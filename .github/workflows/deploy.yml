@@ -1,0 +1,46 @@
+name: Deploy to InfinityFree via FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: FTP Sync to InfinityFree
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify FTP Secrets Configuration
+        run: |
+          if [ -z "${{ secrets.FTP_SERVER }}" ] || [ -z "${{ secrets.FTP_USERNAME }}" ] || [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+            echo "::error ::Missing FTP secrets! Please configure FTP_SERVER, FTP_USERNAME, and FTP_PASSWORD in GitHub Repository Secrets (Settings -> Secrets and variables -> Actions)."
+            exit 1
+          fi
+          echo "FTP configuration verified. Proceeding with deployment..."
+
+      - name: Sync Files to InfinityFree Server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_DIR || 'htdocs/' }}
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/developer/**
+            **/.gemini/**
+            **/node_modules/**
+            **/package*.json
+            **/README.md
