@@ -17,7 +17,7 @@ window.__SITE_CONFIG__ = {
     "socialLinks": {
       "twitter": "https://twitter.com/NextGamesGame",
       "discord": "https://discord.gg/nextgames",
-      "github": "https://github.com/next-games-game"
+      "github": "https://github.com/rambir-bhatiwal/next-gamer-portal"
     },
     "seoKeywords": [
       "HTML5 games",

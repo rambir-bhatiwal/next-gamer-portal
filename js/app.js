@@ -1118,60 +1118,74 @@
    */
   function setupEventListeners() {
     // 1. Search Inputs
-    DOM.headerSearchInput.addEventListener('input', (e) => {
-      AppState.searchQuery = e.target.value;
-      if (AppState.searchQuery.length > 0) {
-        DOM.clearSearchBtn.classList.remove('hidden');
-      } else {
-        DOM.clearSearchBtn.classList.add('hidden');
-      }
-      renderGamesGrid();
-      updateDocumentTitle();
-    });
+    if (DOM.headerSearchInput) {
+      DOM.headerSearchInput.addEventListener('input', (e) => {
+        AppState.searchQuery = e.target.value;
+        if (DOM.clearSearchBtn) {
+          if (AppState.searchQuery.length > 0) {
+            DOM.clearSearchBtn.classList.remove('hidden');
+          } else {
+            DOM.clearSearchBtn.classList.add('hidden');
+          }
+        }
+        if (DOM.gamesGrid) renderGamesGrid();
+        updateDocumentTitle();
+      });
+    }
 
-    DOM.clearSearchBtn.addEventListener('click', () => {
-      AppState.searchQuery = '';
-      DOM.headerSearchInput.value = '';
-      DOM.clearSearchBtn.classList.add('hidden');
-      DOM.headerSearchInput.focus();
-      renderGamesGrid();
-      updateDocumentTitle();
-    });
+    if (DOM.clearSearchBtn) {
+      DOM.clearSearchBtn.addEventListener('click', () => {
+        AppState.searchQuery = '';
+        if (DOM.headerSearchInput) {
+          DOM.headerSearchInput.value = '';
+          DOM.headerSearchInput.focus();
+        }
+        DOM.clearSearchBtn.classList.add('hidden');
+        if (DOM.gamesGrid) renderGamesGrid();
+        updateDocumentTitle();
+      });
+    }
 
     // 2. Sort Selector
-    DOM.sortSelect.addEventListener('change', (e) => {
-      AppState.sortBy = e.target.value;
-      renderGamesGrid();
-    });
+    if (DOM.sortSelect) {
+      DOM.sortSelect.addEventListener('change', (e) => {
+        AppState.sortBy = e.target.value;
+        if (DOM.gamesGrid) renderGamesGrid();
+      });
+    }
 
     // 3. Reset Filters in Empty State
-    DOM.resetFiltersBtn.addEventListener('click', () => {
-      AppState.searchQuery = '';
-      AppState.activeCategory = 'all';
-      AppState.sortBy = 'featured';
-      DOM.headerSearchInput.value = '';
-      DOM.clearSearchBtn.classList.add('hidden');
-      DOM.sortSelect.value = 'featured';
-      renderCategories(AppState.categories);
-      renderGamesGrid();
-      updateDocumentTitle();
-    });
+    if (DOM.resetFiltersBtn) {
+      DOM.resetFiltersBtn.addEventListener('click', () => {
+        AppState.searchQuery = '';
+        AppState.activeCategory = 'all';
+        AppState.sortBy = 'featured';
+        if (DOM.headerSearchInput) DOM.headerSearchInput.value = '';
+        if (DOM.clearSearchBtn) DOM.clearSearchBtn.classList.add('hidden');
+        if (DOM.sortSelect) DOM.sortSelect.value = 'featured';
+        if (DOM.categoryBar) renderCategories(AppState.categories);
+        if (DOM.gamesGrid) renderGamesGrid();
+        updateDocumentTitle();
+      });
+    }
 
     // 4. Modal Controls
-    DOM.modalCloseBtn.addEventListener('click', closeGameModal);
-    DOM.modalReloadBtn.addEventListener('click', reloadGame);
-    DOM.modalFullscreenBtn.addEventListener('click', toggleFullscreen);
+    if (DOM.modalCloseBtn) DOM.modalCloseBtn.addEventListener('click', closeGameModal);
+    if (DOM.modalReloadBtn) DOM.modalReloadBtn.addEventListener('click', reloadGame);
+    if (DOM.modalFullscreenBtn) DOM.modalFullscreenBtn.addEventListener('click', toggleFullscreen);
 
     // Close when clicking modal backdrop outside the wrapper
-    DOM.gameModal.addEventListener('click', (e) => {
-      if (e.target === DOM.gameModal) {
-        closeGameModal();
-      }
-    });
+    if (DOM.gameModal) {
+      DOM.gameModal.addEventListener('click', (e) => {
+        if (e.target === DOM.gameModal) {
+          closeGameModal();
+        }
+      });
+    }
 
     // Escape Key Listener to dismiss modal
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && (DOM.gameModal.open || DOM.gameModal.hasAttribute('open'))) {
+      if (DOM.gameModal && e.key === 'Escape' && (DOM.gameModal.open || DOM.gameModal.hasAttribute('open'))) {
         closeGameModal();
       }
       // Shortcut: 'F' toggles fullscreen when playing
@@ -1244,12 +1258,26 @@
   }
 
   /**
+   * Automatically updates copyright year dynamically across all pages.
+   */
+  function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    const yearElements = document.querySelectorAll('.dynamic-year, #currentYear');
+    yearElements.forEach((el) => {
+      el.textContent = currentYear;
+    });
+  }
+
+  /**
    * ==========================================================================
    * 7. MASTER BOOTSTRAP INITIALIZER
    * ==========================================================================
    */
   async function init() {
     console.log('[Next Games/Game] Initializing portal engine...');
+
+    // 0. Update Dynamic Copyright Year
+    updateCopyrightYear();
 
     // 1. Fetch Configuration Manifest
     const config = await loadConfiguration();
@@ -1258,18 +1286,20 @@
     AppState.categories = config.categories || [];
 
     // 2. Identify Featured Spotlight Game
-    const featuredGame = AppState.games.find(g => g.id === config.featuredGameId) || AppState.games[0];
-    renderHero(featuredGame);
+    if (DOM.heroShowcase) {
+      const featuredGame = AppState.games.find(g => g.id === config.featuredGameId) || AppState.games[0];
+      if (featuredGame) renderHero(featuredGame);
+    }
 
     // 3. Render Categories & Games Matrix
-    renderCategories(AppState.categories);
-    renderGamesGrid();
+    if (DOM.categoryBar) renderCategories(AppState.categories);
+    if (DOM.gamesGrid) renderGamesGrid();
 
     // 4. Render FAQ Section
-    renderFaq(config.faq);
+    if (DOM.faqAccordion && config.faq) renderFaq(config.faq);
 
     // 5. Inject Dynamic Schema.org JSON-LD SEO Metadata
-    injectDynamicSeoSchemas(config);
+    if (DOM.jsonLdSchema) injectDynamicSeoSchemas(config);
 
     // 6. Bind Event Listeners
     setupEventListeners();
