@@ -12,5 +12,6 @@ Thumbs.db
 .gemini/
 *.log
 
-# Developer scratch
-developer/qa-reports/*.tmp
+# Developer suite (isolated to 'test' branch)
+developer/
+
