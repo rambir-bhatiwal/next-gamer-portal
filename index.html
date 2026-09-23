@@ -79,7 +79,7 @@
         "sameAs": [
           "https://twitter.com/NextGamesGame",
           "https://discord.gg/nextgames",
-          "https://github.com/next-games-game"
+          "https://github.com/rambir-bhatiwal/next-gamer-portal"
         ]
       }
     ]
@@ -113,7 +113,10 @@
       </div>
 
       <!-- Navigation & Action Buttons -->
-      <nav class="header-nav" aria-label="Header Actions">
+      <nav class="header-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active" aria-current="page">HOME</a>
+        <a href="index.html#gamesGallery" class="nav-link">ALL GAMES</a>
+        <a href="contact.html" class="nav-link">CONTACT US</a>
         <a href="#gamesGallery" class="nav-btn nav-btn-primary">
           <span class="btn-glow-pulse" aria-hidden="true"></span>
           <span class="btn-icon" aria-hidden="true">🕹️</span>
@@ -352,7 +355,7 @@
         <div class="footer-social-links" id="footerSocials">
           <a href="https://twitter.com/NextGamesGame" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game on Twitter">Twitter</a>
           <a href="https://discord.gg/nextgames" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game Discord">Discord</a>
-          <a href="https://github.com/next-games-game" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game GitHub">GitHub</a>
+          <a href="https://github.com/rambir-bhatiwal/next-gamer-portal" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game GitHub">GitHub</a>
         </div>
       </div>
 
@@ -364,12 +367,12 @@
       </div>
 
       <div class="footer-nav-col">
-        <h4 class="footer-col-title">DEVELOPER SUITE</h4>
+        <h4 class="footer-col-title">QUICK LINKS</h4>
         <ul class="footer-links-list">
-          <li><a href="developer/roadmap.md" target="_blank">System Roadmap</a></li>
-          <li><a href="developer/rules.md" target="_blank">Architecture Guardrails</a></li>
-          <li><a href="developer/prompt.md" target="_blank">Portal Specifications</a></li>
-          <li><a href="config/site-config.json" target="_blank">Site Manifest JSON</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#gamesGallery">All Games</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="config/site-config.json" target="_blank" rel="noopener noreferrer">Site Manifest JSON</a></li>
         </ul>
       </div>
     </div>
@@ -377,7 +380,7 @@
     <div class="footer-bottom">
       <div class="footer-bottom-container">
         <p class="copyright-text">
-          &copy; 2026 <strong>Next Games/Game</strong>. All rights reserved. All games and brand artwork are royalty-free.
+          &copy; <span id="currentYear" class="dynamic-year">2026</span> Next Games/Game. All Rights Reserved. Officially Registered Domain.
         </p>
         <p class="system-status">
           <span class="status-indicator"></span>
