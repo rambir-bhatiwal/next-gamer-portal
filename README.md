@@ -1,5 +1,7 @@
 # Next Games/Game — Instant-Play HTML5 Web Games Portal
 
+[![Deploy to InfinityFree via FTP](https://github.com/rambir-bhatiwal/next-gamer-portal/actions/workflows/deploy.yml/badge.svg)](https://github.com/rambir-bhatiwal/next-gamer-portal/actions/workflows/deploy.yml)
+
 > **Live Production URL**: [https://next.gamer.free/](https://next.gamer.free/)
 
 Next Games/Game is a high-octane, zero-installation HTML5 web gaming portal featuring **101 completely self-contained games** across 10 diverse categories. Built entirely using vanilla Canvas 2D/WebGL, CSS3, and the browser's native Web Audio API, the portal delivers silky 60 FPS performance on both desktop and mobile devices without external third-party dependencies or game engines.
