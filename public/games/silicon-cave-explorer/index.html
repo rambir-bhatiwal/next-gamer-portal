@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Silicon Cave Explorer: Spelunker 2099 - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Subterranean Sector</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Oxygen Tank</div><div id="o2Val" class="hud-val" style="color:#00ffcc;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Suit Shields</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Crystals Harvested</div><div id="crystalVal" class="hud-val" style="color:#ffd600;">0 / 10</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CAVERNS (1-45)</button>
+      <button id="jumpBtn" class="action-btn jump-btn">JUMP [SPACE / W]</button>
+      <button id="restartBtn" class="action-btn">RETRY DESCENT</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CAVERN &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">SILICON CAVE EXPLORER</h1>
+        <p id="overlayDesc">Descend into dangerous subterranean silicon caverns across 45 expedition depths. Navigate dynamic stalactites, harvest rare glowing energy crystals, and extract safely.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE EXPEDITION</button>
+        <div class="controls-hint">Controls: [A][D] or Left/Right arrows to walk. [W], [Up], or Space to jump. Reach crystal quota and elevator.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

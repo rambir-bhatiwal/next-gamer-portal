@@ -1,0 +1,7 @@
+# Next Games/Game — Production Robots Exclusion Protocol
+User-agent: *
+Allow: /
+Disallow: /developer/
+
+# Sitemaps
+Sitemap: https://next.gamer.free/sitemap.xml

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>FreeCell Neo: Quantum Cascade - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Quantum Deal</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Foundations</div><div id="foundVal" class="hud-val" style="color:#00ff88;">0 / 52 CARDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Free Cells</div><div id="freeCellsVal" class="hud-val" style="color:#00f0ff;">4 OPEN</div></div>
+      <div class="hud-box"><div class="hud-lbl">Moves Made</div><div id="movesVal" class="hud-val" style="color:#ffd600;">0 MOVES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">DEALS (1-45)</button>
+      <button id="autoBtn" class="action-btn">AUTO FINISH</button>
+      <button id="restartBtn" class="action-btn">RETRY DEAL</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT DEAL &gt;</button>
+    </div>
+    <div class="controls-hint">Use 4 free cells as temporary storage | Build cascades down in alternating colors | Move cards to foundations</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">FREECELL NEO</h1>
+        <p id="overlayDesc">Solve open-card solitaire puzzles using four temporary free reserve cells across 45 numbered quantum challenge deals!</p>
+        <button id="startBtn" class="glow-btn">INITIALIZE DEAL</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT FREECELL DEAL (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Skyward Spire: Endless Cyber Ascender - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Spire Altitude</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Climb Height</div><div id="heightVal" class="hud-val">0 / 1200m</div></div>
+      <div class="hud-box"><div class="hud-lbl">Booster Shield</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Jump Boosters</div><div id="boostVal" class="hud-val" style="color:#ffd600;">READY</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">ALTITUDES (1-45)</button>
+      <button id="boostBtn" class="action-btn boost-btn">JETPACK BOOST [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY CLIMB</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TOWER &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">SKYWARD SPIRE</h1>
+        <p id="overlayDesc">Bounce upward through vertical communication megatowers across 45 altitude sectors. Steer across moving, spring-loaded, and crumbling platforms to summit the clouds.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE SPIRE ASCENT</button>
+        <div class="controls-hint">Controls: Move Left/Right with [A][D] or Arrow keys. Automatic bounce on platforms. Spacebar for Jetpack Booster.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nanotech Crawler: Magnetic Surface Climb - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Substrate Node</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Magnetic Energy</div><div id="energyVal" class="hud-val" style="color:#00f0ff;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Bot Shields</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Nanites Extracted</div><div id="nanitesVal" class="hud-val" style="color:#ffd600;">0 / 15</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CIRCUITS (1-45)</button>
+      <button id="leapBtn" class="action-btn leap-btn">SURFACE LEAP [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY CIRCUIT</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CIRCUIT &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">NANOTECH CRAWLER</h1>
+        <p id="overlayDesc">Crawl along 360-degree magnetic circuit surfaces across 45 microscopic substrates. Adhere to walls, leap across floating circuit conduits, and extract all nanite clusters.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ACTIVATE NANOBOT</button>
+        <div class="controls-hint">Controls: Left/Right [A][D] to crawl along the surface ring. Spacebar / Leap button to hop to the outer conduit.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

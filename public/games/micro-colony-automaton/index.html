@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Micro-Colony Automaton: Base Architect - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Colony World</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Power Grid</div><div id="powerVal" class="hud-val" style="color:#ffd600;">+10 kW</div></div>
+      <div class="hud-box"><div class="hud-lbl">Oxygen Level</div><div id="oxygenVal" class="hud-val" style="color:#00ffcc;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Mineral Stock</div><div id="mineralVal" class="hud-val" style="color:#00f0ff;">150 M</div></div>
+      <div class="hud-box"><div class="hud-lbl">Colonists</div><div id="popVal" class="hud-val" style="color:#39ff14;">0 / 25</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="build-bar">
+      <button class="build-btn active" data-type="solar"><span class="b-name">SOLAR ARRAY</span><span class="b-cost">40 M | +15 kW</span></button>
+      <button class="build-btn" data-type="dome"><span class="b-name">BIO-DOME</span><span class="b-cost">60 M | +5 Pop, -5 kW</span></button>
+      <button class="build-btn" data-type="extractor"><span class="b-name">O2 SCRUBBER</span><span class="b-cost">50 M | +O2, -8 kW</span></button>
+      <button class="build-btn" data-type="mine"><span class="b-name">MINING RIG</span><span class="b-cost">45 M | +10 M/s, -6 kW</span></button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">WORLDS (1-45)</button>
+      <button id="restartBtn" class="action-btn">REBUILD COLONY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT WORLD &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">MICRO-COLONY AUTOMATON</h1>
+        <p id="overlayDesc">Establish resilient planetary outposts across 45 extraterrestrial worlds. Balance your power grid, maintain life-support oxygen, extract raw minerals, and grow your colonist population.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">BEGIN COLONIZATION INITIATIVE</button>
+        <div class="controls-hint">Controls: Select structure type, click an empty terrain tile to construct. Reach the colonist population quota to complete each stage.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Blackjack 2099: High Roller Matrix - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Casino Salon</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Bankroll Target</div><div id="bankrollVal" class="hud-val">$1,000 / $2,500</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Bet</div><div id="betVal" class="hud-val" style="color:#ffd600;">$50</div></div>
+      <div class="hud-box"><div class="hud-lbl">Streak / Status</div><div id="statusVal" class="hud-val" style="color:#00ff88;">PLACE BET</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SALONS (1-45)</button>
+      <button id="chip10" class="chip-btn" data-val="10">$10</button>
+      <button id="chip50" class="chip-btn" data-val="50">$50</button>
+      <button id="chip100" class="chip-btn" data-val="100">$100</button>
+      <button id="chip500" class="chip-btn" data-val="500">$500</button>
+      <button id="dealBtn" class="action-btn deal-btn">DEAL</button>
+      <button id="hitBtn" class="action-btn" disabled>HIT</button>
+      <button id="standBtn" class="action-btn" disabled>STAND</button>
+      <button id="doubleBtn" class="action-btn" disabled>DOUBLE</button>
+      <button id="clearBtn" class="action-btn">CLEAR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SALON &gt;</button>
+    </div>
+    <div class="controls-hint">Select chip wager and click DEAL | Click HIT for additional card or STAND to hold | Beat dealer without busting 21</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">NEON BLACKJACK 2099</h1>
+        <p id="overlayDesc">Challenge the high-roller dealer AI across 45 futuristic casino salons. Hit bankroll milestones to advance to higher stake VIP lounges!</p>
+        <button id="startBtn" class="glow-btn">ENTER CASINO</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT CASINO SALON (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Gravity Jumper: Dual-Floor Flip - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Course Track</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Course Progress</div><div id="distVal" class="hud-val">0 / 1000m</div></div>
+      <div class="hud-box"><div class="hud-lbl">Shield Matrix</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Orbs Collected</div><div id="orbsVal" class="hud-val" style="color:#ffd600;">0 ORBS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">COURSES (1-45)</button>
+      <button id="flipBtn" class="action-btn flip-btn">INVERT GRAVITY [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY COURSE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT COURSE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">NEON GRAVITY JUMPER</h1>
+        <p id="overlayDesc">Sprint across dual ceiling and floor velocity tracks across 45 futuristic courses. Invert gravity with precise timing to dodge laser barriers and gather quantum energy orbs.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE GRAVITY RUN</button>
+        <div class="controls-hint">Controls: Press Spacebar or Click/Tap anywhere to flip gravity between floor and ceiling.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

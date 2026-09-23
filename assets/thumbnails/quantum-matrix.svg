@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Quantum Matrix Hacker Game Banner">
+  <!-- Quantum Matrix Hacker Thumbnail Graphic -->
+  <defs>
+    <linearGradient id="qmBg" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040b17" />
+      <stop offset="50%" stop-color="#071b2e" />
+      <stop offset="100%" stop-color="#020914" />
+    </linearGradient>
+    <linearGradient id="nodeCyan" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0055ff" />
+    </linearGradient>
+    <linearGradient id="nodeEmerald" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ff88" />
+      <stop offset="100%" stop-color="#008855" />
+    </linearGradient>
+    <linearGradient id="nodeMagenta" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#770044" />
+    </linearGradient>
+    <filter id="qmGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b1" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Matrix Terminal Background -->
+  <rect width="600" height="340" fill="url(#qmBg)" />
+
+  <!-- Holographic Grid Lines -->
+  <pattern id="gridPat" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 240, 255, 0.08)" stroke-width="0.8" />
+  </pattern>
+  <rect width="600" height="340" fill="url(#gridPat)" />
+
+  <!-- Hexagonal Firewall Grid Centerpiece -->
+  <g transform="translate(180, 50)">
+    <!-- Circuit connection lines between nodes -->
+    <line x1="60" y1="60" x2="140" y2="60" stroke="#00f0ff" stroke-width="3" opacity="0.8" filter="url(#qmGlow)" />
+    <line x1="140" y1="60" x2="220" y2="60" stroke="#00f0ff" stroke-width="2" opacity="0.5" />
+    <line x1="60" y1="60" x2="60" y2="140" stroke="#ff007f" stroke-width="3" opacity="0.8" filter="url(#qmGlow)" />
+    <line x1="140" y1="60" x2="140" y2="140" stroke="#00ff88" stroke-width="4" opacity="0.9" filter="url(#qmGlow)" />
+    <line x1="220" y1="60" x2="220" y2="140" stroke="#00f0ff" stroke-width="2" opacity="0.5" />
+    <line x1="60" y1="140" x2="140" y2="140" stroke="#00ff88" stroke-width="4" opacity="0.9" filter="url(#qmGlow)" />
+    <line x1="140" y1="140" x2="220" y2="140" stroke="#ff007f" stroke-width="3" opacity="0.8" filter="url(#qmGlow)" />
+    <line x1="60" y1="140" x2="60" y2="220" stroke="#00f0ff" stroke-width="2" opacity="0.5" />
+    <line x1="140" y1="140" x2="140" y2="220" stroke="#00f0ff" stroke-width="3" opacity="0.8" filter="url(#qmGlow)" />
+    <line x1="220" y1="140" x2="220" y2="220" stroke="#00ff88" stroke-width="2" opacity="0.5" />
+    <line x1="60" y1="220" x2="140" y2="220" stroke="#00f0ff" stroke-width="2" opacity="0.5" />
+    <line x1="140" y1="220" x2="220" y2="220" stroke="#00f0ff" stroke-width="3" opacity="0.8" filter="url(#qmGlow)" />
+
+    <!-- Matrix Nodes (Hexagons and Cubes) -->
+    <!-- Node 1: Cyan -->
+    <polygon points="60,40 77,50 77,70 60,80 43,70 43,50" fill="url(#nodeCyan)" filter="url(#qmGlow)" />
+    <!-- Node 2: Emerald Active Match -->
+    <polygon points="140,36 161,48 161,72 140,84 119,72 119,48" fill="url(#nodeEmerald)" filter="url(#qmGlow)" />
+    <circle cx="140" cy="60" r="6" fill="#ffffff" />
+    <!-- Node 3: Magenta -->
+    <polygon points="220,40 237,50 237,70 220,80 203,70 203,50" fill="url(#nodeMagenta)" filter="url(#qmGlow)" />
+
+    <!-- Node 4: Magenta -->
+    <polygon points="60,120 77,130 77,150 60,160 43,150 43,130" fill="url(#nodeMagenta)" filter="url(#qmGlow)" />
+    <!-- Node 5: Emerald Core Breached! -->
+    <polygon points="140,114 163,127 163,153 140,166 117,153 117,127" fill="url(#nodeEmerald)" filter="url(#qmGlow)" stroke="#ffffff" stroke-width="2" />
+    <circle cx="140" cy="140" r="10" fill="#ffffff" filter="url(#qmGlow)" />
+    <polygon points="135,133 148,140 135,147" fill="#020914" />
+    <!-- Node 6: Cyan -->
+    <polygon points="220,120 237,130 237,150 220,160 203,150 203,130" fill="url(#nodeCyan)" filter="url(#qmGlow)" />
+
+    <!-- Node 7: Cyan -->
+    <polygon points="60,200 77,210 77,230 60,240 43,230 43,210" fill="url(#nodeCyan)" filter="url(#qmGlow)" />
+    <!-- Node 8: Emerald Match Target -->
+    <polygon points="140,196 161,208 161,232 140,244 119,232 119,208" fill="url(#nodeEmerald)" filter="url(#qmGlow)" />
+    <circle cx="140" cy="220" r="6" fill="#ffffff" />
+    <!-- Node 9: Magenta -->
+    <polygon points="220,200 237,210 237,230 220,240 203,230 203,210" fill="url(#nodeMagenta)" filter="url(#qmGlow)" />
+  </g>
+
+  <!-- Cyber Code Streaming Streams on Sides -->
+  <g font-family="monospace" font-size="11" fill="rgba(0, 240, 255, 0.45)">
+    <text x="30" y="70">0x7F 00 1B 4A</text>
+    <text x="30" y="90">SEC_FIREWALL://OK</text>
+    <text x="30" y="110">NODE_RESOLVE: [9]</text>
+    <text x="30" y="130">DECRYPT: 88.4%</text>
+    <text x="30" y="150" fill="#00ff88">KEY_MATCH: FOUND</text>
+    <text x="30" y="170">SYNTH_OVERRIDE</text>
+    <text x="30" y="190">PORT_MAP: 443</text>
+  </g>
+
+  <g font-family="monospace" font-size="11" fill="rgba(255, 0, 127, 0.45)">
+    <text x="470" y="70">SYS_ALERT: CORRUPT</text>
+    <text x="470" y="90">HASH: 0x9AF032</text>
+    <text x="470" y="110">VECTOR: SHIFT</text>
+    <text x="470" y="130" fill="#00f0ff">ENTROPY: 0.003</text>
+    <text x="470" y="150">TRACE_DELAY: 12ms</text>
+    <text x="470" y="170">STATUS: OVERRIDE</text>
+    <text x="470" y="190">BREACH_LEVEL_4</text>
+  </g>
+
+  <!-- Title Badge Overlay -->
+  <rect x="25" y="25" width="240" height="34" rx="6" fill="rgba(4, 11, 23, 0.85)" stroke="#00ff88" stroke-width="1.2" />
+  <text x="38" y="48" font-family="'Orbitron', sans-serif" font-size="15" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+    QUANTUM <tspan fill="#00ff88">MATRIX</tspan>
+  </text>
+  
+  <rect x="490" y="25" width="85" height="26" rx="4" fill="#00ff88" />
+  <text x="502" y="42" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#020914" letter-spacing="1">
+    STRATEGY
+  </text>
+</svg>

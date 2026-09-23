@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Pong: Hyper Duel - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Arena / AI Archetype</div><div id="themeVal" class="hud-val">1: Cyan/Magenta Void</div></div>
+      <div class="hud-box"><div class="hud-lbl">Match Score</div><div id="scoreVal" class="hud-val">YOU 0 - 0 AI (First to 5)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Ball Velocity</div><div id="speedVal" class="hud-val">12.0 PX/F</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">NEON PONG: HYPER DUEL</h1>
+        <p id="menuDesc">Vector paddle duel against progressive AI neural archetypes across 45 unique neon combat arenas. First to 5 points claims the arena championship.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START DUEL</button>
+        <div class="controls-hint">Controls: Up/Down or W/S to Move Paddle | Mouse / Touch Drag Supported</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

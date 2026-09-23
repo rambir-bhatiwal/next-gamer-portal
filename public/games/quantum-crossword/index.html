@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Quantum Crossword: Cyber Mini-Puzzles - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Mini Crossword</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Clue Selected</div><div id="clueVal" class="hud-val" style="color:#00ff88;">1-ACROSS: Photonic light beam</div></div>
+      <div class="hud-box"><div class="hud-lbl">Progress</div><div id="progressVal" class="hud-val" style="color:#00f0ff;">0 / 25 CELLS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Direction</div><div id="dirVal" class="hud-val" style="color:#ffd600;">ACROSS [TAB]</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="clue-list-wrap">
+      <div class="clue-col" id="acrossCol"><h3>ACROSS</h3></div>
+      <div class="clue-col" id="downCol"><h3>DOWN</h3></div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">PUZZLES (1-45)</button>
+      <button id="checkBtn" class="action-btn check-btn">CHECK SOLUTION</button>
+      <button id="restartBtn" class="action-btn">CLEAR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT PUZZLE &gt;</button>
+    </div>
+    <div class="controls-hint">Click grid cells or clue list to select word | Type letters on keyboard | Fill all intersecting cyber terms to advance</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">QUANTUM CROSSWORD</h1>
+        <p id="overlayDesc">Solve compact 5x5 mini crossword puzzles packed with clever technology, science, and gaming clues across 45 stages!</p>
+        <button id="startBtn" class="glow-btn">ENTER CROSSWORD</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT MINI CROSSWORD (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

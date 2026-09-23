@@ -1,0 +1,426 @@
+/**
+ * Micro-Colony Automaton: Base Architect - 45 Thematic Levels
+ */
+(function() {
+  'use strict';
+
+  const THEMES = [
+  { id: 1, name: "Earth Orbital Alpha", bg: "#04020f", primary: "#00f0ff", secondary: "#ff007f", accent: "#39ff14", text: "#e0f7fa" },
+  { id: 2, name: "Mars Dust Plains", bg: "#160505", primary: "#ff5722", secondary: "#ff9800", accent: "#ffeb3b", text: "#fbe9e7" },
+  { id: 3, name: "Titan Methane Ocean", bg: "#02120e", primary: "#00ffcc", secondary: "#00bcd4", accent: "#76ff03", text: "#e0f2f1" },
+  { id: 4, name: "Europa Sub-Surface Core", bg: "#02121a", primary: "#80d8ff", secondary: "#00b0ff", accent: "#00e5ff", text: "#e1f5fe" },
+  { id: 5, name: "Venusian Acid Highlands", bg: "#140e02", primary: "#ffd600", secondary: "#ffab00", accent: "#ff6d00", text: "#fff8e1" },
+  { id: 6, name: "Jovian Magnetic Vortex", bg: "#0d0217", primary: "#e040fb", secondary: "#aa00ff", accent: "#00f0ff", text: "#f3e5f5" },
+  { id: 7, name: "Saturnian Ice Ring 7", bg: "#081017", primary: "#00e5ff", secondary: "#40c4ff", accent: "#b388ff", text: "#e0f7fa" },
+  { id: 8, name: "Kuiper Belt Relay", bg: "#04050d", primary: "#5c6bc0", secondary: "#3f51b5", accent: "#00f0ff", text: "#e8eaf6" },
+  { id: 9, name: "Solar Corona Outpost", bg: "#170a01", primary: "#ff6d00", secondary: "#ff3d00", accent: "#ffd600", text: "#fff3e0" },
+  { id: 10, name: "Oort Cloud Perimeter", bg: "#03020a", primary: "#7c4dff", secondary: "#651fff", accent: "#ff4081", text: "#ede7f6" },
+  { id: 11, name: "Proxima Centauri Foundry", bg: "#14010a", primary: "#ff1744", secondary: "#d50000", accent: "#00e676", text: "#ffebee" },
+  { id: 12, name: "Sirius A Thermal Forge", bg: "#021218", primary: "#00e5ff", secondary: "#00b0ff", accent: "#ffd600", text: "#e0f7fa" },
+  { id: 13, name: "Orion Nebula Spire", bg: "#120317", primary: "#ea80fc", secondary: "#ba68c8", accent: "#64ffda", text: "#f3e5f5" },
+  { id: 14, name: "Cygnus X-1 Event Horizon", bg: "#05010a", primary: "#9575cd", secondary: "#512da8", accent: "#00f0ff", text: "#ede7f6" },
+  { id: 15, name: "Tachyon Star Bridge", bg: "#0a0217", primary: "#d500f9", secondary: "#aa00ff", accent: "#39ff14", text: "#f3e5f5" },
+  { id: 16, name: "Silicon Wafer Megacity", bg: "#061214", primary: "#00e676", secondary: "#00bfa5", accent: "#ffd600", text: "#e8f5e9" },
+  { id: 17, name: "Dark Matter Bastion", bg: "#020308", primary: "#7986cb", secondary: "#3949ab", accent: "#ff4081", text: "#e8eaf6" },
+  { id: 18, name: "Antimatter Containment Hub", bg: "#170308", primary: "#ff1744", secondary: "#c51162", accent: "#00f0ff", text: "#ffebee" },
+  { id: 19, name: "Emerald Nanite Colony", bg: "#021708", primary: "#00e676", secondary: "#00c853", accent: "#69f0ae", text: "#e8f5e9" },
+  { id: 20, name: "Obsidian Deep Subnet", bg: "#060608", primary: "#90a4ae", secondary: "#607d8b", accent: "#00f0ff", text: "#eceff1" },
+  { id: 21, name: "Neutron Star Pulsar Hub", bg: "#0f0217", primary: "#e040fb", secondary: "#8e24aa", accent: "#ffd700", text: "#f8bbd0" },
+  { id: 22, name: "Heliosphere Beacon", bg: "#170e02", primary: "#ffab00", secondary: "#ff6d00", accent: "#ffff00", text: "#fff8e1" },
+  { id: 23, name: "Cryo-Stasis Vault", bg: "#01121a", primary: "#80d8ff", secondary: "#40c4ff", accent: "#00e676", text: "#e1f5fe" },
+  { id: 24, name: "Molten Magma Shelf", bg: "#170402", primary: "#ff3d00", secondary: "#dd2c00", accent: "#ffab00", text: "#fbe9e7" },
+  { id: 25, name: "Galactic Trade Nexus", bg: "#040914", primary: "#00b0ff", secondary: "#0091ea", accent: "#ffd600", text: "#e1f5fe" },
+  { id: 26, name: "Asteroid Mining Belt V", bg: "#141103", primary: "#ffd600", secondary: "#ff9100", accent: "#ff3d00", text: "#fffde7" },
+  { id: 27, name: "Quantum Supercluster", bg: "#08011c", primary: "#651fff", secondary: "#3d5afe", accent: "#00e5ff", text: "#ede7f6" },
+  { id: 28, name: "Plasma Shield Line Alpha", bg: "#14010e", primary: "#ff007f", secondary: "#d50000", accent: "#00f0ff", text: "#ffebee" },
+  { id: 29, name: "Hyper-Relay Terminal", bg: "#021217", primary: "#18ffff", secondary: "#00b0ff", accent: "#76ff03", text: "#e0f7fa" },
+  { id: 30, name: "Starlight Dreadnought Yard", bg: "#090614", primary: "#b388ff", secondary: "#7c4dff", accent: "#ffd600", text: "#ede7f6" },
+  { id: 31, name: "Supernova Remnant M-1", bg: "#17050a", primary: "#ff4081", secondary: "#f50057", accent: "#ffd600", text: "#fce4ec" },
+  { id: 32, name: "Sub-Atomic Slalom Gate", bg: "#01140e", primary: "#00e676", secondary: "#1de9b6", accent: "#00f0ff", text: "#e8f5e9" },
+  { id: 33, name: "Geothermal Power Basin", bg: "#160902", primary: "#ff9100", secondary: "#ff6d00", accent: "#ffd600", text: "#fff3e0" },
+  { id: 34, name: "Dark Nebula Veil", bg: "#04020a", primary: "#7e57c2", secondary: "#4527a0", accent: "#ea80fc", text: "#ede7f6" },
+  { id: 35, name: "Solar Wind Sail Station", bg: "#170c01", primary: "#ffd600", secondary: "#ffab00", accent: "#ff3d00", text: "#fff8e1" },
+  { id: 36, name: "Cyber-Bunker Quarantine", bg: "#0e1402", primary: "#76ff03", secondary: "#64dd17", accent: "#c6ff00", text: "#f1f8e9" },
+  { id: 37, name: "Vaporwave Orbital Arcade", bg: "#120517", primary: "#ff77ff", secondary: "#00ffff", accent: "#ffff00", text: "#fdf0ff" },
+  { id: 38, name: "Titanium Asteroid Bastion", bg: "#0a0c10", primary: "#b0bec5", secondary: "#78909c", accent: "#00e5ff", text: "#eceff1" },
+  { id: 39, name: "Phosphor Command Bunker", bg: "#011404", primary: "#00e676", secondary: "#00b300", accent: "#b9f6ca", text: "#e8f8f5" },
+  { id: 40, name: "Krypton Atmospheric Station", bg: "#021714", primary: "#26a69a", secondary: "#00897b", accent: "#80cbc4", text: "#e0f2f1" },
+  { id: 41, name: "Quantum Horizon Nexus", bg: "#0c0117", primary: "#e040fb", secondary: "#d500f9", accent: "#00f0ff", text: "#f3e5f5" },
+  { id: 42, name: "Singularity Defense Ring", bg: "#030208", primary: "#3f51b5", secondary: "#1a237e", accent: "#ff1744", text: "#e8eaf6" },
+  { id: 43, name: "Bioluminescent Biosphere", bg: "#01170d", primary: "#00e676", secondary: "#00bfa5", accent: "#ffd600", text: "#e0f2f1" },
+  { id: 44, name: "Tesseract Command Core", bg: "#0a0117", primary: "#d500f9", secondary: "#651fff", accent: "#00e5ff", text: "#ede7f6" },
+  { id: 45, name: "Galactic Apex Citadel", bg: "#000005", primary: "#00f0ff", secondary: "#ff007f", accent: "#ffd700", text: "#ffffff" }
+];
+
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const themeVal = document.getElementById('themeVal');
+  const powerVal = document.getElementById('powerVal');
+  const oxygenVal = document.getElementById('oxygenVal');
+  const mineralVal = document.getElementById('mineralVal');
+  const popVal = document.getElementById('popVal');
+  const overlay = document.getElementById('overlay');
+  const overlayTitle = document.getElementById('overlayTitle');
+  const overlayDesc = document.getElementById('overlayDesc');
+  const startBtn = document.getElementById('startBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const restartBtn = document.getElementById('restartBtn');
+  const levelSelectBtn = document.getElementById('levelSelectBtn');
+  const levelSelectGrid = document.getElementById('levelSelectGrid');
+  const buildBtns = document.querySelectorAll('.build-btn');
+
+  let width = 0, height = 0;
+  const cols = 12;
+  const rows = 8;
+  let cellSize = 50;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  function resize() {
+    width = canvas.width = canvas.parentElement.clientWidth || window.innerWidth;
+    height = canvas.height = canvas.parentElement.clientHeight || window.innerHeight;
+    cellSize = Math.min((width - 60) / cols, (height - 120) / rows);
+    offsetX = (width - cols * cellSize) / 2;
+    offsetY = (height - rows * cellSize) / 2;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  let currentLevel = 1;
+  let isPlaying = false;
+  let selectedBuildType = 'solar';
+  let power = 20;
+  let oxygen = 100;
+  let minerals = 150;
+  let population = 0;
+  let targetPopulation = 25;
+  let tickTimer = 0;
+  let invulnerable = 0; // human speed fair defense
+
+  const COSTS = {
+    solar: 40,
+    dome: 60,
+    extractor: 50,
+    mine: 45
+  };
+
+  let grid = [];
+  let particles = [];
+  let drones = [];
+
+  function initLevelSelect() {
+    levelSelectGrid.innerHTML = '';
+    THEMES.forEach(t => {
+      const btn = document.createElement('button');
+      btn.className = 'lvl-btn' + (t.id === currentLevel ? ' active' : '');
+      btn.textContent = t.id;
+      btn.title = t.name;
+      btn.addEventListener('click', () => {
+        currentLevel = t.id;
+        document.querySelectorAll('.lvl-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        loadLevel(currentLevel);
+        overlay.style.display = 'none';
+      });
+      levelSelectGrid.appendChild(btn);
+    });
+  }
+
+  function loadLevel(lvl) {
+    currentLevel = lvl;
+    const theme = THEMES[(lvl - 1) % THEMES.length];
+    targetPopulation = 20 + lvl * 2;
+    minerals = 160 + lvl * 10;
+    power = 20;
+    oxygen = 100;
+    population = 0;
+    tickTimer = 0;
+    grid = [];
+    particles = [];
+    drones = [];
+    invulnerable = 60;
+
+    // Build Empty Grid with natural mineral deposit nodes
+    for (let r = 0; r < rows; r++) {
+      grid[r] = [];
+      for (let c = 0; c < cols; c++) {
+        const isDeposit = Math.random() < 0.15;
+        grid[r][c] = {
+          type: isDeposit ? 'deposit' : 'empty',
+          level: 1
+        };
+      }
+    }
+
+    // Place Initial Headquarters Dome
+    const hqx = Math.floor(cols / 2);
+    const hqy = Math.floor(rows / 2);
+    grid[hqy][hqx] = { type: 'hq', level: 1 };
+    population = 5;
+
+    // Drones
+    for (let i = 0; i < 3; i++) {
+      drones.push({
+        x: offsetX + hqx * cellSize + cellSize / 2,
+        y: offsetY + hqy * cellSize + cellSize / 2,
+        targetX: offsetX + hqx * cellSize + cellSize / 2,
+        targetY: offsetY + hqy * cellSize + cellSize / 2,
+        speed: 1.5
+      });
+    }
+
+    themeVal.textContent = lvl + ': ' + theme.name;
+    themeVal.style.color = theme.primary;
+    powerVal.textContent = '+20 kW';
+    oxygenVal.textContent = '100%';
+    oxygenVal.style.color = '#00ffcc';
+    mineralVal.textContent = minerals + ' M';
+    popVal.textContent = population + ' / ' + targetPopulation;
+    nextBtn.style.display = 'none';
+    isPlaying = true;
+  }
+
+  function createExplosion(x, y, color, count = 10) {
+    for (let i = 0; i < count; i++) {
+      const ang = Math.random() * Math.PI * 2;
+      const spd = Math.random() * 3 + 1;
+      particles.push({
+        x, y,
+        vx: Math.cos(ang) * spd,
+        vy: Math.sin(ang) * spd,
+        life: 25,
+        maxLife: 25,
+        color
+      });
+    }
+  }
+
+  function buildStructure(c, r) {
+    if (!isPlaying) return;
+    const tile = grid[r][c];
+    if (tile.type !== 'empty' && !(tile.type === 'deposit' && selectedBuildType === 'mine')) {
+      return;
+    }
+
+    const cost = COSTS[selectedBuildType];
+    if (minerals < cost) return;
+
+    minerals -= cost;
+    mineralVal.textContent = minerals + ' M';
+    tile.type = selectedBuildType;
+    if (window.soundEngine) window.soundEngine.playBuild();
+
+    const tx = offsetX + c * cellSize + cellSize / 2;
+    const ty = offsetY + r * cellSize + cellSize / 2;
+    createExplosion(tx, ty, '#00f0ff', 12);
+
+    updateStats();
+  }
+
+  function updateStats() {
+    let powerGen = 20;
+    let powerDrain = 0;
+    let o2Rate = 0;
+    let mineralRate = 2;
+    let maxPop = 5;
+
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const type = grid[r][c].type;
+        if (type === 'solar') powerGen += 15;
+        if (type === 'dome') { powerDrain += 5; maxPop += 6; }
+        if (type === 'extractor') { powerDrain += 8; o2Rate += 2; }
+        if (type === 'mine') { powerDrain += 6; mineralRate += 8; }
+      }
+    }
+
+    const netPower = powerGen - powerDrain;
+    powerVal.textContent = (netPower >= 0 ? '+' : '') + netPower + ' kW';
+    powerVal.style.color = netPower >= 0 ? '#ffd600' : '#ff1744';
+
+    if (population < maxPop && netPower >= 0 && oxygen > 30) {
+      population = Math.min(maxPop, population + 1);
+      popVal.textContent = population + ' / ' + targetPopulation;
+    }
+
+    // Check Victory
+    if (population >= targetPopulation) {
+      isPlaying = false;
+      if (window.soundEngine) window.soundEngine.playWin();
+      nextBtn.style.display = 'inline-block';
+      overlayTitle.textContent = 'COLONY MILESTONE ACHIEVED!';
+      overlayDesc.textContent = 'Sector ' + currentLevel + ' (' + THEMES[(currentLevel - 1) % THEMES.length].name + ') has established a thriving sustainable civilization!';
+      startBtn.textContent = 'COLONIZE NEXT WORLD';
+      overlay.style.display = 'flex';
+    }
+  }
+
+  function gameLoop() {
+    requestAnimationFrame(gameLoop);
+
+    const theme = THEMES[(currentLevel - 1) % THEMES.length];
+    ctx.fillStyle = theme.bg;
+    ctx.fillRect(0, 0, width, height);
+
+    // Draw Grid
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const x = offsetX + c * cellSize;
+        const y = offsetY + r * cellSize;
+        const tile = grid[r][c];
+
+        ctx.strokeStyle = theme.primary + '22';
+        ctx.lineWidth = 1;
+        ctx.strokeRect(x, y, cellSize, cellSize);
+
+        // Tile Content
+        if (tile.type === 'empty') {
+          ctx.fillStyle = 'rgba(255, 255, 255, 0.02)';
+          ctx.fillRect(x + 1, y + 1, cellSize - 2, cellSize - 2);
+        } else if (tile.type === 'deposit') {
+          ctx.fillStyle = 'rgba(0, 240, 255, 0.15)';
+          ctx.fillRect(x + 2, y + 2, cellSize - 4, cellSize - 4);
+          ctx.fillStyle = '#00f0ff';
+          ctx.font = '10px monospace';
+          ctx.fillText('ORES', x + 8, y + cellSize / 2 + 3);
+        } else if (tile.type === 'hq') {
+          ctx.fillStyle = theme.primary;
+          ctx.beginPath();
+          ctx.arc(x + cellSize / 2, y + cellSize / 2, cellSize * 0.35, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = '#04020f';
+          ctx.font = 'bold 9px monospace';
+          ctx.fillText('HQ', x + cellSize / 2 - 6, y + cellSize / 2 + 3);
+        } else if (tile.type === 'solar') {
+          ctx.fillStyle = '#ffd600';
+          ctx.fillRect(x + cellSize * 0.2, y + cellSize * 0.2, cellSize * 0.6, cellSize * 0.6);
+          ctx.strokeStyle = '#04020f';
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x + cellSize * 0.2, y + cellSize * 0.2, cellSize * 0.6, cellSize * 0.6);
+        } else if (tile.type === 'dome') {
+          ctx.fillStyle = 'rgba(57, 255, 20, 0.5)';
+          ctx.beginPath();
+          ctx.arc(x + cellSize / 2, y + cellSize / 2, cellSize * 0.35, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.strokeStyle = '#39ff14';
+          ctx.stroke();
+        } else if (tile.type === 'extractor') {
+          ctx.fillStyle = '#00ffcc';
+          ctx.beginPath();
+          ctx.arc(x + cellSize / 2, y + cellSize / 2, cellSize * 0.3, 0, Math.PI * 2);
+          ctx.fill();
+        } else if (tile.type === 'mine') {
+          ctx.fillStyle = '#ff9100';
+          ctx.fillRect(x + cellSize * 0.25, y + cellSize * 0.25, cellSize * 0.5, cellSize * 0.5);
+        }
+      }
+    }
+
+    if (!isPlaying) return;
+
+    // Simulation Tick
+    tickTimer++;
+    if (tickTimer >= 60) {
+      tickTimer = 0;
+
+      // Minerals earned from mines
+      let mineCount = 0;
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          if (grid[r][c].type === 'mine') mineCount++;
+        }
+      }
+      minerals += 3 + mineCount * 8;
+      mineralVal.textContent = minerals + ' M';
+
+      updateStats();
+    }
+
+    // Drone flight logic
+    drones.forEach(d => {
+      const dx = d.targetX - d.x;
+      const dy = d.targetY - d.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist < 4) {
+        // Pick new random tile
+        const rc = Math.floor(Math.random() * cols);
+        const rr = Math.floor(Math.random() * rows);
+        d.targetX = offsetX + rc * cellSize + cellSize / 2;
+        d.targetY = offsetY + rr * cellSize + cellSize / 2;
+      } else {
+        d.x += (dx / dist) * d.speed;
+        d.y += (dy / dist) * d.speed;
+      }
+
+      ctx.fillStyle = '#00f0ff';
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, 3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.life--;
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.life / p.maxLife;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalAlpha = 1.0;
+      if (p.life <= 0) particles.splice(i, 1);
+    }
+  }
+
+  // Input Handling
+  canvas.addEventListener('click', e => {
+    const rect = canvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    const c = Math.floor((mx - offsetX) / cellSize);
+    const r = Math.floor((my - offsetY) / cellSize);
+    if (c >= 0 && c < cols && r >= 0 && r < rows) {
+      buildStructure(c, r);
+    }
+  });
+
+  buildBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buildBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      selectedBuildType = btn.dataset.type;
+    });
+  });
+
+  startBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    if (population >= targetPopulation) {
+      currentLevel = (currentLevel % THEMES.length) + 1;
+    }
+    loadLevel(currentLevel);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentLevel = (currentLevel % THEMES.length) + 1;
+    loadLevel(currentLevel);
+  });
+
+  restartBtn.addEventListener('click', () => {
+    loadLevel(currentLevel);
+  });
+
+  levelSelectBtn.addEventListener('click', () => {
+    isPlaying = false;
+    initLevelSelect();
+    overlayTitle.textContent = 'COLONY WORLD ATLAS (1-45)';
+    overlayDesc.textContent = 'Select target extraterrestrial biosphere:';
+    startBtn.textContent = 'RESUME COLONIZATION';
+    overlay.style.display = 'flex';
+  });
+
+  initLevelSelect();
+  loadLevel(1);
+  gameLoop();
+})();

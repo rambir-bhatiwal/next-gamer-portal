@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020108"/>
+      <stop offset="50%" stop-color="#050814"/>
+      <stop offset="100%" stop-color="#0e021a"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Vector Asteroids -->
+  <g filter="url(#neonGlow)">
+    <!-- Asteroid 1 (Large) -->
+    <polygon points="120,100 160,80 200,110 220,150 190,200 140,210 100,170 90,130" fill="none" stroke="#48cae4" stroke-width="3"/>
+    <!-- Asteroid 2 (Medium) -->
+    <polygon points="420,120 460,90 500,130 480,180 430,170 400,140" fill="none" stroke="#a0e426" stroke-width="3"/>
+    <!-- Asteroid 3 (Shattered fragments) -->
+    <polygon points="460,250 490,240 500,270 470,280" fill="none" stroke="#ffd700" stroke-width="2.5"/>
+    <polygon points="410,290 435,275 440,305 420,315" fill="none" stroke="#ffd700" stroke-width="2.5"/>
+    <polygon points="130,280 160,260 170,290 140,310" fill="none" stroke="#ff007f" stroke-width="2.5"/>
+
+    <!-- Player Vector Interceptor -->
+    <g transform="translate(300,220) rotate(-45)">
+      <polygon points="0,-28 18,20 0,12 -18,20" fill="#0b031c" stroke="#00f0ff" stroke-width="3"/>
+      <!-- Thruster flame -->
+      <polygon points="-8,16 0,32 8,16" fill="#ff007f"/>
+      <!-- Dual laser shot -->
+      <line x1="-12" y1="-10" x2="-12" y2="-120" stroke="#00f0ff" stroke-width="3"/>
+      <line x1="12" y1="-10" x2="12" y2="-120" stroke="#00f0ff" stroke-width="3"/>
+    </g>
+  </g>
+  <!-- Title Badge -->
+  <rect x="125" y="24" width="350" height="34" rx="6" fill="rgba(6, 2, 18, 0.85)" stroke="#00f0ff" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#00f0ff" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">ASTEROID SHATTER</text>
+</svg>

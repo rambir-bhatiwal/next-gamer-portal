@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Word Search: Matrix Grid Hunter - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Matrix Theme</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Words Found</div><div id="wordsVal" class="hud-val" style="color:#00ff88;">0 / 5 FOUND</div></div>
+      <div class="hud-box"><div class="hud-lbl">Time Elapsed</div><div id="timeVal" class="hud-val" style="color:#00f0ff;">00:00</div></div>
+      <div class="hud-box"><div class="hud-lbl">Target Checklist</div><div id="checklistVal" class="hud-val" style="color:#ffd600;">CYBER, LASER...</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="word-list-bar" id="wordListBar"></div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">MATRICES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT MATRIX &gt;</button>
+    </div>
+    <div class="controls-hint">Drag across letter matrix or click start & end letters to highlight hidden cyber terms | Find all stage words</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER WORD SEARCH</h1>
+        <p id="overlayDesc">Drag across letter grids to locate hidden sci-fi and cybersecurity terms across 45 matrix puzzle levels!</p>
+        <button id="startBtn" class="glow-btn">ENTER MATRIX</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT MATRIX PUZZLE (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

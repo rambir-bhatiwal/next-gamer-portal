@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Magnetic Polarity Balancer: Levitator - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Coil Chamber</div><div id="themeVal" class="hud-val">1: Magnetic Lab</div></div>
+      <div class="hud-box"><div class="hud-lbl">Stability Time</div><div id="stableVal" class="hud-val">0 / 12 SEC</div></div>
+      <div class="hud-box"><div class="hud-lbl">Core Shields</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Coil Voltage</div><div id="voltageVal" class="hud-val" style="color:#ffd600;">50% FLUX</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CHAMBERS (1-45)</button>
+      <button id="pwrDownBtn" class="action-btn">VOLTS - [S/DOWN]</button>
+      <button id="pwrUpBtn" class="action-btn pwr-btn">VOLTS + [W/UP]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CHAMBER &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">MAGNETIC LEVITATOR</h1>
+        <p id="overlayDesc">Balance a magnetic quantum core suspended in mid-air between electromagnetic coils across 45 chambers. Regulate real-time coil voltage to maintain perfect equilibrium against turbulence!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ACTIVATE MAGNETIC COILS</button>
+        <div class="controls-hint">Controls: Press [W/Up] or [S/Down] to adjust coil voltage. Keep the core within the green target zone for the required duration!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

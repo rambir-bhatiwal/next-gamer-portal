@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Vortex Missile Command: Defense 2090 - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Capital Defense Sector</div><div id="themeVal" class="hud-val">1: Neo-Tokyo Skyline</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score & Flak Ammo</div><div id="scoreVal" class="hud-val">0 PTS | AMMO: 30</div></div>
+      <div class="hud-box"><div class="hud-lbl">Incoming Warheads</div><div id="missileVal" class="hud-val">0 / 15</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">VORTEX MISSILE COMMAND</h1>
+        <p id="menuDesc">Ballistic interceptor defense across 45 global megacities. Aim and detonate flak clouds to intercept descending hypersonic missile warheads before city domes fall.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">DEPLOY BATTERY</button>
+        <div class="controls-hint">Controls: Click or Tap to Launch Flak Interceptor | Aim Ahead of Warhead Vectors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Orbital Defense Sentinel Game Banner">
+  <!-- Orbital Defense Sentinel Thumbnail Graphic -->
+  <defs>
+    <radialGradient id="odBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a152e" />
+      <stop offset="60%" stop-color="#050a17" />
+      <stop offset="100%" stop-color="#020409" />
+    </radialGradient>
+    <radialGradient id="planetGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="40%" stop-color="#0055aa" />
+      <stop offset="80%" stop-color="#001844" />
+      <stop offset="100%" stop-color="#00081a" />
+    </radialGradient>
+    <filter id="odGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="b1" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Cosmos Background -->
+  <rect width="600" height="340" fill="url(#odBg)" />
+
+  <!-- Stars in Background -->
+  <g fill="#a6c8ff" opacity="0.6">
+    <circle cx="50" cy="50" r="1.5" />
+    <circle cx="150" cy="90" r="1" />
+    <circle cx="280" cy="40" r="2" />
+    <circle cx="480" cy="60" r="1.2" />
+    <circle cx="550" cy="120" r="1.5" />
+    <circle cx="80" cy="260" r="1" />
+    <circle cx="520" cy="270" r="1.8" />
+  </g>
+
+  <!-- Central Planet Earth / Colony Sphere -->
+  <g transform="translate(300, 180)">
+    <!-- Atmospheric Halo Ring -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.4" filter="url(#odGlow)" />
+    <!-- Planet Globe -->
+    <circle cx="0" cy="0" r="60" fill="url(#planetGlow)" />
+    <!-- Continents Matrix Lines -->
+    <path d="M -30,-20 Q 0,-40 25,-15 Q 40,10 10,35 Q -25,30 -30,-20 Z" fill="rgba(0, 240, 255, 0.25)" />
+    <path d="M -45,10 Q -30,0 -20,25 Q -40,40 -45,10 Z" fill="rgba(0, 255, 136, 0.2)" />
+
+    <!-- Orbital Shield Radius -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="rgba(0, 240, 255, 0.25)" stroke-width="1.5" stroke-dasharray="6 6" />
+
+    <!-- Revolving Defense Turret / Sentinel Cannon -->
+    <g transform="rotate(40)">
+      <circle cx="0" cy="-105" r="12" fill="#0c1833" stroke="#00f0ff" stroke-width="2.5" filter="url(#odGlow)" />
+      <!-- Twin Laser Barrels -->
+      <line x1="-4" y1="-105" x2="-4" y2="-130" stroke="#00f0ff" stroke-width="3" filter="url(#odGlow)" />
+      <line x1="4" y1="-105" x2="4" y2="-130" stroke="#00f0ff" stroke-width="3" filter="url(#odGlow)" />
+      
+      <!-- Energy Cannon Blast Beams -->
+      <line x1="-4" y1="-130" x2="-4" y2="-180" stroke="#ffffff" stroke-width="2" filter="url(#odGlow)" />
+      <line x1="4" y1="-130" x2="4" y2="-180" stroke="#ffffff" stroke-width="2" filter="url(#odGlow)" />
+    </g>
+
+    <!-- Swarm of Incoming Threat Meteors -->
+    <!-- Meteor 1 (North-East incoming) -->
+    <g transform="translate(140, -110)">
+      <line x1="40" y1="-30" x2="0" y2="0" stroke="#ff007f" stroke-width="3" opacity="0.8" filter="url(#odGlow)" />
+      <circle cx="0" cy="0" r="7" fill="#ff007f" filter="url(#odGlow)" />
+      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    </g>
+    <!-- Meteor 2 (West incoming) -->
+    <g transform="translate(-160, -30)">
+      <line x1="-50" y1="-10" x2="0" y2="0" stroke="#ffaa00" stroke-width="3" opacity="0.8" filter="url(#odGlow)" />
+      <circle cx="0" cy="0" r="8" fill="#ffaa00" filter="url(#odGlow)" />
+      <circle cx="0" cy="0" r="4" fill="#ffffff" />
+    </g>
+    <!-- Meteor 3 (South-East incoming) -->
+    <g transform="translate(120, 100)">
+      <line x1="30" y1="25" x2="0" y2="0" stroke="#ff007f" stroke-width="2" opacity="0.7" filter="url(#odGlow)" />
+      <circle cx="0" cy="0" r="5" fill="#ff007f" />
+    </g>
+  </g>
+
+  <!-- Title Badge Overlay -->
+  <rect x="25" y="25" width="250" height="34" rx="6" fill="rgba(2, 4, 9, 0.85)" stroke="#00f0ff" stroke-width="1.2" />
+  <text x="38" y="48" font-family="'Orbitron', sans-serif" font-size="15" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+    ORBITAL <tspan fill="#ff007f">DEFENSE</tspan>
+  </text>
+  
+  <rect x="490" y="25" width="85" height="26" rx="4" fill="#ffaa00" />
+  <text x="502" y="42" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#070913" letter-spacing="1">
+    TACTICAL
+  </text>
+</svg>

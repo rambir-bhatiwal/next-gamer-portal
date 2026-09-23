@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Drift: Tokyo Neo-Alley - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">District / Alley</div><div id="themeVal" class="hud-val">1: Akihabara Neon Alley</div></div>
+      <div class="hud-box"><div class="hud-lbl">Drift Score & Multiplier</div><div id="scoreVal" class="hud-val">0 PTS (x1.0)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Target Quota & Time</div><div id="quotaVal" class="hud-val">0 / 2500 | 45.0s</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CYBER DRIFT: TOKYO NEO-ALLEY</h1>
+        <p id="menuDesc">Top-down urban alley drift challenge across 45 unique cyberpunk city districts. Counter-steer through tight corners to rack up massive drift multiplier combos before time expires.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START DRIFT RUN</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD to Steer & Throttle | Space to Handbrake Drift | Touch & Drag on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

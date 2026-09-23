@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Orbital Defense: Sentinel - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box">
+        <div class="hud-lbl">Planetary Sector</div>
+        <div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-lbl">Threats Neutralized</div>
+        <div id="scoreVal" class="hud-val">0 / 20</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-lbl">Colony Shield</div>
+        <div id="shieldVal" class="hud-val" style="color: #00ff88;">100%</div>
+      </div>
+      <div class="hud-box">
+        <div class="hud-lbl">EMP Charge</div>
+        <div id="empVal" class="hud-val" style="color: #00f0ff;">READY [E]</div>
+      </div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="defenseCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="empBtn" class="action-btn">DETONATE EMP [E]</button>
+      <button id="restartBtn" class="action-btn">RETRY SECTOR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">ORBITAL DEFENSE: SENTINEL</h1>
+        <p id="overlayDesc">Protect planetary colonies across 45 cosmic sectors from incoming meteor swarms and rogue orbital satellites. Rotate your 360-degree turret, launch interceptor missiles, and trigger EMP shockwaves.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE TURRET DEFENSE</button>
+        <div class="controls-hint">Controls: Mouse / Touch to aim & click to fire. Spacebar to shoot, [E] key for EMP shockwave.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

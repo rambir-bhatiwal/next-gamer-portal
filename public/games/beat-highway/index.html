@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beat Highway: 4-Lane Synthwave Tap - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">STAGE</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">THEME</span><span id="themeDisplay" class="value">Sunset Synthwave</span></div>
+      <div class="hud-item"><span class="label">SCORE</span><span id="scoreDisplay" class="value">0</span></div>
+      <div class="hud-item"><span class="label">STREAK</span><span id="streakDisplay" class="value">0x</span></div>
+      <div class="hud-item"><span class="label">SHIELDS</span><span id="shieldDisplay" class="value">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">STAGES</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="highwayCanvas" width="480" height="640"></canvas>
+      <div id="hitFeedback" class="hit-feedback"></div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="key-hints">
+        <button class="key-btn" data-lane="0">D</button>
+        <button class="key-btn" data-lane="1">F</button>
+        <button class="key-btn" data-lane="2">J</button>
+        <button class="key-btn" data-lane="3">K</button>
+      </div>
+      <div class="controls-hint">Tap keys [D] [F] [J] [K] or click lane buttons on beat!</div>
+    </footer>
+  </div>
+
+  <!-- Level Select Modal -->
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT SYNTHWAVE TRACK (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02010c"/>
+      <stop offset="50%" stop-color="#070217"/>
+      <stop offset="100%" stop-color="#020c14"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Neon Maze Walls -->
+  <g stroke="#0055ff" stroke-width="6" fill="none" filter="url(#neonGlow)">
+    <rect x="70" y="80" width="460" height="280" rx="12"/>
+    <path d="M150 140 H250 V200 H150 Z"/>
+    <path d="M350 140 H450 V200 H350 Z"/>
+    <path d="M250 250 H350 V310 H250 Z"/>
+    <path d="M150 250 H200 V310"/>
+    <path d="M450 250 H400 V310"/>
+  </g>
+  <!-- Data Pellets -->
+  <g fill="#00ffff" filter="url(#neonGlow)">
+    <circle cx="110" cy="110" r="4"/>
+    <circle cx="150" cy="110" r="4"/>
+    <circle cx="190" cy="110" r="4"/>
+    <circle cx="230" cy="110" r="4"/>
+    <circle cx="270" cy="110" r="4"/>
+    <circle cx="310" cy="110" r="4"/>
+    <circle cx="350" cy="110" r="4"/>
+    <circle cx="390" cy="110" r="4"/>
+    <circle cx="430" cy="110" r="4"/>
+    <circle cx="470" cy="110" r="4"/>
+    <!-- Big Power Pellet -->
+    <circle cx="110" cy="330" r="10" fill="#ffd700"/>
+    <circle cx="490" cy="330" r="10" fill="#ffd700"/>
+  </g>
+  <!-- Pac Cyber Entity & Ghosts -->
+  <g filter="url(#neonGlow)">
+    <!-- Yellow Chaser -->
+    <path d="M210 110 A 24 24 0 1 1 210 109 L190 110 Z" fill="#ffd700"/>
+    <!-- Cyber Ghost 1 (Red) -->
+    <path d="M360 220 C360 200 390 200 390 220 L390 235 L382 228 L375 235 L368 228 L360 235 Z" fill="#ff0055"/>
+    <circle cx="370" cy="214" r="3" fill="#fff"/>
+    <circle cx="380" cy="214" r="3" fill="#fff"/>
+    <!-- Cyber Ghost 2 (Cyan) -->
+    <path d="M410 220 C410 200 440 200 440 220 L440 235 L432 228 L425 235 L418 228 L410 235 Z" fill="#00f0ff"/>
+    <circle cx="420" cy="214" r="3" fill="#fff"/>
+    <circle cx="430" cy="214" r="3" fill="#fff"/>
+  </g>
+  <!-- Title Badge -->
+  <rect x="135" y="24" width="330" height="34" rx="6" fill="rgba(6, 2, 18, 0.85)" stroke="#ffd700" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#ffd700" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">TURBO PAC-GRID</text>
+</svg>

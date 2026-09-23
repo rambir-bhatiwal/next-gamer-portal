@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Spider Protocol: Eight-Legged Data Sorter - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Spider Protocol</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Suits Cleared</div><div id="suitsVal" class="hud-val" style="color:#00ff88;">0 / 8 SUITS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Stock Rows</div><div id="stockVal" class="hud-val" style="color:#00f0ff;">5 DEALS REMAINING</div></div>
+      <div class="hud-box"><div class="hud-lbl">Moves Made</div><div id="movesVal" class="hud-val" style="color:#ffd600;">0 MOVES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">PROTOCOLS (1-45)</button>
+      <button id="dealBtn" class="action-btn deal-btn">DEAL NEW ROW [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT PROTOCOL &gt;</button>
+    </div>
+    <div class="controls-hint">Build tableau cascades in descending order King to Ace | Completed 13-card suit sequences are removed | Clear all cards</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">SPIDER PROTOCOL</h1>
+        <p id="overlayDesc">Sort cascading card sequences from King down to Ace to assemble full suits across 45 stages scaling from 1 to 4 suits!</p>
+        <button id="startBtn" class="glow-btn">INITIATE SORTER</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT SPIDER PROTOCOL (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

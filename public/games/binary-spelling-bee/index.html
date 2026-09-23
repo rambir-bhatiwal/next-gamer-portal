@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Binary Spelling Bee: Hex Word Forge - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Hex Forge</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score Target</div><div id="scoreVal" class="hud-val">0 / 120 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Spelling</div><div id="currentSpellingVal" class="hud-val" style="color:#ffd700;">TYPE WORDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Pangram Found</div><div id="pangramVal" class="hud-val" style="color:#00ff88;">NO PANGRAM YET</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">FORGES (1-45)</button>
+      <button id="deleteBtn" class="action-btn">DELETE</button>
+      <button id="submitBtn" class="action-btn submit-btn">ENTER [ENTER]</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT FORGE &gt;</button>
+    </div>
+    <div class="controls-hint">Click honeycomb hexes or type letters on keyboard | Must include center golden letter | Press ENTER to forge word</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">BINARY SPELLING BEE</h1>
+        <p id="overlayDesc">Construct words of 4 or more letters using a honeycomb of 7 letters, requiring the central golden letter, across 45 stages!</p>
+        <button id="startBtn" class="glow-btn">ENTER HONEYCOMB</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT HEX FORGE (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Cyber Runner 2099 Game Banner">
+  <!-- Cyber Runner 2099 Thumbnail Graphic -->
+  <defs>
+    <linearGradient id="crSky" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#0b001a" />
+      <stop offset="50%" stop-color="#19053b" />
+      <stop offset="100%" stop-color="#360940" />
+    </linearGradient>
+    <linearGradient id="crSun" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#ffaa00" />
+    </linearGradient>
+    <linearGradient id="crGrid" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="crBike" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+    <filter id="crGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b1" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Cyber Sky -->
+  <rect width="600" height="340" fill="url(#crSky)" />
+
+  <!-- Retro Synthwave Sun with Scanlines -->
+  <circle cx="300" cy="150" r="85" fill="url(#crSun)" filter="url(#crGlow)" />
+  <g fill="#0b001a">
+    <rect x="200" y="145" width="200" height="3" />
+    <rect x="200" y="153" width="200" height="4.5" />
+    <rect x="200" y="163" width="200" height="6" />
+    <rect x="200" y="175" width="200" height="8" />
+    <rect x="200" y="189" width="200" height="11" />
+    <rect x="200" y="206" width="200" height="15" />
+  </g>
+
+  <!-- Distant City Skyline Silhouettes -->
+  <polygon points="40,210 60,140 85,140 95,210" fill="#08031d" />
+  <polygon points="90,210 115,110 140,110 160,210" fill="#0c0529" />
+  <polygon points="170,210 185,160 215,160 225,210" fill="#090420" />
+  <polygon points="380,210 395,130 425,130 440,210" fill="#090420" />
+  <polygon points="450,210 470,100 500,100 520,210" fill="#0d062b" />
+  <polygon points="530,210 545,150 570,150 580,210" fill="#08031d" />
+
+  <!-- 3D Perspective Ground Grid -->
+  <polygon points="0,210 600,210 600,340 0,340" fill="#070913" />
+  <!-- Perspective Lines converging to horizon (300, 210) -->
+  <line x1="300" y1="210" x2="-200" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+  <line x1="300" y1="210" x2="-50" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+  <line x1="300" y1="210" x2="80" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+  <line x1="300" y1="210" x2="190" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.7" />
+  <line x1="300" y1="210" x2="270" y2="340" stroke="#00f0ff" stroke-width="1.5" opacity="0.8" />
+  <line x1="300" y1="210" x2="330" y2="340" stroke="#00f0ff" stroke-width="1.5" opacity="0.8" />
+  <line x1="300" y1="210" x2="410" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.7" />
+  <line x1="300" y1="210" x2="520" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+  <line x1="300" y1="210" x2="650" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+  <line x1="300" y1="210" x2="800" y2="340" stroke="#00f0ff" stroke-width="1.2" opacity="0.6" />
+
+  <!-- Horizontal Grid Latitudes -->
+  <line x1="0" y1="216" x2="600" y2="216" stroke="#00f0ff" stroke-width="0.8" opacity="0.3" />
+  <line x1="0" y1="225" x2="600" y2="225" stroke="#00f0ff" stroke-width="1" opacity="0.4" />
+  <line x1="0" y1="240" x2="600" y2="240" stroke="#00f0ff" stroke-width="1.2" opacity="0.5" />
+  <line x1="0" y1="262" x2="600" y2="262" stroke="#00f0ff" stroke-width="1.5" opacity="0.7" />
+  <line x1="0" y1="295" x2="600" y2="295" stroke="#00f0ff" stroke-width="2" opacity="0.9" filter="url(#crGlow)" />
+
+  <!-- Neon Laser Obstacle -->
+  <line x1="160" y1="250" x2="160" y2="190" stroke="#ff007f" stroke-width="4" filter="url(#crGlow)" />
+  <polygon points="152,190 168,190 160,180" fill="#ff007f" />
+
+  <!-- Cyber Runner Character / Bike Silhouette in Motion -->
+  <g transform="translate(240, 215) scale(0.95)">
+    <!-- Light Trail -->
+    <path d="M-80,45 L-10,42 L-2,30 L-80,32 Z" fill="url(#crBike)" opacity="0.6" filter="url(#crGlow)" />
+    <!-- Cyber Wheel Rear -->
+    <circle cx="10" cy="42" r="16" fill="#070913" stroke="#00f0ff" stroke-width="3" filter="url(#crGlow)" />
+    <circle cx="10" cy="42" r="7" fill="#00f0ff" />
+    <!-- Cyber Wheel Front -->
+    <circle cx="75" cy="42" r="16" fill="#070913" stroke="#00f0ff" stroke-width="3" filter="url(#crGlow)" />
+    <circle cx="75" cy="42" r="7" fill="#00f0ff" />
+    <!-- Bike Chassis -->
+    <polygon points="10,40 35,22 65,22 75,40 50,44" fill="#121a36" stroke="#ff007f" stroke-width="2.5" filter="url(#crGlow)" />
+    <!-- Rider Silhouette leaning forward -->
+    <polygon points="32,22 45,5 56,10 42,24" fill="#00f0ff" />
+    <!-- Helmet Visor -->
+    <circle cx="50" cy="8" r="6" fill="#ff007f" filter="url(#crGlow)" />
+    <!-- Headlight Beam -->
+    <polygon points="78,35 180,15 180,55 78,42" fill="#00f0ff" opacity="0.25" filter="url(#crGlow)" />
+  </g>
+
+  <!-- Game Banner Text Overlay -->
+  <rect x="25" y="25" width="220" height="34" rx="6" fill="rgba(11, 0, 26, 0.75)" stroke="#00f0ff" stroke-width="1.2" />
+  <text x="38" y="48" font-family="'Orbitron', sans-serif" font-size="16" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+    CYBER RUNNER <tspan fill="#ff007f">2099</tspan>
+  </text>
+  
+  <rect x="495" y="25" width="80" height="26" rx="4" fill="#ff007f" />
+  <text x="507" y="42" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="1">
+    ACTION
+  </text>
+</svg>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Plasma Hydrofoil: Cyberpunk Waterway - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Canal / Waterway</div><div id="themeVal" class="hud-val">1: Neo-Venice Neon Canals</div></div>
+      <div class="hud-box"><div class="hud-lbl">Knots & Stunt Points</div><div id="speedVal" class="hud-val">65 KTS | 0 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Distance & Target</div><div id="distVal" class="hud-val">0 / 2200M</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">PLASMA HYDROFOIL: WATERWAY</h1>
+        <p id="menuDesc">Electrified hydrofoil jet-ski racing across 45 illuminated cyberpunk canal environments. Hit water ramps for aerial stunt combos and carve through wake currents to reach the ocean terminal.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">LAUNCH HYDROFOIL</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Carve Water | Up/W for Throttle | Space to Handbrake Wake Drift</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

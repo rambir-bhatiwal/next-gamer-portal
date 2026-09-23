@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bassline Defender: BPM Turret Sync - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="defender-container">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/45</span></div>
+      <div class="stat"><span class="lbl">PERIMETER</span><span id="themeDisplay" class="val">Sub-Bass Subnet</span></div>
+      <div class="stat"><span class="lbl">SCORE</span><span id="scoreDisplay" class="val">0</span></div>
+      <div class="stat"><span class="lbl">WAVE</span><span id="waveDisplay" class="val">0/20</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="turret-arena">
+      <canvas id="defenderCanvas" width="480" height="560"></canvas>
+      <div id="defMsg" class="def-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <button id="fireBtn" class="btn-fire">FIRE SONIC CANNON (SPACE / CLICK)</button>
+      <div class="hint">Aim with mouse/touch | Fire on the bass beat for massive shockwaves!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT DEFENSE PERIMETER (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

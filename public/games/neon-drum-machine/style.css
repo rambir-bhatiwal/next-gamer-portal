@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  background: #080a12;
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.drum-app {
+  width: 100vw;
+  max-width: 500px;
+  height: 100vh;
+  max-height: 860px;
+  background: #111422;
+  border: 2px solid #ff8800;
+  border-radius: 14px;
+  box-shadow: 0 0 35px rgba(255, 136, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.hud-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #090c17;
+  border-bottom: 1px solid rgba(255, 136, 0, 0.3);
+}
+.hud-stat {
+  display: flex;
+  flex-direction: column;
+}
+.hud-stat .lbl {
+  font-size: 8px;
+  color: #ff8800;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.hud-stat .val {
+  font-size: 13px;
+  font-weight: 900;
+}
+.btn-stages {
+  background: #ff8800;
+  border: none;
+  color: #000;
+  font-weight: 900;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.screen-section {
+  padding: 10px 14px;
+  background: #06080e;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+#scopeCanvas {
+  width: 100%;
+  height: 80px;
+  background: #030408;
+  border: 1px solid #00f0ff;
+  border-radius: 6px;
+}
+.status-prompt {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #39ff14;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+.pad-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  padding: 14px;
+}
+.pad-btn {
+  background: #1b2038;
+  border: 2px solid #ff8800;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: 0 4px 0 #0c0e1a;
+  transition: all 0.08s;
+}
+.pad-btn:active, .pad-btn.active {
+  background: #ff8800;
+  color: #000;
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #0c0e1a, 0 0 20px #ff8800;
+}
+.pad-lbl {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.pad-key {
+  font-size: 9px;
+  opacity: 0.6;
+  font-family: monospace;
+}
+.hud-controls {
+  padding: 10px 14px 14px;
+  background: #090c17;
+  border-top: 1px solid rgba(255, 136, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ctl-btn {
+  background: linear-gradient(135deg, #00f0ff, #7c4dff);
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.ctl-btn:hover {
+  filter: brightness(1.15);
+}
+.hint-text {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 3, 10, 0.94);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-overlay.hidden { display: none; }
+.modal-box {
+  width: 90%;
+  max-width: 420px;
+  background: #111422;
+  border: 2px solid #ff8800;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.modal-box h2 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #ff8800;
+  text-align: center;
+}
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.lvl-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #ff8800;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.lvl-btn.active {
+  background: #ff8800;
+  color: #000;
+}
+.btn-close {
+  background: #39ff14;
+  border: none;
+  color: #000;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

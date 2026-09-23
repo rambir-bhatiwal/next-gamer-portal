@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Chrono Switch Phase Shift Game Banner">
+  <!-- Chrono Switch Phase Shift Thumbnail Graphic -->
+  <defs>
+    <radialGradient id="csBg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#110926" />
+      <stop offset="60%" stop-color="#080314" />
+      <stop offset="100%" stop-color="#020008" />
+    </radialGradient>
+    <linearGradient id="cyanBeam" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <linearGradient id="magentaBeam" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ff007f" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <filter id="csGlowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b1" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="csGlowMagenta" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b1" />
+      <feMerge>
+        <feMergeNode in="b1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Polarity Rift Background -->
+  <rect width="600" height="340" fill="url(#csBg)" />
+
+  <!-- Dual Polarity Waveforms -->
+  <!-- Upper Cyan Stream -->
+  <path d="M 0,110 C 150,70 250,150 400,100 C 480,75 540,110 600,90" fill="none" stroke="#00f0ff" stroke-width="4" opacity="0.8" filter="url(#csGlowCyan)" />
+  <path d="M 0,110 C 150,70 250,150 400,100 C 480,75 540,110 600,90" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.9" />
+
+  <!-- Lower Magenta Stream -->
+  <path d="M 0,230 C 150,270 250,190 400,240 C 480,265 540,230 600,250" fill="none" stroke="#ff007f" stroke-width="4" opacity="0.8" filter="url(#csGlowMagenta)" />
+  <path d="M 0,230 C 150,270 250,190 400,240 C 480,265 540,230 600,250" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.9" />
+
+  <!-- Central Polarity Shifting Core Orb (Bipolar Split) -->
+  <g transform="translate(300, 170)">
+    <!-- Outer Dispersion Aura -->
+    <circle cx="0" cy="0" r="58" fill="none" stroke="#00f0ff" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#ff007f" stroke-width="1.5" opacity="0.4" stroke-dasharray="6 6" />
+
+    <!-- Left Polarity Hemisphere (Cyan) -->
+    <path d="M 0,-34 A 34 34 0 0 0 0,34 Z" fill="#00f0ff" filter="url(#csGlowCyan)" />
+    <!-- Right Polarity Hemisphere (Magenta) -->
+    <path d="M 0,-34 A 34 34 0 0 1 0,34 Z" fill="#ff007f" filter="url(#csGlowMagenta)" />
+    
+    <!-- Central Divider Spark Line -->
+    <line x1="0" y1="-38" x2="0" y2="38" stroke="#ffffff" stroke-width="2.5" />
+    <!-- White Hot Nucleus -->
+    <circle cx="0" cy="0" r="8" fill="#ffffff" />
+
+    <!-- Phase Shift Particles -->
+    <circle cx="-22" cy="-12" r="3" fill="#ffffff" opacity="0.8" />
+    <circle cx="22" cy="12" r="3" fill="#ffffff" opacity="0.8" />
+  </g>
+
+  <!-- Alternating Laser Phase Gates -->
+  <!-- Gate 1: Cyan -->
+  <g transform="translate(140, 120)">
+    <line x1="0" y1="-35" x2="0" y2="35" stroke="#00f0ff" stroke-width="5" filter="url(#csGlowCyan)" />
+    <circle cx="0" cy="-35" r="4" fill="#ffffff" />
+    <circle cx="0" cy="35" r="4" fill="#ffffff" />
+  </g>
+
+  <!-- Gate 2: Magenta -->
+  <g transform="translate(460, 120)">
+    <line x1="0" y1="-35" x2="0" y2="35" stroke="#ff007f" stroke-width="5" filter="url(#csGlowMagenta)" />
+    <circle cx="0" cy="-35" r="4" fill="#ffffff" />
+    <circle cx="0" cy="35" r="4" fill="#ffffff" />
+  </g>
+
+  <!-- Title Badge Overlay -->
+  <rect x="25" y="25" width="250" height="34" rx="6" fill="rgba(6, 2, 16, 0.85)" stroke="#00f0ff" stroke-width="1.2" />
+  <text x="38" y="48" font-family="'Orbitron', sans-serif" font-size="15" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+    CHRONO <tspan fill="#ff007f">SWITCH</tspan>
+  </text>
+  
+  <rect x="490" y="25" width="85" height="26" rx="4" fill="#00f0ff" />
+  <text x="502" y="42" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#070913" letter-spacing="1">
+    REFLEX
+  </text>
+</svg>

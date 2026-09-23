@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Plasma Ballistics: Laser Artillery - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Battleground</div><div id="themeVal" class="hud-val">1: Martian Dunes</div></div>
+      <div class="hud-box"><div class="hud-lbl">Wind Vector</div><div id="windVal" class="hud-val">0.0 M/S</div></div>
+      <div class="hud-box"><div class="hud-lbl">Tank Armor</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Enemy Target</div><div id="enemyVal" class="hud-val" style="color:#ff1744;">100% ARMOR</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">ZONES (1-45)</button>
+      <button id="aimUpBtn" class="action-btn">ELEVATE ^ [W]</button>
+      <button id="aimDownBtn" class="action-btn">LOWER v [S]</button>
+      <button id="powerDownBtn" class="action-btn">PWR - [A]</button>
+      <button id="powerUpBtn" class="action-btn">PWR + [D]</button>
+      <button id="fireBtn" class="action-btn fire-btn">FIRE CANNON [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT ZONE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">PLASMA BALLISTICS</h1>
+        <p id="overlayDesc">Command a plasma artillery tank on destructible 2D terrain across 45 combat stages. Adjust barrel elevation, firing power, and account for shifting atmospheric wind vectors to obliterate hostile tank squadrons!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">DEPLOY ARTILLERY</button>
+        <div class="controls-hint">Controls: [W/S] to adjust barrel angle, [A/D] to adjust cannon power, [Space] to fire. Touch buttons supported.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

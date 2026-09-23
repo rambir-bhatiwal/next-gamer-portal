@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Tri-Peaks Cyber Pyramid: Data Clear - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Cyber Pyramid</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Pyramid Cards</div><div id="cardsVal" class="hud-val" style="color:#00ff88;">28 / 28 REMAINING</div></div>
+      <div class="hud-box"><div class="hud-lbl">Streak Multiplier</div><div id="streakVal" class="hud-val" style="color:#ffd600;">x1 STREAK</div></div>
+      <div class="hud-box"><div class="hud-lbl">Stock Draw Pile</div><div id="stockVal" class="hud-val" style="color:#00f0ff;">23 CARDS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">PYRAMIDS (1-45)</button>
+      <button id="drawBtn" class="action-btn">DRAW STOCK [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RELOAD</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT PYRAMID &gt;</button>
+    </div>
+    <div class="controls-hint">Click tableau cards that are 1 rank higher or lower than the waste pile card | Draw from deck when no moves remain</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">TRI-PEAKS CYBER PYRAMID</h1>
+        <p id="overlayDesc">Clear 3 overlapping cyber peaks by matching cards that are 1 higher or 1 lower than the waste card across 45 cosmic layouts!</p>
+        <button id="startBtn" class="glow-btn">ENTER PYRAMID</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT CYBER PYRAMID (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Jetpack Salvager: Zero-G Cavern Dash - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Derelict Sector</div><div id="themeVal" class="hud-val">Sector 1</div></div>
+      <div class="hud-box"><div class="hud-lbl">Fuel Reserve</div><div id="fuelVal" class="hud-val">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hull Integrity</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Salvage Quota</div><div id="salvageVal" class="hud-val" style="color:#ffd600;">0 / 4 CORES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="thrustLeftBtn" class="action-btn">THRUST LEFT [A]</button>
+      <button id="thrustUpBtn" class="action-btn thrust-btn">MAIN THRUSTER [W/SPACE]</button>
+      <button id="thrustRightBtn" class="action-btn">THRUST RIGHT [D]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">JETPACK SALVAGER</h1>
+        <p id="overlayDesc">Pilot a fuel-limited zero-g salvage explorer through treacherous metallic corridors across 45 sectors. Collect salvage cores, dodge hydraulic presses and laser hazards, and dock with the escape airlock!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE ZERO-G FLIGHT</button>
+        <div class="controls-hint">Controls: [W/Up/Space] or Center Button to Fire Jetpack Thruster. [A/D or Left/Right] to steer. Land on landing pads to refuel!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

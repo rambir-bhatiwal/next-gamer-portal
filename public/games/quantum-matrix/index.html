@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Quantum Matrix: Cryptographic Decryptor - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Security Sector</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score Target</div><div id="scoreDisplay" class="hud-val">0 / 800 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Breach Window</div><div id="timeDisplay" class="hud-val">60s</div></div>
+    </div>
+    
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas" style="display:none;"></canvas>
+      <div id="matrixGrid" class="matrix-grid"></div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RESTART SECTOR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">QUANTUM MATRIX HACKER</h1>
+        <p id="overlayDesc">Match 3 or more cryptographic data glyphs to decrypt the security mainframe across 45 covert security sectors.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE INFILTRATION</button>
+        <div class="controls-hint">Controls: Click adjacent glyphs to swap and match 3 in a row</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

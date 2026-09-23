@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Ninja Climb: Shadow Shuriken Dash - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Spire Tower</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Altitude Reached</div><div id="altVal" class="hud-val">0 / 800m</div></div>
+      <div class="hud-box"><div class="hud-lbl">Shinobi Shields</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Drones Slashed</div><div id="killsVal" class="hud-val" style="color:#39ff14;">0 KILLS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SPIRES (1-45)</button>
+      <button id="shurikenBtn" class="action-btn shuriken-btn">THROW SHURIKEN [Z / CLICK]</button>
+      <button id="restartBtn" class="action-btn">RETRY ASCENT</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SPIRE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER NINJA CLIMB</h1>
+        <p id="overlayDesc">Scale neon megastructure spires across 45 vertical stages. Wall-jump between shaft walls, throw precision shurikens at patrolling security drones, and reach the apex.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">BEGIN SPIRE ASCENT</button>
+        <div class="controls-hint">Controls: Arrow keys / [A][D] to steer & wall-jump. [Space] to leap. [Z] or Click to throw shurikens.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

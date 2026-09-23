@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Drone Swarm Commander: Tactical Patrol - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Patrol Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Swarm Drones</div><div id="droneVal" class="hud-val" style="color:#00f0ff;">40 DRONES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Stance</div><div id="stanceVal" class="hud-val" style="color:#ffd600;">INTERCEPT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hostiles Purged</div><div id="scoreVal" class="hud-val" style="color:#39ff14;">0 / 20</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="stance-bar">
+      <button class="stance-btn active" data-stance="intercept">AGGRESSIVE INTERCEPT</button>
+      <button class="stance-btn" data-stance="orbit">ORBITAL DEFENSE</button>
+      <button class="stance-btn" data-stance="scatter">SPREAD PATROL</button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RESET PATROL</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">DRONE SWARM COMMANDER</h1>
+        <p id="overlayDesc">Command a dynamic flock of autonomous micro-drones using flocking algorithms across 45 security sectors. Direct your swarm to hunt down stealth enemy infiltrators.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">LAUNCH DRONE SWARM</button>
+        <div class="controls-hint">Controls: Click or drag on canvas to position swarm focal beacon. Choose tactical stance to adapt flocking behavior.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

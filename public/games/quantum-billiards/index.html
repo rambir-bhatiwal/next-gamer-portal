@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Zero-G Pool: Quantum Billiards - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Quantum Table</div><div id="themeVal" class="hud-val">1: Felt Cyan</div></div>
+      <div class="hud-box"><div class="hud-lbl">Spheres Sunk</div><div id="ballsVal" class="hud-val">0 / 5 BALLS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Stroke Limit</div><div id="strokesVal" class="hud-val" style="color:#00ff88;">6 STROKES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Cue Shield</div><div id="shieldVal" class="hud-val" style="color:#ffd600;">3 LIVES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">TABLES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RETRY TABLE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TABLE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">ZERO-G POOL</h1>
+        <p id="overlayDesc">Pocket glowing quantum spheres on frictionless octagonal tables across 45 stages. Calculate geometric bank shots off magnetic cushions and into gravitational pockets within strict stroke limits!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">CHALK QUANTUM CUE</button>
+        <div class="controls-hint">Controls: Click/Tap and drag back from the white Cue Sphere to aim and set stroke power, then release to strike!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

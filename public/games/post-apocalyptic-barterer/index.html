@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Apocalyptic Barterer: Wasteland Merchant - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">STAGE</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">SETTLEMENT</span><span id="themeDisplay" class="value">Scrap City</span></div>
+      <div class="hud-item"><span class="label">CAPS</span><span id="capsDisplay" class="value">300 CAPS</span></div>
+      <div class="hud-item"><span class="label">WATER</span><span id="waterDisplay" class="value">20 GAL</span></div>
+      <div class="hud-item"><span class="label">FUEL</span><span id="fuelDisplay" class="value">15 GAL</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">STAGES</button>
+    </header>
+
+    <main class="trading-board">
+      <div id="eventLog" class="event-log">Welcome to the settlement. Buy low, sell high, and manage caravan supplies!</div>
+      
+      <div class="market-grid">
+        <div class="market-card">
+          <span class="comm-title">💧 Purified Water</span>
+          <span id="priceWater" class="comm-price">10 Caps</span>
+          <div class="comm-btn-row">
+            <button class="buy-btn" data-comm="water">BUY</button>
+            <button class="sell-btn" data-comm="water">SELL</button>
+          </div>
+          <span id="invWater" class="comm-inv">Stock: 20</span>
+        </div>
+
+        <div class="market-card">
+          <span class="comm-title">⚙️ Scrap Metal</span>
+          <span id="priceScrap" class="comm-price">25 Caps</span>
+          <div class="comm-btn-row">
+            <button class="buy-btn" data-comm="scrap">BUY</button>
+            <button class="sell-btn" data-comm="scrap">SELL</button>
+          </div>
+          <span id="invScrap" class="comm-inv">Stock: 5</span>
+        </div>
+
+        <div class="market-card">
+          <span class="comm-title">⛽ Bio-Fuel</span>
+          <span id="priceFuel" class="comm-price">18 Caps</span>
+          <div class="comm-btn-row">
+            <button class="buy-btn" data-comm="fuel">BUY</button>
+            <button class="sell-btn" data-comm="fuel">SELL</button>
+          </div>
+          <span id="invFuel" class="comm-inv">Stock: 15</span>
+        </div>
+
+        <div class="market-card">
+          <span class="comm-title">💉 Medical Stims</span>
+          <span id="priceStims" class="comm-price">40 Caps</span>
+          <div class="comm-btn-row">
+            <button class="buy-btn" data-comm="stims">BUY</button>
+            <button class="sell-btn" data-comm="stims">SELL</button>
+          </div>
+          <span id="invStims" class="comm-inv">Stock: 2</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <button id="btnTravel" class="btn-travel">🚚 TRAVEL TO NEXT SETTLEMENT (-3 Water, -2 Fuel)</button>
+      <div class="controls-hint">Navigate trade routes across 45 wasteland settlements! Survive raider ambushes!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT WASTELAND SETTLEMENT (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

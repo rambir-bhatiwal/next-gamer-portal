@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyberpunk Mech Tactics: Grid Skirmish - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Skirmish Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Squad Phase</div><div id="phaseVal" class="hud-val" style="color:#00f0ff;">PLAYER TURN</div></div>
+      <div class="hud-box"><div class="hud-lbl">Action Points</div><div id="apVal" class="hud-val" style="color:#ffd600;">3 / 3 AP</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hostile Mechs</div><div id="enemyVal" class="hud-val" style="color:#ff1744;">3 REMAINING</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="orders-bar">
+      <button class="order-btn active" data-action="move">MOVE MECH</button>
+      <button class="order-btn" data-action="railgun">RAILGUN BLAST</button>
+      <button class="order-btn" data-action="missile">MISSILE SALVO</button>
+      <button id="endTurnBtn" class="action-btn end-turn-btn">END TURN &gt;</button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">ZONES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RETRY SKIRMISH</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT ZONE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBERPUNK MECH TACTICS</h1>
+        <p id="overlayDesc">Command a squad of three heavy combat mechs across 45 city battleground sectors. Deploy tactical AP to maneuver through destructible cover and eliminate hostile enemy walkers.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">DEPLOY MECH SQUADRON</button>
+        <div class="controls-hint">Controls: Click a player mech to select, choose action, click destination tile or hostile target.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

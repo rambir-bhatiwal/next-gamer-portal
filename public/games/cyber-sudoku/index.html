@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Sudoku: Binary Node Matrix - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Matrix Sector</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Errors Allowed</div><div id="errorVal" class="hud-val">MISTAKES: 0 / 3</div></div>
+      <div class="hud-box"><div class="hud-lbl">Timer</div><div id="timerVal" class="hud-val">00:00</div></div>
+    </div>
+    
+    <div class="matrix-board" id="sudokuGrid"></div>
+
+    <div class="keypad-bar">
+      <div class="keypad-row">
+        <button class="num-key" data-val="1">1</button>
+        <button class="num-key" data-val="2">2</button>
+        <button class="num-key" data-val="3">3</button>
+        <button class="num-key" data-val="4">4</button>
+        <button class="num-key" data-val="5">5</button>
+        <button class="num-key" data-val="6">6</button>
+        <button class="num-key" data-val="7">7</button>
+        <button class="num-key" data-val="8">8</button>
+        <button class="num-key" data-val="9">9</button>
+      </div>
+      <div class="tool-row">
+        <button id="eraseBtn" class="tool-btn">ERASE</button>
+        <button id="noteBtn" class="tool-btn">NOTES: OFF</button>
+        <button id="levelSelectBtn" class="tool-btn">SECTORS (1-45)</button>
+        <button id="restartBtn" class="tool-btn">RELOAD</button>
+      </div>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CYBER SUDOKU</h1>
+        <p id="menuDesc">Decrypt 9x9 binary data matrices across 45 unique difficulty sectors. Fill rows, columns, and 3x3 sectors with digits 1 through 9 without duplication.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE MATRIX</button>
+        <div class="controls-hint">Controls: Select cell, tap number 1-9 | Toggle notes mode for scratch computation</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  background: #0f0802;
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 680px;
+  height: 100vh;
+  max-height: 720px;
+  background: radial-gradient(circle at center, #241407 0%, #0f0802 100%);
+  border: 1px solid rgba(255, 179, 0, 0.3);
+  box-shadow: 0 0 35px rgba(255, 179, 0, 0.15);
+  position: relative;
+}
+.hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(22, 12, 4, 0.85);
+  border-bottom: 1px solid rgba(255, 179, 0, 0.25);
+}
+.hud-item {
+  display: flex;
+  flex-direction: column;
+}
+.hud-item .label {
+  font-size: 9px;
+  color: #ffe082;
+  letter-spacing: 1px;
+}
+.hud-item .value {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffb300;
+  font-family: monospace;
+}
+.btn-level-select {
+  background: #ffb300;
+  border: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.trading-board {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  gap: 12px;
+  overflow-y: auto;
+}
+.event-log {
+  background: rgba(14, 7, 2, 0.9);
+  border: 1px solid rgba(255, 179, 0, 0.2);
+  padding: 10px 14px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #ffb300;
+  min-height: 52px;
+  border-radius: 4px;
+}
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.market-card {
+  background: #1e1106;
+  border: 1px solid #ffb300;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.comm-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+.comm-price {
+  font-size: 14px;
+  font-weight: 900;
+  color: #ffd600;
+  font-family: monospace;
+}
+.comm-btn-row {
+  display: flex;
+  gap: 6px;
+}
+.buy-btn {
+  flex: 1;
+  background: #39ff14;
+  color: #000;
+  border: none;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 11px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.sell-btn {
+  flex: 1;
+  background: #ff3d00;
+  color: #fff;
+  border: none;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 11px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.comm-inv {
+  font-size: 10px;
+  color: #ffe082;
+  font-family: monospace;
+}
+.hud-footer {
+  padding: 12px;
+  background: rgba(18, 9, 3, 0.95);
+  border-top: 1px solid rgba(255, 179, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.btn-travel {
+  width: 100%;
+  max-width: 480px;
+  background: #ffb300;
+  color: #000;
+  border: none;
+  padding: 12px;
+  font-weight: 900;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+.controls-hint {
+  font-size: 10px;
+  color: #ffe082;
+  opacity: 0.8;
+}
+.modal-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(6, 3, 1, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-overlay.hidden { display: none; }
+.modal-content {
+  background: #1c0e04;
+  border: 1px solid #ffb300;
+  border-radius: 8px;
+  padding: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content h2 {
+  color: #ffb300;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 50vh;
+}
+.lvl-btn {
+  background: #2e1706;
+  border: 1px solid #ffb300;
+  color: #fff;
+  font-size: 10px;
+  padding: 8px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lvl-btn.active {
+  background: #ffb300;
+  color: #000;
+  font-weight: bold;
+}
+.btn-close {
+  margin-top: 12px;
+  background: #ffb300;
+  color: #000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiptune Piano Tiles: Cyber Virtuoso - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="piano-container">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/45</span></div>
+      <div class="stat"><span class="lbl">SONG</span><span id="themeDisplay" class="val">Sunset Melody</span></div>
+      <div class="stat"><span class="lbl">TILES</span><span id="tilesDisplay" class="val">0/30</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="canvas-arena">
+      <canvas id="pianoCanvas" width="440" height="560"></canvas>
+      <div id="pianoMsg" class="piano-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <div class="key-labels">
+        <button class="key-tap" data-lane="0">D</button>
+        <button class="key-tap" data-lane="1">F</button>
+        <button class="key-tap" data-lane="2">J</button>
+        <button class="key-tap" data-lane="3">K</button>
+      </div>
+      <div class="hint">Tap falling black/neon tiles as they cross the bottom line! [D, F, J, K]</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT PIANO REPERTOIRE (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum Chrono RPG: Timeline Paradox Savior - Next Games/Game (GAME 100 FINALE)</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">ERA</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">TIMELINE</span><span id="themeDisplay" class="value">Neo-Kyoto 2099</span></div>
+      <div class="hud-item"><span class="label">ERA SHIFT</span><span id="eraDisplay" class="value">PRESENT</span></div>
+      <div class="hud-item"><span class="label">PARTY HP</span><span id="partyHpDisplay" class="value">300/300</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">TIMELINES</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="chronoCanvas" width="600" height="400"></canvas>
+      <div id="chronoLog" class="chrono-log">Active Time Battle initiated against the Entropy Core! Select action.</div>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">TIMELINE RESTORED!</h2>
+        <p id="overlayMessage">Paradox anomaly neutralized across all eras.</p>
+        <button id="overlayBtn" class="btn-action">NEXT ERA</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="atb-bars-row">
+        <div class="atb-meter"><span class="atb-lbl">CHRONO KNIGHT</span><div class="atb-outer"><div id="atb1" class="atb-fill" style="width: 100%"></div></div></div>
+        <div class="atb-meter"><span class="atb-lbl">QUANTUM MAGE</span><div class="atb-outer"><div id="atb2" class="atb-fill" style="width: 80%"></div></div></div>
+        <div class="atb-meter"><span class="atb-lbl">TECH SPECIALIST</span><div class="atb-outer"><div id="atb3" class="atb-fill" style="width: 60%"></div></div></div>
+      </div>
+      <div class="battle-actions">
+        <button class="bat-btn atk" id="btnAtk">⚔️ CHRONO STRIKE [1]</button>
+        <button class="bat-btn warp" id="btnWarp">⌛ TIME WARP [2]</button>
+        <button class="bat-btn tech" id="btnTech">⚡ QUANTUM TECH [3]</button>
+        <button class="bat-btn era" id="btnEra">🌀 SHIFT ERA [4]</button>
+      </div>
+      <div class="controls-hint">Master the Active Time Battle (ATB) gauge to restore history across 45 timeline eras!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT TIMELINE ERA (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

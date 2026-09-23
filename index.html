@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- ==========================================================================
+       NEXT GAMES/GAME - PRODUCTION PORTAL ENTRYPOINT
+       Dynamic, SEO-optimized, config-driven gaming portal for instant-play HTML5 games.
+       Author: Next Games/Game Engineering Team
+       License: Open-Source / Royalty-Free Codebase
+       ========================================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Primary Dynamic SEO Meta Tags (Enriched via js/app.js) -->
+  <title>Next Games/Game — Instant-Play HTML5 Web Games Portal</title>
+  <meta name="title" content="Next Games/Game — Instant-Play HTML5 Web Games Portal">
+  <meta name="description" content="Immerse yourself in Next Games/Game: a premier portal for adrenaline-pumping, instant-play HTML5 games featuring sleek cyberpunk neon visuals, reactive physics, and zero download requirements.">
+  <meta name="keywords" content="Next Games/Game, HTML5 games, browser games, cyberpunk games, neon arcade, free web games, instant play, online gaming portal">
+  <meta name="author" content="Next Games/Game Interactive">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://next.gamer.free/">
+  <meta name="theme-color" content="#00f0ff">
+
+  <!-- Open Graph / Social Sharing Protocol (Facebook, LinkedIn, Discord) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://next.gamer.free/">
+  <meta property="og:title" content="Next Games/Game — Instant-Play HTML5 Web Games Portal">
+  <meta property="og:description" content="Play high-velocity, cyberpunk HTML5 browser games with reactive physics and zero installation on Next Games/Game.">
+  <meta property="og:image" content="assets/logo.svg">
+  <meta property="og:site_name" content="Next Games/Game">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Protocol -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://next.gamer.free/">
+  <meta name="twitter:title" content="Next Games/Game — Instant-Play HTML5 Web Games Portal">
+  <meta name="twitter:description" content="Play high-velocity, cyberpunk HTML5 browser games with reactive physics and zero installation on Next Games/Game.">
+  <meta name="twitter:image" content="assets/logo.svg">
+  <meta name="twitter:site" content="@NextGamesGame">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="apple-touch-icon" href="assets/logo.svg">
+
+  <!-- Google Fonts: Orbitron (Headings) & Rajdhani (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured Data: JSON-LD Schema.org Definition (WebSite & Organization) -->
+  <script type="application/ld+json" id="jsonLdSchema">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://next.gamer.free/#website",
+        "url": "https://next.gamer.free/",
+        "name": "Next Games/Game",
+        "description": "High-octane, instant-play HTML5 games showcase featuring cyberpunk aesthetics and reactive physics.",
+        "publisher": {
+          "@id": "https://next.gamer.free/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://next.gamer.free/?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://next.gamer.free/#organization",
+        "name": "Next Games/Game",
+        "url": "https://next.gamer.free/",
+        "logo": "https://next.gamer.free/assets/logo.svg",
+        "sameAs": [
+          "https://twitter.com/NextGamesGame",
+          "https://discord.gg/nextgames",
+          "https://github.com/next-games-game"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ========================================================================
+       ACCESSIBILITY SKIP-LINK: Allows screen readers & keyboard users to skip nav
+       ======================================================================== -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- ========================================================================
+       SITE HEADER & GLASSMORPHIIC NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Next Games/Game Home">
+        <img src="assets/logo.svg" alt="Next Games/Game Logo" class="brand-logo" width="220" height="48">
+      </a>
+
+      <!-- Quick Search Form -->
+      <div class="header-search-wrapper">
+        <label for="headerSearchInput" class="visually-hidden">Search games library</label>
+        <div class="search-input-group">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input type="search" id="headerSearchInput" placeholder="Search by game name, genre, or tag..." autocomplete="off">
+          <button type="button" id="clearSearchBtn" class="clear-search-btn hidden" aria-label="Clear search input">✕</button>
+        </div>
+      </div>
+
+      <!-- Navigation & Action Buttons -->
+      <nav class="header-nav" aria-label="Header Actions">
+        <a href="#gamesGallery" class="nav-btn nav-btn-primary">
+          <span class="btn-glow-pulse" aria-hidden="true"></span>
+          <span class="btn-icon" aria-hidden="true">🕹️</span>
+          <span>EXPLORE GAMES</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER
+       ======================================================================== -->
+  <main id="main-content" class="main-content">
+
+    <!-- HERO SHOWCASE SECTION (Populated dynamically via site-config.json) -->
+    <section class="hero-showcase" id="heroShowcase" aria-label="Featured Game of the Week">
+      <div class="hero-backdrop" id="heroBackdrop"></div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span id="heroBadgeText">FEATURED SPOTLIGHT</span>
+        </div>
+        <h1 class="hero-title" id="heroTitle">CYBER RUNNER 2099</h1>
+        <p class="hero-description" id="heroDescription">
+          Sprint across glowing highway skyways at supersonic velocities. Dodge photon barriers, slide under laser defenses, and dominate the global leaderboards.
+        </p>
+        <div class="hero-tags" id="heroTags">
+          <span class="tag">Cyberpunk</span>
+          <span class="tag">Reflex</span>
+          <span class="tag">Synth Beats</span>
+        </div>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-hero-play" id="heroPlayBtn">
+            <span class="btn-play-icon" aria-hidden="true">▶</span>
+            <span>PLAY NOW — INSTANT</span>
+          </button>
+          <a href="#gamesGallery" class="btn btn-hero-secondary">
+            <span>BROWSE CATALOG</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-artwork-frame">
+          <img id="heroThumbnail" src="assets/thumbnails/cyber-runner.svg" alt="Cyber Runner 2099 Artwork" class="hero-artwork-img">
+          <div class="hero-artwork-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLS & FILTERING BAR -->
+    <section class="controls-section" id="controlsSection" aria-label="Search and Filter Controls">
+      <div class="controls-container">
+        <!-- Category Filter Pills (Injected dynamically from site-config.json) -->
+        <div class="category-filter-bar" id="categoryBar" role="tablist" aria-label="Game Categories">
+          <!-- Populated by app.js -->
+        </div>
+
+        <!-- Secondary Controls: Search Results Indicator & Sort Selector -->
+        <div class="controls-meta-bar">
+          <div class="results-count" id="resultsCount" aria-live="polite">
+            Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">0</strong> games
+          </div>
+          <div class="sort-selector-wrapper">
+            <label for="sortSelect" class="sort-label">Sort By:</label>
+            <select id="sortSelect" class="sort-select" aria-label="Sort games by">
+              <option value="featured">Featured First</option>
+              <option value="rating">Top Player Rating</option>
+              <option value="plays">Most Played</option>
+              <option value="title">Alphabetical (A-Z)</option>
+              <option value="newest">Newest Releases</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GAMES GALLERY GRID -->
+    <section class="gallery-section" id="gamesGallery" aria-label="Interactive Game Grid">
+      <div class="gallery-container">
+        <!-- Section Header -->
+        <div class="section-heading">
+          <div class="heading-lead">
+            <span class="cyber-accent" aria-hidden="true">//</span>
+            <span class="heading-tag">VERIFIED HTML5 BUILDS</span>
+          </div>
+          <h2 class="section-title">THE ARCADE MATRIX</h2>
+        </div>
+
+        <!-- The Dynamic Game Cards Grid Container -->
+        <div class="games-grid" id="gamesGrid" role="region" aria-label="Game Catalog Grid" aria-live="polite">
+          <!-- Game cards are dynamically inserted here by js/app.js -->
+          <div class="grid-loading" id="gridLoading">
+            <div class="spinner"></div>
+            <p>Booting Game Registry & Shaders...</p>
+          </div>
+        </div>
+
+        <!-- Empty Results State (Hidden by default) -->
+        <div class="empty-state hidden" id="emptyState" role="alert">
+          <div class="empty-icon" aria-hidden="true">🛰️</div>
+          <h3 class="empty-title">No Neural Matches Found</h3>
+          <p class="empty-desc">We couldn't locate any games matching your query. Try resetting your search filters or browse another category.</p>
+          <button type="button" class="btn btn-hero-secondary" id="resetFiltersBtn">RESET FILTERS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAL PILLARS / PLATFORM VALUE PROPOSITION -->
+    <section class="features-section" aria-label="Platform Features">
+      <div class="features-container">
+        <div class="section-heading centered">
+          <div class="heading-lead">
+            <span class="cyber-accent" aria-hidden="true">//</span>
+            <span class="heading-tag">ENGINEERED FOR SPEED</span>
+          </div>
+          <h2 class="section-title">WHY PLAY ON NEXT GAMES/GAME?</h2>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">⚡</div>
+            <h3 class="feature-title">Zero Installation, Zero Wait</h3>
+            <p class="feature-desc">Play immediately in your browser. No gigabyte downloads, launcher updates, or third-party bloatware required.</p>
+          </article>
+
+          <!-- Feature 2 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">💎</div>
+            <h3 class="feature-title">Silky 60FPS Canvas Physics</h3>
+            <p class="feature-desc">Engineered with low-overhead HTML5 Canvas, WebGL, and optimized animation loops for ultra-smooth rendering.</p>
+          </article>
+
+          <!-- Feature 3 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">📱</div>
+            <h3 class="feature-title">100% Cross-Device Fluidity</h3>
+            <p class="feature-desc">Seamless controls across desktop keyboards, mice, trackpads, and multi-touch mobile screens.</p>
+          </article>
+
+          <!-- Feature 4 -->
+          <article class="feature-card">
+            <div class="feature-icon-box" aria-hidden="true">🚀</div>
+            <h3 class="feature-title">Modular Onboarding Pipeline</h3>
+            <p class="feature-desc">Developers can drop game builds into the catalog with automated JSON configuration and isolated iframe sandboxing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (AEO & SEO OPTIMIZED) -->
+    <section class="faq-section" id="faqSection" aria-label="Frequently Asked Questions">
+      <div class="faq-container">
+        <div class="section-heading centered">
+          <div class="heading-lead">
+            <span class="cyber-accent" aria-hidden="true">//</span>
+            <span class="heading-tag">PLAYER ASSISTANCE & KNOWLEDGE</span>
+          </div>
+          <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          <!-- Populated from config/site-config.json FAQ array by app.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       ISOLATED GAME IFRAME MODAL (NATIVE HTML5 <dialog>)
+       ======================================================================== -->
+  <dialog class="game-modal" id="gameModal" aria-modal="true" aria-labelledby="modalGameTitle">
+    <div class="modal-wrapper">
+      <!-- Modal Top Control Bar -->
+      <header class="modal-header">
+        <div class="modal-info">
+          <span class="modal-category" id="modalCategoryBadge">ACTION</span>
+          <h2 class="modal-title" id="modalGameTitle">Game Title</h2>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="modal-btn" id="modalReloadBtn" aria-label="Restart Game" title="Restart Game">
+            <span aria-hidden="true">🔄</span>
+          </button>
+          <button type="button" class="modal-btn" id="modalFullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+            <span aria-hidden="true">⛶</span>
+          </button>
+          <button type="button" class="modal-btn modal-btn-close" id="modalCloseBtn" aria-label="Close Game Modal" title="Close Modal (Esc)">
+            <span aria-hidden="true">✕</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Modal Body: High-Performance Iframe Sandbox -->
+      <div class="modal-body" id="modalBody">
+        <div class="iframe-loading-indicator" id="iframeLoader">
+          <div class="spinner"></div>
+          <span>Loading Game Stream...</span>
+        </div>
+        <iframe id="gameIframe" 
+                class="game-iframe"
+                src="about:blank"
+                title="Active Game Player"
+                allow="fullscreen; autoplay; gamepad">
+        </iframe>
+      </div>
+
+      <!-- Modal Drawer: Controls & Metadata -->
+      <footer class="modal-drawer">
+        <div class="drawer-grid">
+          <div class="drawer-controls">
+            <span class="drawer-label">CONTROLS</span>
+            <p id="modalControlsText" class="drawer-value">Space / Arrow keys</p>
+          </div>
+          <div class="drawer-desc">
+            <span class="drawer-label">BRIEFING</span>
+            <p id="modalDescriptionText" class="drawer-value">Description of the game.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- ========================================================================
+       SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand-link" aria-label="Next Games/Game Home">
+          <img src="assets/logo.svg" alt="Next Games/Game Logo" class="footer-logo" width="200" height="44">
+        </a>
+        <p class="footer-tagline">
+          The premier destination for instant-play HTML5 games. No downloads, zero bloat, high-octane neon entertainment for everyone.
+        </p>
+        <div class="footer-social-links" id="footerSocials">
+          <a href="https://twitter.com/NextGamesGame" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game on Twitter">Twitter</a>
+          <a href="https://discord.gg/nextgames" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game Discord">Discord</a>
+          <a href="https://github.com/next-games-game" target="_blank" rel="noopener noreferrer" aria-label="Next Games/Game GitHub">GitHub</a>
+        </div>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">CATEGORIES</h4>
+        <ul class="footer-links-list" id="footerCategoriesList">
+          <!-- Injected dynamically -->
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 class="footer-col-title">DEVELOPER SUITE</h4>
+        <ul class="footer-links-list">
+          <li><a href="developer/roadmap.md" target="_blank">System Roadmap</a></li>
+          <li><a href="developer/rules.md" target="_blank">Architecture Guardrails</a></li>
+          <li><a href="developer/prompt.md" target="_blank">Portal Specifications</a></li>
+          <li><a href="config/site-config.json" target="_blank">Site Manifest JSON</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p class="copyright-text">
+          &copy; 2026 <strong>Next Games/Game</strong>. All rights reserved. All games and brand artwork are royalty-free.
+        </p>
+        <p class="system-status">
+          <span class="status-indicator"></span>
+          <span>ALL SYSTEMS OPERATIONAL (HTML5 ENGINE V2.4)</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Configuration Preload (Ensures instant offline & local file:// compatibility) -->
+  <script src="config/site-config.js"></script>
+  <!-- Core Interactive Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

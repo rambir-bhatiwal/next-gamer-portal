@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cryptographic Word Cipher: Decryptor - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Comm Sector</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Decrypted Progress</div><div id="progressVal" class="hud-val">0% DECRYPTED</div></div>
+      <div class="hud-box"><div class="hud-lbl">Cipher Type</div><div id="typeVal" class="hud-val">MONOALPHABETIC</div></div>
+    </div>
+
+    <div class="terminal-body">
+      <div class="terminal-header">&gt; INTERCEPTED TRANSMISSION:// DECRYPT_STREAM</div>
+      <div id="cipherStream" class="cipher-stream"></div>
+    </div>
+
+    <div class="mapping-bar">
+      <div class="selected-cipher" id="selectedCipherBox">SELECT A CIPHER LETTER ABOVE</div>
+      <div class="plain-keys" id="alphabetKeyboard"></div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="hintBtn" class="action-btn">DECRYPT HINT (1 LETTER)</button>
+      <button id="levelSelectBtn" class="action-btn">BRIEFS (1-45)</button>
+      <button id="resetBtn" class="action-btn">CLEAR MAPPINGS</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT BRIEF &gt;</button>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CRYPTOGRAPHIC WORD CIPHER</h1>
+        <p id="menuDesc">Decode intercepted cyber-intelligence communiques across 45 covert security sectors by substituting scrambled cipher symbols with alphabetical letters.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START CRYPTO DECRYPTION</button>
+        <div class="controls-hint">Controls: Click an encrypted letter, then tap the decoded letter | Hints available</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

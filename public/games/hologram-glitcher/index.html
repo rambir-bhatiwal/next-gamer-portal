@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Hologram Glitcher: Reality Shifter - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Reality Zone</div><div id="themeVal" class="hud-val">1: Cyan High-Tech</div></div>
+      <div class="hud-box"><div class="hud-lbl">Active Layer</div><div id="layerVal" class="hud-val" style="color:#00f0ff;">LAYER ALPHA</div></div>
+      <div class="hud-box"><div class="hud-lbl">Reality Anchor</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Quantum Shards</div><div id="shardsVal" class="hud-val" style="color:#ffd600;">0 / 3 SHARDS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">REALITIES (1-45)</button>
+      <button id="leftBtn" class="action-btn">&lt; LEFT [A]</button>
+      <button id="jumpBtn" class="action-btn jump-btn">JUMP [W]</button>
+      <button id="rightBtn" class="action-btn">RIGHT [D] &gt;</button>
+      <button id="shiftBtn" class="action-btn shift-btn">SHIFT REALITY [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT REALITY &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">HOLOGRAM GLITCHER</h1>
+        <p id="overlayDesc">Toggle between two alternate holographic reality layers (Layer Alpha & Layer Beta) across 45 spatial puzzle stages. Materialize solid platforms mid-air to reach quantum shards and unlock the spatial rift!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE REALITY GLITCH</button>
+        <div class="controls-hint">Controls: [A/D or Left/Right] to move, [W/Up] to jump, [Space] to Glitch / Shift between Layer Alpha (Cyan) and Layer Beta (Amber/Magenta).</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

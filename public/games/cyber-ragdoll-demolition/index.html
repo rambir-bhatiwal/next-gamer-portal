@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cybernetic Ragdoll Demolition: Crash Dummy - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Demolition Slope</div><div id="themeVal" class="hud-val">1: Concrete Staircase</div></div>
+      <div class="hud-box"><div class="hud-lbl">Impact Damage</div><div id="dmgVal" class="hud-val">0 / 8,000 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Launch Units</div><div id="unitsVal" class="hud-val" style="color:#00ff88;">3 DUMMIES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Kinetic Velocity</div><div id="velVal" class="hud-val" style="color:#ffd600;">0 KM/H</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SLOPES (1-45)</button>
+      <button id="angleUpBtn" class="action-btn">AIM UP [W]</button>
+      <button id="launchBtn" class="action-btn launch-btn">LAUNCH DUMMY [SPACE]</button>
+      <button id="angleDownBtn" class="action-btn">AIM DOWN [S]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SLOPE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER RAGDOLL DEMOLITION</h1>
+        <p id="overlayDesc">Launch a multi-jointed cybernetic crash dummy down hazardous slopes filled with explosive barrels, pinwheels, and steel girders across 45 demolition stages. Accumulate severe kinetic impact damage to surpass the target quota!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START CRASH TEST</button>
+        <div class="controls-hint">Controls: [W/S] or Aim buttons to set angle, [Space] or Launch button to fire dummy. You can also drag the launch catapult with mouse/touch!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

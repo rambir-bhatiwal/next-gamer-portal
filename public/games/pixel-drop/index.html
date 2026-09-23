@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Pixel Drop: Neon Tetromino Collapse - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Matrix Theme</div><div id="themeVal" class="hud-val">1: Cyber Neon Matrix</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score & Gravity</div><div id="scoreVal" class="hud-val">0 PTS | 1.0G</div></div>
+      <div class="hud-box"><div class="hud-lbl">Lines / Target</div><div id="linesVal" class="hud-val">0 / 6 Lines</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">PIXEL DROP: NEON TETROMINO</h1>
+        <p id="menuDesc">Fast-paced falling block collapse across 45 structured mission stages. Complete horizontal lines to trigger particle collapse before the matrix overflows.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START STAGE</button>
+        <div class="controls-hint">Controls: Left/Right to Shift | Up to Rotate | Down for Soft Drop | Space for Hard Drop | Touch on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

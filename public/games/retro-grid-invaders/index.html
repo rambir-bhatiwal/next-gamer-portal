@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Retro Grid Invaders: Vector Swarm - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Sector / Wave</div><div id="themeVal" class="hud-val">1: Moonbase Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score & Bases</div><div id="scoreVal" class="hud-val">0 PTS | LIVES: 3</div></div>
+      <div class="hud-box"><div class="hud-lbl">Invaders Remaining</div><div id="waveVal" class="hud-val">24 / 24</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">RETRO GRID INVADERS</h1>
+        <p id="menuDesc">Defend the orbital base against descending geometric vector alien swarms across 45 atmospheric sectors. Destroy all alien formations before they reach the planetary surface.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE DEFENSE</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Move | Space to Fire Laser Cannon | Touch Controls on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

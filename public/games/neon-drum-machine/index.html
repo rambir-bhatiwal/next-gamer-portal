@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Drum Machine: Precision Rhythm Hero - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="drum-app">
+    <header class="hud-bar">
+      <div class="hud-stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/40</span></div>
+      <div class="hud-stat"><span class="lbl">KIT THEME</span><span id="themeDisplay" class="val">808 Orange</span></div>
+      <div class="hud-stat"><span class="lbl">SCORE</span><span id="scoreDisplay" class="val">0</span></div>
+      <div class="hud-stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <div class="screen-section">
+      <canvas id="scopeCanvas" width="460" height="90"></canvas>
+      <div id="statusPrompt" class="status-prompt">FOLLOW THE RHYTHM SEQUENCE!</div>
+    </div>
+
+    <main class="pad-grid">
+      <!-- 4x4 Pads (16 Drum Sounds) -->
+      <button class="pad-btn" data-pad="0"><span class="pad-lbl">KICK</span><span class="pad-key">1</span></button>
+      <button class="pad-btn" data-pad="1"><span class="pad-lbl">SNARE</span><span class="pad-key">2</span></button>
+      <button class="pad-btn" data-pad="2"><span class="pad-lbl">CLAP</span><span class="pad-key">3</span></button>
+      <button class="pad-btn" data-pad="3"><span class="pad-lbl">CH</span><span class="pad-key">4</span></button>
+
+      <button class="pad-btn" data-pad="4"><span class="pad-lbl">OH</span><span class="pad-key">Q</span></button>
+      <button class="pad-btn" data-pad="5"><span class="pad-lbl">HI TOM</span><span class="pad-key">W</span></button>
+      <button class="pad-btn" data-pad="6"><span class="pad-lbl">MID TOM</span><span class="pad-key">E</span></button>
+      <button class="pad-btn" data-pad="7"><span class="pad-lbl">LO TOM</span><span class="pad-key">R</span></button>
+
+      <button class="pad-btn" data-pad="8"><span class="pad-lbl">RIM</span><span class="pad-key">A</span></button>
+      <button class="pad-btn" data-pad="9"><span class="pad-lbl">CYBER ZAP</span><span class="pad-key">S</span></button>
+      <button class="pad-btn" data-pad="10"><span class="pad-lbl">LASER</span><span class="pad-key">D</span></button>
+      <button class="pad-btn" data-pad="11"><span class="pad-lbl">SUB DROP</span><span class="pad-key">F</span></button>
+
+      <button class="pad-btn" data-pad="12"><span class="pad-lbl">SHAKER</span><span class="pad-key">Z</span></button>
+      <button class="pad-btn" data-pad="13"><span class="pad-lbl">COWBELL</span><span class="pad-key">X</span></button>
+      <button class="pad-btn" data-pad="14"><span class="pad-lbl">CYMBAL</span><span class="pad-key">C</span></button>
+      <button class="pad-btn" data-pad="15"><span class="pad-lbl">BEEP</span><span class="pad-key">V</span></button>
+    </main>
+
+    <footer class="hud-controls">
+      <button id="playDemoBtn" class="ctl-btn demo-btn">PLAY PATTERN (SPACE)</button>
+      <div class="hint-text">Trigger pads via click or keyboard shortcuts [1-4, Q-R, A-F, Z-V]</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <h2>SELECT DRUM MACHINE STAGE (1–40)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

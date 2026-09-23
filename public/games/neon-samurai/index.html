@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Samurai: Bushido Odyssey - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">DUEL</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">STAGE</span><span id="themeDisplay" class="value">Rain Alley</span></div>
+      <div class="hud-item"><span class="label">HP</span><span id="hpDisplay" class="value">100/100</span></div>
+      <div class="hud-item"><span class="label">STANCE</span><span id="stanceDisplay" class="value">FIRE STANCE</span></div>
+      <div class="hud-item"><span class="label">HONOR</span><span id="honorDisplay" class="value">0</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">DUELS</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="samuraiCanvas" width="600" height="420"></canvas>
+      <div id="duelLog" class="duel-log">Corporate Ronin draws blade. Switch stances and execute precision parries!</div>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">DUEL CONQUERED!</h2>
+        <p id="overlayMessage">Corporate swordsman yielded with honor.</p>
+        <button id="overlayBtn" class="btn-action">NEXT DUEL</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="samurai-actions">
+        <button class="sam-btn slash" id="btnSlash">⚔️ KATANA SLASH [1]</button>
+        <button class="sam-btn parry" id="btnParry">🛡️ PARRY CLASH [2]</button>
+        <button class="sam-btn stance" id="btnStance">🔄 SWITCH STANCE [3]</button>
+      </div>
+      <div class="controls-hint">Time parry clash as opponent strikes to stagger them for critical damage!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT BUSHIDO DUEL STAGE (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

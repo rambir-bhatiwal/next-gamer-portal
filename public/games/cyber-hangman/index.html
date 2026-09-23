@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Hangman: AI Sentence Rescue - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Containment Chamber</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Rescue Status</div><div id="statusVal" class="hud-val" style="color:#00ff88;">6 SHIELDS INTACT</div></div>
+      <div class="hud-box"><div class="hud-lbl">AI Phrase Clue</div><div id="clueVal" class="hud-val" style="color:#ffd600;">CYBERSECURITY TERM</div></div>
+      <div class="hud-box"><div class="hud-lbl">Errors Allowed</div><div id="shieldDots" class="hud-val" style="color:#00e5ff;">● ● ● ● ● ●</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="keyboard-wrap" id="keyboardWrap"></div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CHAMBERS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RELOAD</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CHAMBER &gt;</button>
+    </div>
+    <div class="controls-hint">Click letter buttons or type on keyboard | Decrypt secret keyword before terminal lockdown | 6 strikes allowed</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER HANGMAN</h1>
+        <p id="overlayDesc">Prevent a rogue AI companion from memory purge by guessing letters to decode encrypted tech phrases across 45 rescue chambers!</p>
+        <button id="startBtn" class="glow-btn">ENTER CHAMBER</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT RESCUE CHAMBER (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

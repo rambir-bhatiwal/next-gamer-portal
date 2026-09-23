@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Wizard: Spell Grimoire - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">SANCTUM</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">REALM</span><span id="themeDisplay" class="value">Arcane Library</span></div>
+      <div class="hud-item"><span class="label">HP</span><span id="hpDisplay" class="value">100/100</span></div>
+      <div class="hud-item"><span class="label">MANA</span><span id="manaDisplay" class="value">100/100</span></div>
+      <div class="hud-item"><span class="label">SCORE</span><span id="scoreDisplay" class="value">0</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">SANCTUMS</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="wizardCanvas" width="600" height="420"></canvas>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">SANCTUM PURIFIED!</h2>
+        <p id="overlayMessage">All mythical glitched monsters banished.</p>
+        <button id="overlayBtn" class="btn-action">NEXT SANCTUM</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="rune-spells">
+        <button class="rune-btn fire" data-spell="fire">🔥 FIRE RUNES [1]</button>
+        <button class="rune-btn ice" data-spell="ice">❄️ FROST SHARD [2]</button>
+        <button class="rune-btn shock" data-spell="shock">⚡ SHOCK WAVE [3]</button>
+        <button class="rune-btn shield" data-spell="shield">🛡️ ARCANE WARD [4]</button>
+      </div>
+      <div class="controls-hint">Click spells or press [1] [2] [3] [4] to cast runes and destroy incoming mythical monsters!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT ARCANE SANCTUM (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

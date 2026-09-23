@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>AI Defense Matrix: Neural Firewall War - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Neural Subnet</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">CPU Cycles</div><div id="cpuVal" class="hud-val" style="color:#00f0ff;">100 MHz</div></div>
+      <div class="hud-box"><div class="hud-lbl">Core Sentience</div><div id="coreVal" class="hud-val" style="color:#00ff88;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Intrusions Quarantined</div><div id="scoreVal" class="hud-val" style="color:#ffd600;">0 / 25</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="defense-tools-bar">
+      <button class="tool-btn active" data-tool="firewall"><span class="t-name">FIREWALL (25 CPU)</span><span class="t-sub">Block Path</span></button>
+      <button class="tool-btn" data-tool="honeypot"><span class="t-name">HONEYPOT (40 CPU)</span><span class="t-sub">Trap Infiltrator</span></button>
+      <button class="tool-btn" data-tool="purge"><span class="t-name">PURGE (60 CPU)</span><span class="t-sub">Area Quarantine</span></button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">MATRICES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RELOAD NEURAL CORE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT MATRIX &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">AI DEFENSE MATRIX</h1>
+        <p id="overlayDesc">Protect a nascent sentient neural core against escalating cyber breaches across 45 neural network stages. Allocate CPU cycles to deploy adaptive firewalls, decoy honeypots, and purge routines.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ACTIVATE NEURAL SAFEGUARD</button>
+        <div class="controls-hint">Controls: Select security subroutine, click on neural pathways or nodes to construct defense barriers.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

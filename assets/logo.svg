@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 100" width="100%" height="100%" role="img" aria-label="Next Games/Game Official Logo">
+  <!-- ==========================================================================
+       NEXT GAMES/GAME BRAND LOGO
+       Features: Futuristic typography, glowing neon filters, cyberpunk hex-core badge.
+       Palette: Cyan (#00f0ff), Magenta (#ff007f), Deep Space Violet (#120b2e)
+       ========================================================================== -->
+  <defs>
+    <!-- Radial & Linear Gradients for Neon Core and Glow -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#7000ff" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+    
+    <linearGradient id="textCyanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#cbf7ff" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+
+    <linearGradient id="textMagentaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#ff99cc" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+
+    <linearGradient id="badgeRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#ff007f" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glowing Drop Shadow & Ambient Neon Bloom Filters -->
+    <filter id="neonGlowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="blur1" />
+      <feGaussianBlur stdDeviation="9" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlowMagenta" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur1" />
+      <feGaussianBlur stdDeviation="10" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Group: Brand Emblem (Geometric Cyber Hex-Controller) -->
+  <g transform="translate(15, 10)">
+    <!-- Outer Ambient Glow Hexagon -->
+    <polygon points="40,5 72,23 72,57 40,75 8,57 8,23" fill="none" stroke="url(#badgeRim)" stroke-width="2.5" filter="url(#neonGlowCyan)" />
+    
+    <!-- Inner Dark Glass Poly -->
+    <polygon points="40,10 68,26 68,54 40,70 12,54 12,26" fill="#0c1022" fill-opacity="0.85" stroke="rgba(0, 240, 255, 0.4)" stroke-width="1.5" />
+    
+    <!-- Circuit Cross Lines -->
+    <line x1="20" y1="40" x2="60" y2="40" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1" />
+    <line x1="40" y1="20" x2="40" y2="60" stroke="#ff007f" stroke-opacity="0.3" stroke-width="1" />
+
+    <!-- Isometric Glowing Play/Game Diamond -->
+    <polygon points="32,26 56,40 32,54" fill="url(#neonGradient)" filter="url(#neonGlowMagenta)" />
+    <polygon points="34,31 49,40 34,49" fill="#ffffff" opacity="0.9" />
+    
+    <!-- Tech Dot Accents -->
+    <circle cx="40" cy="5" r="2.5" fill="#00f0ff" filter="url(#neonGlowCyan)" />
+    <circle cx="72" cy="23" r="2" fill="#ff007f" />
+    <circle cx="72" cy="57" r="2" fill="#00f0ff" />
+    <circle cx="40" cy="75" r="2.5" fill="#ff007f" filter="url(#neonGlowMagenta)" />
+    <circle cx="8" cy="57" r="2" fill="#00f0ff" />
+    <circle cx="8" cy="23" r="2" fill="#ff007f" />
+  </g>
+
+  <!-- Group: Brand Typography "Next Games/Game" -->
+  <g transform="translate(105, 0)">
+    <!-- Primary Brand Word: "NEXT" -->
+    <text x="0" y="52" 
+          font-family="'Orbitron', 'Rajdhani', 'Segoe UI', sans-serif" 
+          font-size="36" 
+          font-weight="900" 
+          font-style="italic"
+          letter-spacing="3" 
+          fill="url(#textCyanGradient)" 
+          filter="url(#neonGlowCyan)">
+      NEXT
+    </text>
+
+    <!-- Secondary Word: "GAMES" -->
+    <text x="125" y="52" 
+          font-family="'Orbitron', 'Rajdhani', 'Segoe UI', sans-serif" 
+          font-size="36" 
+          font-weight="900" 
+          letter-spacing="2" 
+          fill="#ffffff">
+      GAMES
+    </text>
+
+    <!-- Neon Cyber Slash: "/" -->
+    <text x="272" y="53" 
+          font-family="'Orbitron', sans-serif" 
+          font-size="40" 
+          font-weight="900" 
+          fill="url(#neonGradient)" 
+          filter="url(#neonGlowMagenta)">
+      /
+    </text>
+
+    <!-- Suffix Word: "GAME" -->
+    <text x="296" y="52" 
+          font-family="'Orbitron', 'Rajdhani', 'Segoe UI', sans-serif" 
+          font-size="36" 
+          font-weight="900" 
+          letter-spacing="2" 
+          fill="url(#textMagentaGradient)" 
+          filter="url(#neonGlowMagenta)">
+      GAME
+    </text>
+
+    <!-- Subtitle / Tagline Badge: "HTML5 ARCADE PORTAL" -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="345" height="18" rx="4" fill="rgba(0, 240, 255, 0.08)" stroke="rgba(0, 240, 255, 0.3)" stroke-width="0.8" />
+      <circle cx="8" cy="9" r="3" fill="#00ff88" filter="url(#neonGlowCyan)" />
+      <text x="18" y="13" 
+            font-family="'Rajdhani', 'Segoe UI', monospace" 
+            font-size="11" 
+            font-weight="700" 
+            letter-spacing="3.5" 
+            fill="#a6c8ff">
+        NEXT-GEN HTML5 WEB ENTERTAINMENT
+      </text>
+    </g>
+  </g>
+</svg>

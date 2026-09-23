@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  background: #040814;
+  color: #fff;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.piano-container {
+  width: 100vw;
+  max-width: 480px;
+  height: 100vh;
+  max-height: 840px;
+  background: #080f24;
+  border: 2px solid #8a2be2;
+  border-radius: 12px;
+  box-shadow: 0 0 35px rgba(138, 43, 226, 0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.hud-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: #050a1a;
+  border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat .lbl {
+  font-size: 8px;
+  color: #8a2be2;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.stat .val {
+  font-size: 13px;
+  font-weight: 900;
+}
+.btn-stages {
+  background: #8a2be2;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.canvas-arena {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pianoCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.piano-msg {
+  position: absolute;
+  top: 40%;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.12s ease-out;
+}
+.piano-msg.show {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.hud-bottom {
+  padding: 10px 14px 14px;
+  background: #050a1a;
+  border-top: 1px solid rgba(138, 43, 226, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.key-labels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.key-tap {
+  background: #111a3b;
+  border: 2px solid #8a2be2;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 12px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.08s;
+}
+.key-tap:active, .key-tap.active {
+  background: #8a2be2;
+  color: #000;
+  transform: scale(0.95);
+  box-shadow: 0 0 20px #8a2be2;
+}
+.hint {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 4, 10, 0.94);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.modal-overlay.hidden { display: none; }
+.modal-card {
+  width: 90%;
+  max-width: 440px;
+  background: #080f24;
+  border: 2px solid #8a2be2;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.modal-card h2 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #8a2be2;
+  text-align: center;
+}
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+.lvl-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #8a2be2;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.lvl-btn.active {
+  background: #8a2be2;
+  color: #fff;
+}
+.btn-close {
+  background: #ff007f;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

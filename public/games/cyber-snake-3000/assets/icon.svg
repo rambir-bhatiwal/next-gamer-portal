@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02140a"/>
+      <stop offset="50%" stop-color="#050a12"/>
+      <stop offset="100%" stop-color="#0e021a"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- PCB Circuit Grid Lines -->
+  <g stroke="rgba(0, 255, 136, 0.2)" stroke-width="1.5" fill="none">
+    <path d="M50 100 H150 V180 H250"/>
+    <path d="M350 120 H450 V200 H550"/>
+    <path d="M80 320 H200 V260 H300"/>
+    <path d="M320 340 H440 V280 H520"/>
+  </g>
+  <!-- Cyber Snake Body & Energy Nodes -->
+  <g filter="url(#neonGlow)">
+    <!-- Food Energy Bit -->
+    <rect x="420" y="160" width="24" height="24" rx="4" fill="#ff007f"/>
+    <circle cx="432" cy="172" r="5" fill="#ffffff"/>
+
+    <!-- Snake Head -->
+    <rect x="360" y="160" width="28" height="28" rx="6" fill="#00ff88" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="378" cy="168" r="3" fill="#000"/>
+    <circle cx="378" cy="180" r="3" fill="#000"/>
+
+    <!-- Body Segments -->
+    <rect x="320" y="160" width="28" height="28" rx="6" fill="#00ff88"/>
+    <rect x="280" y="160" width="28" height="28" rx="6" fill="#00ff88"/>
+    <rect x="240" y="160" width="28" height="28" rx="6" fill="#00f0ff"/>
+    <rect x="240" y="200" width="28" height="28" rx="6" fill="#00f0ff"/>
+    <rect x="240" y="240" width="28" height="28" rx="6" fill="#00f0ff"/>
+    <rect x="200" y="240" width="28" height="28" rx="6" fill="#00f0ff"/>
+    <rect x="160" y="240" width="28" height="28" rx="6" fill="#38ef7d"/>
+    <rect x="120" y="240" width="28" height="28" rx="6" fill="#38ef7d"/>
+    <rect x="120" y="280" width="28" height="28" rx="6" fill="#38ef7d"/>
+  </g>
+  <!-- Title Badge -->
+  <rect x="120" y="24" width="360" height="34" rx="6" fill="rgba(4, 16, 8, 0.85)" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#00ff88" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">CYBER SNAKE 3000</text>
+</svg>

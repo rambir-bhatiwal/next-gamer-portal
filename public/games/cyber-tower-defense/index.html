@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Tower Defense: Subnet Guardian - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Subnet Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Data Bits</div><div id="bitsVal" class="hud-val" style="color:#ffd600;">120 BITS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Subnet Core Integrity</div><div id="coreVal" class="hud-val" style="color:#00ff88;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Malware Wave</div><div id="waveVal" class="hud-val">1 / 5</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="tower-selector">
+      <button class="tower-btn active" data-type="pulse"><span class="t-name">PULSE (40)</span><span class="t-desc">Rapid Dart</span></button>
+      <button class="tower-btn" data-type="cryo"><span class="t-name">CRYO (60)</span><span class="t-desc">Freeze Slow</span></button>
+      <button class="tower-btn" data-type="emp"><span class="t-name">EMP (80)</span><span class="t-desc">Area Shock</span></button>
+      <button class="tower-btn" data-type="railgun"><span class="t-name">RAILGUN (120)</span><span class="t-desc">Pierce Beam</span></button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SUBNETS (1-45)</button>
+      <button id="startWaveBtn" class="action-btn wave-btn">DEPLOY NEXT WAVE</button>
+      <button id="restartBtn" class="action-btn">RESTART SUBNET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SUBNET &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER TOWER DEFENSE</h1>
+        <p id="overlayDesc">Defend vulnerable data pathways against malware packet worms across 45 unique subnet environments. Deploy Pulse, Cryo, EMP, and Railgun security nodes.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE GUARDIAN PROTOCOL</button>
+        <div class="controls-hint">Controls: Select security node type, click on empty grid tiles along the pathway to build.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

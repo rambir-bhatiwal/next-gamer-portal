@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Elastic Sling: Orbit Catapult - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Planetary System</div><div id="themeVal" class="hud-val">1: Moon Base</div></div>
+      <div class="hud-box"><div class="hud-lbl">Bunkers Destroyed</div><div id="targetVal" class="hud-val">0 / 3 CORES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Quantum Probes</div><div id="probesVal" class="hud-val" style="color:#00ff88;">3 PROBES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Gravitational Status</div><div id="gravVal" class="hud-val" style="color:#ffd600;">ORBIT STABLE</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SYSTEMS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RETRY SECTOR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SYSTEM &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">NEON ELASTIC SLING</h1>
+        <p id="overlayDesc">Slingshot quantum kinetic probes through multi-body gravitational fields across 45 orbital stages. Harness planetary slingshots and gravitational wells to demolish fortified enemy space stations!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE ORBIT SLING</button>
+        <div class="controls-hint">Controls: Click and drag back the quantum probe inside the slingshot, then release to launch into orbit!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

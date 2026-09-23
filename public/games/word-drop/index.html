@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Word Drop: Falling Letter Vocabulary Tetris - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Letter Well</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score Target</div><div id="scoreVal" class="hud-val">0 / 250 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Selected Word</div><div id="wordVal" class="hud-val" style="color:#00ff88;">CLICK BLOCKS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Well Integrity</div><div id="shieldVal" class="hud-val" style="color:#ffd600;">100% (3 SHIELDS)</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">WELLS (1-45)</button>
+      <button id="clearWordBtn" class="action-btn submit-btn">VAPORIZE WORD [ENTER]</button>
+      <button id="deselectBtn" class="action-btn">CANCEL</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT WELL &gt;</button>
+    </div>
+    <div class="controls-hint">Click adjacent falling letters to form valid words | Press SUBMIT to clear letters and prevent stack overflow</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">WORD DROP</h1>
+        <p id="overlayDesc">Columns of letter blocks drop into a well. Form valid words from adjacent blocks to vaporize them before the stack tops out across 45 stages!</p>
+        <button id="startBtn" class="glow-btn">ENTER WELL</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT LETTER WELL (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

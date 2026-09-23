@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Quantum Velocity: Sub-Atomic GP - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Chamber / Biome</div><div id="themeVal" class="hud-val">1: Hadron Ring</div></div>
+      <div class="hud-box"><div class="hud-lbl">Coherence & Relativistic Speed</div><div id="speedVal" class="hud-val">100% | 0.92c</div></div>
+      <div class="hud-box"><div class="hud-lbl">Electrons / Quota</div><div id="quotaVal" class="hud-val">0 / 25</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">QUANTUM VELOCITY: SUB-ATOMIC GP</h1>
+        <p id="menuDesc">Pilot a relativistic sub-atomic particle through 45 electromagnetic accelerator chambers. Switch polarities (+/-) to absorb electrons and dodge antimatter anomalies.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INJECT PARTICLE</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Steer | Space or Tap to Invert Polarity (+ / -)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

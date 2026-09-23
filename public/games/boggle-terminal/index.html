@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Boggle Terminal: 4x4 Word Constructor - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Dice Terminal</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score Target</div><div id="scoreVal" class="hud-val">0 / 150 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Trace</div><div id="currentTraceVal" class="hud-val" style="color:#ffd600;">_ _ _ _</div></div>
+      <div class="hud-box"><div class="hud-lbl">Words Found</div><div id="wordsVal" class="hud-val" style="color:#00ff88;">0 WORDS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">TERMINALS (1-45)</button>
+      <button id="submitBtn" class="action-btn submit-btn">SUBMIT TRACE [ENTER]</button>
+      <button id="clearBtn" class="action-btn">CLEAR [BACK]</button>
+      <button id="restartBtn" class="action-btn">SHUFFLE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TERMINAL &gt;</button>
+    </div>
+    <div class="controls-hint">Click adjacent letters or type words on keyboard | Press ENTER to submit word | Reach stage quota to advance</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">BOGGLE TERMINAL</h1>
+        <p id="overlayDesc">Trace paths between adjacent letter dice on a 4x4 grid to construct words and hit target scores across 45 stages!</p>
+        <button id="startBtn" class="glow-btn">ENTER TERMINAL</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT BOGGLE TERMINAL (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Turbo Pac-Grid: Cyber Maze Run - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Subnet Sector</div><div id="themeVal" class="hud-val">1: Neon Cyber Maze</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score & High</div><div id="scoreVal" class="hud-val">0 | HIGH: 0</div></div>
+      <div class="hud-box"><div class="hud-lbl">Data Pellets / Lives</div><div id="pelletVal" class="hud-val">0 / 0 | ❤️❤️❤️</div></div>
+    </div>
+    
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="dpad">
+      <button class="dbtn" id="btnUp">▲</button>
+      <button class="dbtn" id="btnLeft">◀</button>
+      <button class="dbtn" id="btnDown">▼</button>
+      <button class="dbtn" id="btnRight">▶</button>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">TURBO PAC-GRID: CYBER MAZE</h1>
+        <p id="menuDesc">Traverse 45 glowing neon cyber-labyrinths. Infiltrate secure mainframe corridors, consume encrypted data bits, and trigger Quantum Overcharge to neutralize patrolling security AI subroutines!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE RUN</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD / Swipe / On-Screen D-Pad</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

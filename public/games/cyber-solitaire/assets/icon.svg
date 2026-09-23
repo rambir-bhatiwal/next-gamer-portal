@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050314"/>
+      <stop offset="60%" stop-color="#0c0721"/>
+      <stop offset="100%" stop-color="#02010a"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="380" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- High-Tech Coordinate Grid -->
+  <g stroke="#00f0ff" stroke-opacity="0.12" stroke-width="1">
+    <line x1="50" y1="0" x2="50" y2="380"/>
+    <line x1="150" y1="0" x2="150" y2="380"/>
+    <line x1="250" y1="0" x2="250" y2="380"/>
+    <line x1="350" y1="0" x2="350" y2="380"/>
+    <line x1="450" y1="0" x2="450" y2="380"/>
+    <line x1="550" y1="0" x2="550" y2="380"/>
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="140" x2="600" y2="140"/>
+    <line x1="0" y1="220" x2="600" y2="220"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+  </g>
+
+  <!-- Outer Neon Trim -->
+  <rect x="8" y="8" width="584" height="364" rx="12" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.4"/>
+  <rect x="14" y="14" width="572" height="352" rx="8" fill="none" stroke="#ff007f" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Category Watermark Banner -->
+  <text x="32" y="44" font-family="'Segoe UI', monospace" font-size="12" font-weight="900" fill="#00f0ff" letter-spacing="3" opacity="0.85">CYBER CARD &amp; CASINO 45-THEME DECK</text>
+
+  <!-- Graphic Icon Payload -->
+  <g>
+    
+      <!-- Solitaire Tableau Stacks -->
+      <!-- Foundation Outline -->
+      <rect x="360" y="80" width="70" height="95" rx="6" fill="#0c102b" stroke="#00f0ff" stroke-width="2" stroke-dasharray="4,4"/>
+      <rect x="445" y="80" width="70" height="95" rx="6" fill="#0c102b" stroke="#ff007f" stroke-width="2" stroke-dasharray="4,4"/>
+      <text x="395" y="135" font-family="sans-serif" font-size="28" fill="#00f0ff" text-anchor="middle" opacity="0.6">♠</text>
+      <text x="480" y="135" font-family="sans-serif" font-size="28" fill="#ff007f" text-anchor="middle" opacity="0.6">♥</text>
+      <!-- Stock & Waste Piles -->
+      <rect x="85" y="80" width="70" height="95" rx="6" fill="#151b3b" stroke="#00f0ff" stroke-width="3"/>
+      <rect x="95" y="90" width="50" height="75" rx="4" fill="#080c1f" stroke="#39ff14" stroke-width="1"/>
+      <circle cx="120" cy="127" r="16" fill="none" stroke="#00f0ff" stroke-width="2"/>
+      <rect x="170" y="80" width="70" height="95" rx="6" fill="#0f1738" stroke="#ffd600" stroke-width="3" filter="url(#glow)"/>
+      <text x="185" y="105" font-family="monospace" font-weight="bold" font-size="18" fill="#ffd600">A</text>
+      <text x="205" y="138" font-family="sans-serif" font-size="30" fill="#ffd600" text-anchor="middle">♦</text>
+      <!-- Cascading Tableau Stack -->
+      <g transform="translate(230, 110)">
+        <rect x="0" y="0" width="70" height="95" rx="6" fill="#101738" stroke="#ff007f" stroke-width="2"/>
+        <text x="15" y="25" font-family="monospace" font-weight="bold" font-size="16" fill="#ff007f">K</text>
+        <text x="35" y="55" font-family="sans-serif" font-size="24" fill="#ff007f" text-anchor="middle">♥</text>
+        <rect x="0" y="35" width="70" height="95" rx="6" fill="#0f1738" stroke="#00f0ff" stroke-width="2"/>
+        <text x="15" y="60" font-family="monospace" font-weight="bold" font-size="16" fill="#00f0ff">Q</text>
+        <text x="35" y="90" font-family="sans-serif" font-size="24" fill="#00f0ff" text-anchor="middle">♠</text>
+        <rect x="0" y="70" width="70" height="95" rx="6" fill="#0d1430" stroke="#ff007f" stroke-width="2" filter="url(#glow)"/>
+        <text x="15" y="95" font-family="monospace" font-weight="bold" font-size="16" fill="#ff007f">J</text>
+        <text x="35" y="125" font-family="sans-serif" font-size="24" fill="#ff007f" text-anchor="middle">♦</text>
+      </g>
+    
+  </g>
+
+  <!-- Game Title Bottom Bar -->
+  <rect x="24" y="318" width="552" height="42" rx="8" fill="#060214" fill-opacity="0.9" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="42" y="345" font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="1">CYBER SOLITAIRE: DATA DECK</text>
+  <text x="550" y="344" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#00f0ff" letter-spacing="1">45 STAGES</text>
+</svg>

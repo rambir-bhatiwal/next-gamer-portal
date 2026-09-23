@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Tachyon Overdrive: Temporal Time-Trial - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Temporal Era</div><div id="themeVal" class="hud-val">1: Neo-Kyoto 2099</div></div>
+      <div class="hud-box"><div class="hud-lbl">Time Left & Tachyon Buffer</div><div id="timeVal" class="hud-val">30.0s | 100% REWIND</div></div>
+      <div class="hud-box"><div class="hud-lbl">Checkpoints</div><div id="checkVal" class="hud-val">0 / 5</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">TACHYON OVERDRIVE: TIME-TRIAL</h1>
+        <p id="menuDesc">Temporal checkpoint racing across 45 chronological eras. If you crash or take a suboptimal corner, hold Spacebar to engage Tachyon Rewind and reverse up to 3 seconds of time!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE TEMPORAL RUN</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD to Steer & Throttle | Spacebar (Hold) to REWIND TIME | Touch Controls on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

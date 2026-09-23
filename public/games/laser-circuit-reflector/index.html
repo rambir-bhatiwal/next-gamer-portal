@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Laser Circuit Reflector: Prism Grid - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Optical Stage</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Receptors Activated</div><div id="targetsVal" class="hud-val">0 / 1</div></div>
+      <div class="hud-box"><div class="hud-lbl">Mirror Rotations</div><div id="movesVal" class="hud-val">0 MOVES</div></div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">STAGES (1-45)</button>
+      <button id="resetBtn" class="action-btn">RESET MIRRORS</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT STAGE &gt;</button>
+    </div>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">LASER CIRCUIT REFLECTOR</h1>
+        <p id="menuDesc">Guide photon laser beams across 45 optical breadboards. Rotate angled mirrors and prism splitters to illuminate all quantum energy receptors.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE OPTICAL ALIGNMENT</button>
+        <div class="controls-hint">Controls: Click or Tap any Mirror to Rotate 90° | Direct laser into all glowing receptors</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

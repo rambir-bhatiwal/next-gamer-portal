@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Chrono Switch: Phase Shift - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Phase Horizon</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Gate Quota</div><div id="quotaVal" class="hud-val">0 / 20 GATES | SHIELDS: 3</div></div>
+      <div class="hud-box"><div class="hud-lbl">Phase State</div><div id="phaseVal" class="hud-val">CYAN POLARITY</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">PHASES (1-45)</button>
+      <button id="shiftBtn" class="action-btn shift-btn">PHASE SHIFT (SPACE)</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT PHASE &gt;</button>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CHRONO SWITCH: PHASE SHIFT</h1>
+        <p id="menuDesc">Shift your quantum core between Cyan and Magenta polarities in real-time across 45 unique rift horizons. Match barrier colors to absorb energy and clear gate quotas.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE PHASE SHIFT</button>
+        <div class="controls-hint">Controls: Spacebar / Screen Tap / Button to Toggle Polarity</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

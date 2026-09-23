@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Poker: Holographic Video Draw - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Video Terminal</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Credits Target</div><div id="creditsVal" class="hud-val">$1,000 / $3,000</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hand Outcome</div><div id="handResultVal" class="hud-val" style="color:#ffd600;">JACKS OR BETTER</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Bet</div><div id="betVal" class="hud-val" style="color:#00ff88;">$50 CREDITS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">TERMINALS (1-45)</button>
+      <button id="betBtn" class="action-btn">BET +$25</button>
+      <button id="dealBtn" class="action-btn deal-btn">DEAL / DRAW [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TERMINAL &gt;</button>
+    </div>
+    <div class="controls-hint">Select bet and click DEAL | Click cards to HOLD then DRAW to finish hand | Royal Flush pays jackpot</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER POKER</h1>
+        <p id="overlayDesc">Classic 5-card draw Video Poker with authentic paytables and card holding toggles across 45 futuristic casino stages!</p>
+        <button id="startBtn" class="glow-btn">PLAY VIDEO POKER</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT VIDEO TERMINAL (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

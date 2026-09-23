@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neural Memory Match: Holographic Pairs - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Memory Matrix</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Matches / Total</div><div id="matchVal" class="hud-val" style="color:#00ff88;">0 / 6 PAIRS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Moves Budget</div><div id="movesVal" class="hud-val" style="color:#ffd600;">20 MOVES LEFT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Combo Streak</div><div id="comboVal" class="hud-val" style="color:#00f0ff;">x1 STREAK</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">MATRICES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RELOAD</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT MATRIX &gt;</button>
+    </div>
+    <div class="controls-hint">Click cards to flip and reveal cyber symbols | Match identical pairs to link neural pathways | Clear grid before timeout</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">NEURAL MEMORY MATCH</h1>
+        <p id="overlayDesc">Flip face-down holographic cards to pair matching cybernetic glyphs across 45 memory stages. Watch your moves budget!</p>
+        <button id="startBtn" class="glow-btn">INITIALIZE MATRIX</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT MEMORY MATRIX (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

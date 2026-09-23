@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Quantum Velocity Sub-Atomic GP Game Banner">
+  <defs>
+    <radialGradient id="qvBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#081830" />
+      <stop offset="60%" stop-color="#040b18" />
+      <stop offset="100%" stop-color="#02050d" />
+    </radialGradient>
+    <filter id="qvGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b" />
+      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="340" fill="url(#qvBg)" />
+  <!-- Particle Accelerator Rings -->
+  <g transform="translate(300, 170)">
+    <circle cx="0" cy="0" r="130" fill="none" stroke="rgba(0, 240, 255, 0.2)" stroke-width="2" />
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#00f0ff" stroke-width="4" stroke-dasharray="24 16" filter="url(#qvGlow)" />
+    <circle cx="0" cy="0" r="90" fill="none" stroke="rgba(255, 0, 127, 0.3)" stroke-width="2" />
+    <!-- Magnetic Field Lines -->
+    <line x1="-150" y1="0" x2="150" y2="0" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1.5" />
+    <line x1="0" y1="-150" x2="0" y2="150" stroke="rgba(0, 240, 255, 0.15)" stroke-width="1.5" />
+    <!-- Quantum Particle Racer (Blazing Sub-Atomic Core) -->
+    <g transform="rotate(35) translate(110, 0)">
+      <circle cx="0" cy="0" r="14" fill="#ffffff" filter="url(#qvGlow)" />
+      <circle cx="0" cy="0" r="8" fill="#00f0ff" />
+      <!-- Tail Arc -->
+      <path d="M 0,0 A 110 110 0 0 0 -90,40" fill="none" stroke="#00f0ff" stroke-width="6" opacity="0.6" filter="url(#qvGlow)" />
+    </g>
+    <!-- Positron Obstacles -->
+    <circle cx="-60" cy="-60" r="10" fill="#ff007f" filter="url(#qvGlow)" />
+    <circle cx="50" cy="70" r="8" fill="#ffaa00" filter="url(#qvGlow)" />
+  </g>
+  <!-- Title Badge Overlay -->
+  <rect x="25" y="25" width="280" height="34" rx="6" fill="rgba(3, 8, 20, 0.85)" stroke="#00f0ff" stroke-width="1.2" />
+  <text x="38" y="48" font-family="'Orbitron', sans-serif" font-size="14" font-weight="900" fill="#ffffff" letter-spacing="1">
+    QUANTUM <tspan fill="#00f0ff">VELOCITY</tspan>
+  </text>
+  <rect x="490" y="25" width="85" height="26" rx="4" fill="#00f0ff" />
+  <text x="508" y="42" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#030814" letter-spacing="1">RACING</text>
+</svg>

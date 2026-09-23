@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#02000c"/>
+      <stop offset="50%" stop-color="#0c041f"/>
+      <stop offset="100%" stop-color="#010e14"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Matrix Grid -->
+  <g stroke="rgba(255, 255, 255, 0.08)" stroke-width="1">
+    <line x1="180" y1="80" x2="180" y2="360"/>
+    <line x1="220" y1="80" x2="220" y2="360"/>
+    <line x1="260" y1="80" x2="260" y2="360"/>
+    <line x1="300" y1="80" x2="300" y2="360"/>
+    <line x1="340" y1="80" x2="340" y2="360"/>
+    <line x1="380" y1="80" x2="380" y2="360"/>
+    <line x1="420" y1="80" x2="420" y2="360"/>
+  </g>
+  <!-- Falling Tetrominoes -->
+  <g filter="url(#neonGlow)">
+    <!-- T-Piece Magenta (Falling) -->
+    <rect x="262" y="102" width="36" height="36" rx="4" fill="#ff007f" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="302" y="102" width="36" height="36" rx="4" fill="#ff007f" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="342" y="102" width="36" height="36" rx="4" fill="#ff007f" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="302" y="142" width="36" height="36" rx="4" fill="#ff007f" stroke="#ffffff" stroke-width="1.5"/>
+
+    <!-- L-Piece Orange -->
+    <rect x="182" y="242" width="36" height="36" rx="4" fill="#ff9100"/>
+    <rect x="182" y="282" width="36" height="36" rx="4" fill="#ff9100"/>
+    <rect x="182" y="322" width="36" height="36" rx="4" fill="#ff9100"/>
+    <rect x="222" y="322" width="36" height="36" rx="4" fill="#ff9100"/>
+
+    <!-- Square Piece Yellow -->
+    <rect x="262" y="282" width="36" height="36" rx="4" fill="#ffd700"/>
+    <rect x="302" y="282" width="36" height="36" rx="4" fill="#ffd700"/>
+    <rect x="262" y="322" width="36" height="36" rx="4" fill="#ffd700"/>
+    <rect x="302" y="322" width="36" height="36" rx="4" fill="#ffd700"/>
+
+    <!-- I-Piece Cyan -->
+    <rect x="342" y="202" width="36" height="36" rx="4" fill="#00f0ff"/>
+    <rect x="342" y="242" width="36" height="36" rx="4" fill="#00f0ff"/>
+    <rect x="342" y="282" width="36" height="36" rx="4" fill="#00f0ff"/>
+    <rect x="342" y="322" width="36" height="36" rx="4" fill="#00f0ff"/>
+
+    <!-- Line Clear Particle Flash -->
+    <line x1="160" y1="320" x2="440" y2="320" stroke="#ffffff" stroke-width="3"/>
+  </g>
+  <!-- Title Badge -->
+  <rect x="135" y="24" width="330" height="34" rx="6" fill="rgba(6, 2, 18, 0.85)" stroke="#00f0ff" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#00f0ff" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">PIXEL DROP</text>
+</svg>

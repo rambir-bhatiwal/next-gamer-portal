@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequency Slicer: Cyber Saber Beat - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="slicer-container">
+    <header class="hud-top">
+      <div class="stat-col"><span class="label">STAGE</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="stat-col"><span class="label">ARENA</span><span id="themeDisplay" class="value">Cyan/Magenta Tunnel</span></div>
+      <div class="stat-col"><span class="label">SCORE</span><span id="scoreDisplay" class="value">0</span></div>
+      <div class="stat-col"><span class="label">COMBO</span><span id="comboDisplay" class="value">0x</span></div>
+      <div class="stat-col"><span class="label">SHIELDS</span><span id="shieldDisplay" class="value">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="canvas-arena">
+      <canvas id="slicerCanvas" width="480" height="600"></canvas>
+      <div id="sliceMsg" class="slice-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <div class="saber-switches">
+        <button class="saber-btn saber-left">LEFT SABER (CYAN)</button>
+        <button class="saber-btn saber-right">RIGHT SABER (RED)</button>
+      </div>
+      <div class="instructions">Swipe or click/drag across approaching cubes matching arrow directions! [WASD/Arrows]</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT FREQUENCY SLICER ARENA (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

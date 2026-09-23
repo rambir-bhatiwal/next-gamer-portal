@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Asteroid Shatter: Deep Space Vector - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Sector / Nebula</div><div id="themeVal" class="hud-val">1: Orion Nebula Violet</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score & Ships</div><div id="scoreVal" class="hud-val">0 PTS | SHIPS: 3</div></div>
+      <div class="hud-box"><div class="hud-lbl">Asteroids Remaining</div><div id="rockVal" class="hud-val">0 / 0</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">ASTEROID SHATTER</h1>
+        <p id="menuDesc">360-degree Newtonian vector space shooter across 45 deep-space sectors. Rotate your ship, fire thrusters, and disintegrate asteroid swarms into fine stardust.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ENGAGE SECTOR</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Rotate | Up or W for Thruster | Space to Fire Lasers | Shift for Hyperspace</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse Conductor: Orchestral Synth Duel - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="conductor-box">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/40</span></div>
+      <div class="stat"><span class="lbl">HALL</span><span id="themeDisplay" class="val">Sunset Synthwave</span></div>
+      <div class="stat"><span class="lbl">BPM</span><span id="bpmDisplay" class="val">100</span></div>
+      <div class="stat"><span class="lbl">HARMONY</span><span id="harmonyDisplay" class="val">0%</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="hall-arena">
+      <canvas id="metronomeCanvas" width="460" height="500"></canvas>
+      <div id="accuracyMsg" class="accuracy-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <button id="tapBatonBtn" class="btn-conduct">CONDUCT / TAP BEAT (SPACE)</button>
+      <div class="hint">Tap when the swinging baton intersects the central golden tempo mark!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT CONCERT HALL STAGE (1–40)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

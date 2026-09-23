@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Isometric Precision Racer - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Stage / Theme</div><div id="themeVal" class="hud-val">1: Neon Metropolis Roof</div></div>
+      <div class="hud-box"><div class="hud-lbl">Lap Time / Best</div><div id="timeVal" class="hud-val">00.00s / --</div></div>
+      <div class="hud-box"><div class="hud-lbl">Checkpoints</div><div id="checkVal" class="hud-val">0 / 4</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">ISOMETRIC PRECISION RACER</h1>
+        <p id="menuDesc">Master precision drift angles across 45 unique isometric raceways. Race against the target ghost time to unlock the next level.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START RACE</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD to Steer & Accelerate | Space to Drift | Touch & Drag on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

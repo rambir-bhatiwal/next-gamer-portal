@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Snake 3000: Quantum Feed - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Motherboard PCB</div><div id="themeVal" class="hud-val">1: Classic Green PCB</div></div>
+      <div class="hud-box"><div class="hud-lbl">Data Packets & Score</div><div id="scoreVal" class="hud-val">0 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Length / Quota</div><div id="lengthVal" class="hud-val">4 / 15 Nodes</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CYBER SNAKE 3000</h1>
+        <p id="menuDesc">Guide a glowing data-serpent through digital motherboard labyrinths across 45 unique hardware themes. Consume encrypted energy packets to achieve target quantum length.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE CORE</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD to Steer | Swipe or Tap Directions on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Pulse Runner: Precision Rhythm Platforms - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Sound Track</div><div id="themeVal" class="hud-val">120BPM: Cyan City</div></div>
+      <div class="hud-box"><div class="hud-lbl">Track Progress</div><div id="distVal" class="hud-val">0 / 1000m</div></div>
+      <div class="hud-box"><div class="hud-lbl">Pulse Matrix</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Rhythm Combo</div><div id="comboVal" class="hud-val" style="color:#ffd600;">x1 COMBO</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">TRACKS (1-45)</button>
+      <button id="jumpBtn" class="action-btn jump-btn">RHYTHM JUMP [SPACE/UP]</button>
+      <button id="restartBtn" class="action-btn">RETRY TRACK</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TRACK &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">PULSE RUNNER</h1>
+        <p id="overlayDesc">Sprint along synth soundwaves across 45 musical platform courses. Jump, double jump, and hit rhythm gates to the beat to maintain your combo multiplier and conquer high BPM tracks!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START RHYTHM RUN</button>
+        <div class="controls-hint">Controls: Press [Space] or [Arrow Up] or Tap the Jump Button. Timing your jumps on beat yields PERFECT bonuses!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

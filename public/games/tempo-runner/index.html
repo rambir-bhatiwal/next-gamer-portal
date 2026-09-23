@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tempo Runner: Rhythm-Synced Platform Sprint - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="runner-box">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/45</span></div>
+      <div class="stat"><span class="lbl">VENUE</span><span id="themeDisplay" class="val">Techno City</span></div>
+      <div class="stat"><span class="lbl">DISTANCE</span><span id="distDisplay" class="val">0/500m</span></div>
+      <div class="stat"><span class="lbl">COMBO</span><span id="comboDisplay" class="val">0x</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="canvas-arena">
+      <canvas id="runnerCanvas" width="500" height="520"></canvas>
+      <div id="runnerMsg" class="runner-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <button id="jumpBtn" class="btn-jump">RHYTHM JUMP (SPACE / UP)</button>
+      <div class="hint">Jump when the expanding rhythm pulse matches the runner ring!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT TEMPO RUNNER TRACK (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

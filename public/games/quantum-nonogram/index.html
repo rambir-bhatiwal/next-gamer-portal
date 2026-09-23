@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Quantum Nonogram: Cyber Picross - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Cyber Blueprint</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Tool Mode</div><div id="modeVal" class="hud-val">FILL BIT (■)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Glyph State</div><div id="statusVal" class="hud-val">UNRESOLVED</div></div>
+    </div>
+
+    <div class="nonogram-wrap">
+      <div id="topClues" class="top-clues"></div>
+      <div class="board-row">
+        <div id="leftClues" class="left-clues"></div>
+        <div id="gridBoard" class="grid-board"></div>
+      </div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="toggleToolBtn" class="action-btn">TOGGLE: FILL / CROSS</button>
+      <button id="checkBtn" class="action-btn">VERIFY GLYPH</button>
+      <button id="levelSelectBtn" class="action-btn">BLUEPRINTS (1-45)</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT GLYPH &gt;</button>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">QUANTUM NONOGRAM</h1>
+        <p id="menuDesc">Deduce and reveal hidden neon cybernetic glyphs by filling grid cells according to numeric row and column clues across 45 blueprint stages.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">COMMENCE PICROSS DECRYPTION</button>
+        <div class="controls-hint">Controls: Left Click / Tap to Fill | Right Click or Tool Toggle to place X marker</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

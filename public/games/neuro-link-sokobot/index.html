@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neuro-Link Soko-Bot: Memory Mover - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Vault Chamber</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Memory Units Docked</div><div id="dockedVal" class="hud-val">0 / 2</div></div>
+      <div class="hud-box"><div class="hud-lbl">Step Tracker</div><div id="stepsVal" class="hud-val">0 STEPS</div></div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="controls-bar">
+      <button id="undoBtn" class="action-btn">UNDO MOVE</button>
+      <button id="resetBtn" class="action-btn">RESTART</button>
+      <button id="levelSelectBtn" class="action-btn">VAULTS (1-45)</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT VAULT &gt;</button>
+    </div>
+    <div class="dpad-bar">
+      <button class="dpad-btn" id="dpadUp">▲</button>
+      <div class="dpad-mid">
+        <button class="dpad-btn" id="dpadLeft">◀</button>
+        <button class="dpad-btn" id="dpadDown">▼</button>
+        <button class="dpad-btn" id="dpadRight">▶</button>
+      </div>
+    </div>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">NEURO-LINK SOKO-BOT</h1>
+        <p id="menuDesc">Command a quantum maintenance automaton pushing memory blocks onto designated server ports across 45 handcrafted cleanrooms.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ACTIVATE SOKO-BOT</button>
+        <div class="controls-hint">Controls: Arrow Keys / WASD / Touch D-Pad to move | Push crates onto target pads</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

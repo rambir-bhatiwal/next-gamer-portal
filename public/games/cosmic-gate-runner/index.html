@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cosmic Gate Runner - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Stage / Theme</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Speed</div><div id="speedVal" class="hud-val">420 KM/H</div></div>
+      <div class="hud-box"><div class="hud-lbl">Target Gate</div><div id="gateVal" class="hud-val">0 / 20</div></div>
+    </div>
+    <div class="controls-hint">Steer: [A] / [D] or Left/Right Arrows | Touch &amp; Drag to Align Gate</div>
+    <canvas id="raceCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">COSMIC GATE RUNNER</h1>
+        <p id="menuDesc">Pilot a supersonic hyper-craft through 45 unique planetary and stellar environments. Pass through energy gates, solve color checkpoints, and conquer all 45 levels!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">LAUNCH LEVEL</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

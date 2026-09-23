@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Galactic Fleet Commander: Turn-Based Tactics - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Star Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Active Turn</div><div id="turnVal" class="hud-val" style="color:#00f0ff;">PLAYER FLEET</div></div>
+      <div class="hud-box"><div class="hud-lbl">Action Points</div><div id="apVal" class="hud-val" style="color:#ffd600;">3 / 3 AP</div></div>
+      <div class="hud-box"><div class="hud-lbl">Enemy Strength</div><div id="enemyVal" class="hud-val" style="color:#ff1744;">3 SHIPS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="orders-bar">
+      <button class="order-btn active" data-action="move">ENGAGE ENGINES [MOVE]</button>
+      <button class="order-btn" data-action="attack">FIRE CANNONS [ATTACK]</button>
+      <button class="order-btn" data-action="shield">SHIELD OVERCHARGE</button>
+      <button id="endTurnBtn" class="action-btn end-turn-btn">END TURN &gt;</button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RETRY MISSION</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">GALACTIC FLEET COMMANDER</h1>
+        <p id="overlayDesc">Command an elite battle squadron across 45 star sectors against an adaptive AI admiral. Use tactical Action Points to maneuver cruisers, fire broadside railguns, and activate directional shields.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE TACTICAL ENGAGEMENT</button>
+        <div class="controls-hint">Controls: Select your starship, choose order (Move/Attack/Shield), click target tile or enemy vessel.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

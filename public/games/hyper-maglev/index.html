@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Hyper Maglev: Monorail Blitz - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Skyway Sector</div><div id="themeVal" class="hud-val">1: Skyway Spire Heights</div></div>
+      <div class="hud-box"><div class="hud-lbl">Velocity & Battery</div><div id="speedVal" class="hud-val">600 KM/H | 100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Terminal Distance</div><div id="distVal" class="hud-val">0 / 2500M</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">HYPER MAGLEV: MONORAIL BLITZ</h1>
+        <p id="menuDesc">Command a 600km/h supersonic maglev train hurtling across 4-rail skyways across 45 transit biomes. Switch rails to dodge repair drones and collect magnetic battery cells.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ENGAGE MAGLEV RAILS</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Switch Rail Tracks | Down or S for Magnetic Brake | Touch Left/Right on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

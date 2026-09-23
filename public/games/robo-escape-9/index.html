@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Robo-Escape 9: Facility Infiltrator - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Security Sector</div><div id="themeVal" class="hud-val">Sector 1: Assembly Line</div></div>
+      <div class="hud-box"><div class="hud-lbl">Alert Status</div><div id="alertVal" class="hud-val" style="color:#00ff88;">STEALTH</div></div>
+      <div class="hud-box"><div class="hud-lbl">Chassis Integrity</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Terminals Hacked</div><div id="termVal" class="hud-val" style="color:#ffd600;">0 / 2 HACKED</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SECTORS (1-45)</button>
+      <button id="leftBtn" class="action-btn">&lt; LEFT [A]</button>
+      <button id="crouchBtn" class="action-btn">CROUCH [S]</button>
+      <button id="jumpBtn" class="action-btn jump-btn">JUMP/CLIMB [W]</button>
+      <button id="rightBtn" class="action-btn">RIGHT [D] &gt;</button>
+      <button id="hackBtn" class="action-btn hack-btn">HACK TERMINAL [E/SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">ROBO-ESCAPE 9</h1>
+        <p id="overlayDesc">Guide rogue robot unit 9 escaping a high-security automated manufacturing complex across 45 sectors. Sneak beneath surveillance cones, hack security consoles, evade patrol drones, and reach the exit vent!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START INFILTRATION</button>
+        <div class="controls-hint">Controls: [A/D or Left/Right] to run, [W/Up] to jump or climb ladders, [S/Down] to crouch and hide behind crates, [E/Space] to hack security terminals.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

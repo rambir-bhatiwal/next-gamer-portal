@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+body {
+  background: #05020c;
+  color: #e0f7fa;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  max-width: 680px;
+  height: 100vh;
+  max-height: 720px;
+  background: radial-gradient(circle at center, #0f0b24 0%, #05020c 100%);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+  position: relative;
+}
+.hud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 16px;
+  background: rgba(10, 6, 26, 0.85);
+  border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+.hud-item {
+  display: flex;
+  flex-direction: column;
+}
+.hud-item .label {
+  font-size: 9px;
+  color: #80d8ff;
+  letter-spacing: 1px;
+}
+.hud-item .value {
+  font-size: 14px;
+  font-weight: 800;
+  color: #00f0ff;
+  font-family: monospace;
+}
+.btn-level-select {
+  background: #ff007f;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.canvas-wrapper {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+canvas {
+  background: #030108;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  max-width: 100%;
+  max-height: 100%;
+}
+.game-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(5, 2, 14, 0.88);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  z-index: 20;
+}
+.game-overlay.hidden { display: none; }
+.game-overlay h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #00f0ff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00f0ff;
+}
+.btn-action {
+  background: #00f0ff;
+  color: #000;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+}
+.hud-footer {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(8, 4, 20, 0.9);
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.dpad-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.dpad-row {
+  display: flex;
+  gap: 3px;
+}
+.dpad-btn {
+  background: #140d30;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  font-size: 12px;
+  font-weight: bold;
+  width: 44px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dpad-actions {
+  display: flex;
+  gap: 8px;
+}
+.action-btn {
+  background: #ff007f;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.controls-hint {
+  font-size: 10px;
+  color: #80d8ff;
+  text-align: center;
+  opacity: 0.8;
+}
+.modal-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(4, 2, 12, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-overlay.hidden { display: none; }
+.modal-content {
+  background: #0d0822;
+  border: 1px solid #00f0ff;
+  border-radius: 8px;
+  padding: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content h2 {
+  color: #00f0ff;
+  font-size: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 50vh;
+  padding: 4px;
+}
+.lvl-btn {
+  background: #160f38;
+  border: 1px solid #7c4dff;
+  color: #fff;
+  font-size: 10px;
+  padding: 8px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+.lvl-btn.active {
+  border-color: #00f0ff;
+  background: #00f0ff;
+  color: #000;
+  font-weight: bold;
+}
+.btn-close {
+  margin-top: 12px;
+  background: #ff007f;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}

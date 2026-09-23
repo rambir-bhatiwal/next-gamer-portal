@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Water Stream Particle Diverter: Fluid Lab - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Fluid Lab</div><div id="themeVal" class="hud-val">1: Cleanroom Cyan</div></div>
+      <div class="hud-box"><div class="hud-lbl">Flask Volume</div><div id="volumeVal" class="hud-val">0 / 60 ML</div></div>
+      <div class="hud-box"><div class="hud-lbl">Fluid Pressure</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Deflector Budget</div><div id="paddlesVal" class="hud-val" style="color:#ffd600;">3 PADDLES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">LABS (1-45)</button>
+      <button id="streamBtn" class="action-btn stream-btn">TOGGLE FLOW [SPACE]</button>
+      <button id="clearPaddlesBtn" class="action-btn">CLEAR PADDLES</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT LAB &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">FLUID LAB DIVERTER</h1>
+        <p id="overlayDesc">Divert streams of hundreds of glowing fluid particles into matching chemical flasks across 45 fluid dynamics stages. Place and rotate deflector paddles to guide hydrodynamic flow!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIALIZE FLUID STREAM</button>
+        <div class="controls-hint">Controls: Click and drag anywhere on the canvas to place a deflector paddle. Press [Space] to toggle fluid nozzle flow!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhythm Revolver: 360-Degree Radial Beat Spinner - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="revolver-container">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/45</span></div>
+      <div class="stat"><span class="lbl">RADAR</span><span id="themeDisplay" class="val">Radar Green</span></div>
+      <div class="stat"><span class="lbl">SPARKS</span><span id="sparksDisplay" class="val">0/25</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <main class="radial-arena">
+      <canvas id="revolverCanvas" width="480" height="560"></canvas>
+      <div id="revMsg" class="rev-msg"></div>
+    </main>
+
+    <footer class="hud-bottom">
+      <div class="hint">Rotate shield arc with mouse/touch or Arrow Keys to intercept incoming rhythm sparks!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT RADAR SECTOR (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

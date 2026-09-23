@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Elemental Card Duel: Nano Elementalists - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Tactical Arena</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Player Cards</div><div id="playerVal" class="hud-val" style="color:#00e5ff;">5 BLUE CARDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">AI Cards</div><div id="aiVal" class="hud-val" style="color:#ff3d00;">5 RED CARDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Turn / Status</div><div id="statusVal" class="hud-val" style="color:#ffd600;">YOUR TURN</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">ARENAS (1-45)</button>
+      <button id="restartBtn" class="action-btn">REMATCH</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT ARENA &gt;</button>
+    </div>
+    <div class="controls-hint">Click card to deploy | Fire beats Earth, Earth beats Water, Water beats Fire | Deplete enemy HP to conquer stage</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">ELEMENTAL CARD DUEL</h1>
+        <p id="overlayDesc">Place directional cards on a 3x3 tactical grid to capture adjacent enemy cards across 45 elemental arena matches!</p>
+        <button id="startBtn" class="glow-btn">ENTER DUEL</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT TACTICAL ARENA (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Hacker Node Conquest: Subnet Dominance - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Subnet Graph</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Player Packets</div><div id="playerVal" class="hud-val" style="color:#00f0ff;">50 BITS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Rival Packets</div><div id="enemyVal" class="hud-val" style="color:#ff1744;">50 BITS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Subnet Control</div><div id="controlVal" class="hud-val" style="color:#39ff14;">50% / 100%</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">NETWORKS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RESET INVASION</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SUBNET &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">HACKER NODE CONQUEST</h1>
+        <p id="overlayDesc">Conquer network server nodes in real-time cyber graph warfare across 45 covert subnets. Drag from your nodes to launch high-speed packet streams and capture neutral and rival hosts.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE SUBNET INVASION</button>
+        <div class="controls-hint">Controls: Click/drag from your blue nodes to any adjacent node to dispatch packet streams. Capture 100% of nodes to win.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

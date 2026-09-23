@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Pet Simulator: Virtual Tamagotchi - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">STAGE</span><span id="levelDisplay" class="value">1/40</span></div>
+      <div class="hud-item"><span class="label">HABITAT</span><span id="themeDisplay" class="value">Cleanroom</span></div>
+      <div class="hud-item"><span class="label">EVOLUTION</span><span id="evoDisplay" class="value">Nano-Spore</span></div>
+      <div class="hud-item"><span class="label">XP</span><span id="xpDisplay" class="value">0/100</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">STAGES</button>
+    </header>
+
+    <main class="tamagotchi-body">
+      <div class="lcd-screen">
+        <canvas id="petCanvas" width="320" height="260"></canvas>
+        <div id="petThought" class="pet-thought">"Beep boop! Ready to learn!"</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><span class="stat-lbl">ENERGY</span><div class="bar-outer"><div id="energyBar" class="bar-fill" style="width: 80%"></div></div></div>
+        <div class="stat"><span class="stat-lbl">CLEAN</span><div class="bar-outer"><div id="cleanBar" class="bar-fill" style="width: 80%"></div></div></div>
+        <div class="stat"><span class="stat-lbl">HAPPY</span><div class="bar-outer"><div id="happyBar" class="bar-fill" style="width: 80%"></div></div></div>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="care-buttons">
+        <button class="care-btn" id="btnFeed">🍎 FEED DATA</button>
+        <button class="care-btn" id="btnTrain">🧠 TRAIN NET</button>
+        <button class="care-btn" id="btnClean">🧹 DEFRAG</button>
+        <button class="care-btn" id="btnPlay">🎮 PLAY MINI</button>
+      </div>
+      <div class="controls-hint">Care for your nanobot companion across 40 evolutionary growth tiers!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT EVOLUTION STAGE (1–40)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn-Based Cyberpunk Arena: Neon Gladiator - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">BOUT</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">ARENA</span><span id="themeDisplay" class="value">Underground Pit</span></div>
+      <div class="hud-item"><span class="label">PURSE</span><span id="purseDisplay" class="value">0 CR</span></div>
+      <div class="hud-item"><span class="label">RECORD</span><span id="recordDisplay" class="value">0W - 0L</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">BOUTS</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="arenaCanvas" width="600" height="420"></canvas>
+      <div id="battleLog" class="battle-log">Welcome to the Neon Gladiator Arena. Select your combat action!</div>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">VICTORY!</h2>
+        <p id="overlayMessage">Gladiator defeated.</p>
+        <button id="overlayBtn" class="btn-action">NEXT BOUT</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="action-grid">
+        <button class="action-btn slash" id="btnSlash">⚡ PLASMA SLASH [1]</button>
+        <button class="action-btn heavy" id="btnHeavy">💥 HEAVY STRIKE [2]</button>
+        <button class="action-btn shield" id="btnShield">🛡️ DEFENSE MATRIX [3]</button>
+        <button class="action-btn heal" id="btnHeal">🧪 NANITE INJECT [4]</button>
+      </div>
+      <div class="controls-hint">Turn-based tactical combat: manage energy, time blocks, and counter rivals!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT CHAMPIONSHIP BOUT (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

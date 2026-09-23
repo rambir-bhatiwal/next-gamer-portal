@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Holographic Pipe Fusion: Flux Router - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Conduit Biome</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Plasma Status</div><div id="statusVal" class="hud-val">DISCONNECTED</div></div>
+      <div class="hud-box"><div class="hud-lbl">Flux Rotations</div><div id="movesVal" class="hud-val">0 MOVES</div></div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CONDUITS (1-45)</button>
+      <button id="resetBtn" class="action-btn">RESET PIPES</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CONDUIT &gt;</button>
+    </div>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">HOLOGRAPHIC PIPE FUSION</h1>
+        <p id="menuDesc">Forge uninterrupted plasma conduits across 45 quantum reactor sectors. Click conduit tiles to rotate them 90° and connect the Generator Source to the Quantum Core.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">POWER PLASMA FLUX</button>
+        <div class="controls-hint">Controls: Click or Tap any pipe tile to rotate 90° | Connect green Source to cyan Core</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

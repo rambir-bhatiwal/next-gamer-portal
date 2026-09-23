@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Horizon - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Stage / Highway</div><div id="themeVal" class="hud-val">1: Miami Cyber-Coast</div></div>
+      <div class="hud-box"><div class="hud-lbl">Speed & Distance</div><div id="speedVal" class="hud-val">0 KM/H | 0 / 2500M</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score / Multiplier</div><div id="scoreVal" class="hud-val">0 (x1.0)</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">NEON HORIZON</h1>
+        <p id="menuDesc">Outrun synthwave scaling racer. Weave through traffic, catch boost pads, and blast across 45 unique highway environments to the checkered horizon.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">IGNITE HIGHWAY</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Steer | Up / W to Accelerate | Down / S to Brake | Touch on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

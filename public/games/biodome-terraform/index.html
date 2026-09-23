@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Bio-Dome Terraform Protocol: Ecosystem Sim - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Biosphere Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Temperature</div><div id="tempVal" class="hud-val" style="color:#ffd600;">22°C (STABLE)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Oxygen / CO2</div><div id="gasVal" class="hud-val" style="color:#00ffcc;">21% / 0.04%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Eco-Stability</div><div id="stabilityVal" class="hud-val" style="color:#39ff14;">85%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Flora Biomass</div><div id="biomassVal" class="hud-val" style="color:#00f0ff;">0 / 100</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-action-bar">
+      <button class="eco-btn" id="heatUpBtn">WARM CORE (+)</button>
+      <button class="eco-btn" id="coolDownBtn">CRYO COOL (-)</button>
+      <button class="eco-btn" id="mistBtn">RELEASE MOISTURE</button>
+      <button class="eco-btn" id="microbeBtn">SEED MICROBES</button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">DOMES (1-45)</button>
+      <button id="restartBtn" class="action-btn">RESET ECOSYSTEM</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT DOME &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">BIODOME TERRAFORM PROTOCOL</h1>
+        <p id="overlayDesc">Regulate atmospheric equilibrium across 45 unique alien biospheres. Balance temperature, atmospheric moisture, and seed microbial flora until full ecological stability is reached.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE TERRAFORMING</button>
+        <div class="controls-hint">Controls: Use atmospheric regulator buttons to maintain 18°C–26°C and 80%+ eco-stability to grow 100 flora biomass units.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

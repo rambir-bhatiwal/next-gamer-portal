@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Pendulum Wrecking Bot: Kinetic Destroyer - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Demolition Site</div><div id="themeVal" class="hud-val">1: Data Center</div></div>
+      <div class="hud-box"><div class="hud-lbl">Server Rubble</div><div id="rubbleVal" class="hud-val">0 / 70% SMASHED</div></div>
+      <div class="hud-box"><div class="hud-lbl">Swings Remaining</div><div id="swingsVal" class="hud-val" style="color:#00ff88;">4 SWINGS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Kinetic Impulse</div><div id="impulseVal" class="hud-val" style="color:#ffd600;">0 KN</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SITES (1-45)</button>
+      <button id="shortenBtn" class="action-btn">WINCH UP [W]</button>
+      <button id="lengthenBtn" class="action-btn">WINCH DOWN [S]</button>
+      <button id="releaseBtn" class="action-btn swing-btn">RELEASE PENDULUM [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SITE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">PENDULUM WRECKING BOT</h1>
+        <p id="overlayDesc">Release and swing a massive electromagnetic wrecking ball on an adjustable pendulum cable across 45 stages. Smash high-density server rack towers into rubble before swings expire!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">DEPLOY WRECKING BOT</button>
+        <div class="controls-hint">Controls: [W/S] or Winch buttons to adjust cable length. [Space] or Release button to release the pendulum and smash towers!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

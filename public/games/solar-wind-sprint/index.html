@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Solar Wind Sprint: Asteroid Slalom - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Solar System / Star</div><div id="themeVal" class="hud-val">1: Yellow Dwarf Orbit</div></div>
+      <div class="hud-box"><div class="hud-lbl">Photon Flux & Velocity</div><div id="speedVal" class="hud-val">840 KM/S (x1.0)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Slalom Gates Cleared</div><div id="gateVal" class="hud-val">0 / 20</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">SOLAR WIND SPRINT: ASTEROID SLALOM</h1>
+        <p id="menuDesc">Ride high-energy stellar photon currents aboard a solar sail craft across 45 unique star systems. Trim your sails, slalom through asteroid ring gates, and clear the corona boundary.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">DEPLOY SOLAR SAIL</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Angle Sail & Slalom | Space or Up to Trim Photon Boost</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

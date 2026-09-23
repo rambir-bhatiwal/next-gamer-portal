@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Dance Floor: Grid Memory DDR - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="ddr-container">
+    <header class="hud-top">
+      <div class="stat"><span class="lbl">STAGE</span><span id="levelDisplay" class="val">1/45</span></div>
+      <div class="stat"><span class="lbl">CLUB</span><span id="themeDisplay" class="val">Sunset Synthwave</span></div>
+      <div class="stat"><span class="lbl">SCORE</span><span id="scoreDisplay" class="val">0</span></div>
+      <div class="stat"><span class="lbl">COMBO</span><span id="comboDisplay" class="val">0x</span></div>
+      <div class="stat"><span class="lbl">SHIELDS</span><span id="shieldDisplay" class="val">🛡️🛡️🛡️</span></div>
+      <button id="levelSelectBtn" class="btn-stages">STAGES</button>
+    </header>
+
+    <div class="stream-view">
+      <canvas id="streamCanvas" width="460" height="240"></canvas>
+      <div id="ddrMsg" class="ddr-msg"></div>
+    </div>
+
+    <main class="dance-grid">
+      <!-- 3x3 Dance Floor Tiles -->
+      <button class="step-btn corner" data-dir="NW">◤</button>
+      <button class="step-btn prime" data-dir="UP">▲</button>
+      <button class="step-btn corner" data-dir="NE">◥</button>
+
+      <button class="step-btn prime" data-dir="LEFT">◀</button>
+      <button class="step-btn center" data-dir="CENTER">★</button>
+      <button class="step-btn prime" data-dir="RIGHT">▶</button>
+
+      <button class="step-btn corner" data-dir="SW">◣</button>
+      <button class="step-btn prime" data-dir="DOWN">▼</button>
+      <button class="step-btn corner" data-dir="SE">◢</button>
+    </main>
+
+    <footer class="hud-bottom">
+      <div class="hint">Step on arrows via keyboard [Arrows / WASD / Numpad] or tap 3x3 dance pads!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <h2>SELECT DANCE CLUB VENUE (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Quantum Teleport Hopper: Warp Jumper - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Test Chamber</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Quantum Beacons</div><div id="beaconVal" class="hud-val" style="color:#00f0ff;">READY [CLICK]</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hopper Shields</div><div id="shieldVal" class="hud-val" style="color:#00ff88;">3 SHIELDS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Exit Portal</div><div id="portalVal" class="hud-val" style="color:#ffd600;">LOCKED</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CHAMBERS (1-45)</button>
+      <button id="warpBtn" class="action-btn warp-btn">WARP TO BEACON [SPACE]</button>
+      <button id="restartBtn" class="action-btn">RETRY CHAMBER</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CHAMBER &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">QUANTUM TELEPORT HOPPER</h1>
+        <p id="overlayDesc">Solve complex puzzle platformer chambers across 45 test facilities. Fire physics beacons and instantly teleport across lethal laser barriers to reach the exit warp portal.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">ENTER TEST CHAMBER</button>
+        <div class="controls-hint">Controls: [A][D] or Arrow keys to run. Click to shoot beacon. Spacebar or [E] to warp to beacon.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

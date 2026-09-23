@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Graviton Loop: Orbital Roller - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Sector / Conduit</div><div id="themeVal" class="hud-val">1: Clear Glass Stellar View</div></div>
+      <div class="hud-box"><div class="hud-lbl">Hull Integrity & Speed</div><div id="speedVal" class="hud-val">100% | 520 KM/H</div></div>
+      <div class="hud-box"><div class="hud-lbl">Distance & Orbs</div><div id="quotaVal" class="hud-val">0 / 2000M | 0 Orbs</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">GRAVITON LOOP: ORBITAL ROLLER</h1>
+        <p id="menuDesc">360-degree pipe racer inside a futuristic orbital transport pipeline. Roll around the inner circumference, dodge rotating laser scaffolding, and collect plasma orbs.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">LAUNCH PIPE POD</button>
+        <div class="controls-hint">Controls: Left/Right or A/D to Rotate 360° | Space or Up to Boost | Touch Drag on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

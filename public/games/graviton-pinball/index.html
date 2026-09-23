@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Graviton Pinball: Hyper Collider - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Collider Table</div><div id="themeVal" class="hud-val">1: CERN Collider</div></div>
+      <div class="hud-box"><div class="hud-lbl">Score Target</div><div id="scoreVal" class="hud-val">0 / 25,000 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Particle Spheres</div><div id="ballsVal" class="hud-val" style="color:#00ff88;">3 BALLS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Bumper Multiplier</div><div id="multVal" class="hud-val" style="color:#ffd600;">x1 COMBO</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">TABLES (1-45)</button>
+      <button id="flipLeftBtn" class="action-btn flipper-btn">&lt; LEFT FLIPPER [A/LEFT]</button>
+      <button id="plungerBtn" class="action-btn plunger-btn">LAUNCH SPHERE [SPACE]</button>
+      <button id="flipRightBtn" class="action-btn flipper-btn">RIGHT FLIPPER [D/RIGHT] &gt;</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT TABLE &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">GRAVITON PINBALL</h1>
+        <p id="overlayDesc">Launch subatomic particle spheres inside 45 quantum colliders. Trigger magnetic bumpers, accelerator loop ramps, and multi-ball anomalies to hit high score targets!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">POWER UP COLLIDER</button>
+        <div class="controls-hint">Controls: [A / Left] for Left Flipper, [D / Right] for Right Flipper, [Space / Launch] to fire plunger. Touch buttons supported.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

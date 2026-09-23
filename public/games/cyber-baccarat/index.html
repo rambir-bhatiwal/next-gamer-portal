@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Baccarat: Quantum High Stakes - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">VIP Salon</div><div id="themeVal" class="hud-val">1: Cyber Cyan Felt</div></div>
+      <div class="hud-box"><div class="hud-lbl">Bankroll Target</div><div id="bankrollVal" class="hud-val">$2,000 / $5,000</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Wager</div><div id="wagerVal" class="hud-val" style="color:#ffd700;">$100 (PLAYER)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Shoe Outcome</div><div id="outcomeVal" class="hud-val" style="color:#00ff88;">PLACE BET</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">SALONS (1-45)</button>
+      <button id="betPlayerBtn" class="action-btn bet-btn active" data-side="player">BET PLAYER (1:1)</button>
+      <button id="betBankerBtn" class="action-btn bet-btn" data-side="banker">BET BANKER (0.95:1)</button>
+      <button id="betTieBtn" class="action-btn bet-btn" data-side="tie">BET TIE (8:1)</button>
+      <button id="dealBtn" class="action-btn deal-btn">DEAL HAND [SPACE]</button>
+      <button id="restartBtn" class="action-btn">CLEAR</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SALON &gt;</button>
+    </div>
+    <div class="controls-hint">Select wager chip and choose side (PLAYER, BANKER, TIE) | Click DEAL | Closest hand to 9 wins</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">CYBER BACCARAT</h1>
+        <p id="overlayDesc">High-roller Punto Banco baccarat in 45 luxurious futuristic VIP salons. Bet on Player, Banker, or Tie and reach bankroll targets!</p>
+        <button id="startBtn" class="glow-btn">ENTER VIP SALON</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT VIP SALON (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

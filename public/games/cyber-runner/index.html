@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Cyber Runner 2099 - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Stage / Cyber Biome</div><div id="themeVal" class="hud-val">1: Rooftop Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Velocity & Energy</div><div id="speedVal" class="hud-val">280 KM/H | 100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Course Distance</div><div id="distVal" class="hud-val">0 / 1500M</div></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">CYBER RUNNER 2099</h1>
+        <p id="menuDesc">Stage-based supersonic runner across 45 unique neo-city rooftop sectors. Jump over photon barriers and slide under scanning defense turrets to reach the extraction zone.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">LAUNCH MISSION</button>
+        <div class="controls-hint">Controls: Space / Up / W to Jump | Down / S to Slide | Tap Upper/Lower Screen on Mobile</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%" role="img" aria-label="Neon Pong Hyper Duel Game Banner">
+  <!-- Neon Pong Hyper Duel Thumbnail Graphic -->
+  <defs>
+    <radialGradient id="npBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0a1226" />
+      <stop offset="60%" stop-color="#050814" />
+      <stop offset="100%" stop-color="#020308" />
+    </radialGradient>
+    <linearGradient id="paddleCyan" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0077ff" />
+    </linearGradient>
+    <linearGradient id="paddleMagenta" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#aa0055" />
+    </linearGradient>
+    <filter id="npGlowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="npGlowMagenta" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Space Arena Background -->
+  <rect width="600" height="340" fill="url(#npBg)" />
+
+  <!-- Arena Boundary Borders with Neon Glow -->
+  <rect x="25" y="25" width="550" height="290" rx="8" fill="none" stroke="rgba(0, 240, 255, 0.2)" stroke-width="2" />
+  <line x1="25" y1="25" x2="575" y2="25" stroke="#00f0ff" stroke-width="2" filter="url(#npGlowCyan)" />
+  <line x1="25" y1="315" x2="575" y2="315" stroke="#00f0ff" stroke-width="2" filter="url(#npGlowCyan)" />
+
+  <!-- Center Court Dashed Divider -->
+  <line x1="300" y1="25" x2="300" y2="315" stroke="rgba(255, 255, 255, 0.25)" stroke-width="3" stroke-dasharray="12 12" />
+  <circle cx="300" cy="170" r="45" fill="none" stroke="rgba(0, 240, 255, 0.15)" stroke-width="2" />
+
+  <!-- Digital Scoreboard in Stadium Background -->
+  <text x="240" y="85" font-family="'Orbitron', monospace" font-size="44" font-weight="900" fill="#00f0ff" opacity="0.4" text-anchor="middle">
+    07
+  </text>
+  <text x="360" y="85" font-family="'Orbitron', monospace" font-size="44" font-weight="900" fill="#ff007f" opacity="0.4" text-anchor="middle">
+    05
+  </text>
+
+  <!-- Player Left Paddle (Cyan) -->
+  <rect x="60" y="120" width="16" height="95" rx="8" fill="url(#paddleCyan)" filter="url(#npGlowCyan)" />
+  
+  <!-- AI Right Paddle (Magenta) -->
+  <rect x="524" y="150" width="16" height="95" rx="8" fill="url(#paddleMagenta)" filter="url(#npGlowMagenta)" />
+
+  <!-- Glowing Hyper Ball with Particle Trails -->
+  <!-- Ball Trail Tail -->
+  <path d="M120,155 L210,185 L320,180" fill="none" stroke="#00f0ff" stroke-width="3" opacity="0.2" />
+  <path d="M210,185 L280,182 L340,178" fill="none" stroke="#00f0ff" stroke-width="6" opacity="0.4" filter="url(#npGlowCyan)" />
+  <!-- Trail Particles -->
+  <circle cx="270" cy="183" r="3.5" fill="#00f0ff" opacity="0.5" />
+  <circle cx="310" cy="180" r="5" fill="#00f0ff" opacity="0.7" />
+  <circle cx="340" cy="178" r="6" fill="#cbf7ff" opacity="0.8" />
+  <!-- Core Energy Ball -->
+  <circle cx="365" cy="176" r="11" fill="#ffffff" filter="url(#npGlowCyan)" />
+  <circle cx="365" cy="176" r="6" fill="#00f0ff" />
+
+  <!-- Deflection Arc Shockwaves -->
+  <path d="M85,150 A 25 25 0 0 1 85,185" fill="none" stroke="#00f0ff" stroke-width="2.5" opacity="0.7" filter="url(#npGlowCyan)" />
+
+  <!-- Title Badge Overlay -->
+  <rect x="40" y="40" width="220" height="34" rx="6" fill="rgba(5, 8, 20, 0.85)" stroke="#ff007f" stroke-width="1.2" />
+  <text x="52" y="63" font-family="'Orbitron', sans-serif" font-size="15" font-weight="900" fill="#ffffff" letter-spacing="1.5">
+    NEON PONG <tspan fill="#ff007f">DUEL</tspan>
+  </text>
+  
+  <rect x="480" y="40" width="80" height="26" rx="4" fill="#00f0ff" />
+  <text x="496" y="57" font-family="'Rajdhani', sans-serif" font-size="12" font-weight="700" fill="#070913" letter-spacing="1">
+    ARCADE
+  </text>
+</svg>

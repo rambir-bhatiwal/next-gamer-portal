@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Space Station Outpost: Resource Balancer - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Solar Sector</div><div id="themeVal" class="hud-val">1: Earth Orbital Alpha</div></div>
+      <div class="hud-box"><div class="hud-lbl">Credits</div><div id="creditsVal" class="hud-val" style="color:#ffd600;">100 CR</div></div>
+      <div class="hud-box"><div class="hud-lbl">Fuel Reserve</div><div id="fuelVal" class="hud-val" style="color:#00ffcc;">100%</div></div>
+      <div class="hud-box"><div class="hud-lbl">Trade Volume</div><div id="quotaVal" class="hud-val" style="color:#39ff14;">0 / 500 CR</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="trade-bar">
+      <button class="trade-btn active" data-cargo="ore">ORE CONVOY (15 CR)</button>
+      <button class="trade-btn" data-cargo="fuel">HYDROGEN TANKER (25 CR)</button>
+      <button class="trade-btn" data-cargo="tech">QUANTUM TECH (40 CR)</button>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">OUTPOSTS (1-45)</button>
+      <button id="restartBtn" class="action-btn">RELOAD ROUTE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT SECTOR &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">SPACE STATION OUTPOST</h1>
+        <p id="overlayDesc">Optimize commercial logistics across 45 deep-space solar sectors. Dispatch cargo freighters between mining moons, refineries, and orbital hubs to reach commercial revenue quotas.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE TRADE NETWORK</button>
+        <div class="controls-hint">Controls: Select cargo type, click from source station to target outpost to dispatch freighter convoys.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

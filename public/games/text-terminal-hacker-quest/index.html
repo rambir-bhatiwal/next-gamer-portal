@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Terminal Hacker Quest - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">NODE</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">SYSTEM</span><span id="themeDisplay" class="value">Police Terminal</span></div>
+      <div class="hud-item"><span class="label">CREDITS</span><span id="creditsDisplay" class="value">500 CR</span></div>
+      <div class="hud-item"><span class="label">CLEARANCE</span><span id="secDisplay" class="value">LVL 1</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">NODES</button>
+    </header>
+
+    <main class="terminal-wrapper">
+      <div id="terminalOutput" class="terminal-output"></div>
+      <div class="terminal-input-row">
+        <span class="prompt-sign">&gt;</span>
+        <input type="text" id="terminalInput" placeholder="Type command (ls, cat, hack, bypass, help)..." autocomplete="off" autofocus>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="quick-cmd-row">
+        <button class="cmd-btn" data-cmd="help">HELP</button>
+        <button class="cmd-btn" data-cmd="ls">LS</button>
+        <button class="cmd-btn" data-cmd="scan">SCAN</button>
+        <button class="cmd-btn" data-cmd="hack">HACK</button>
+        <button class="cmd-btn" data-cmd="decrypt">DECRYPT</button>
+        <button class="cmd-btn" data-cmd="next">NEXT NODE</button>
+      </div>
+      <div class="controls-hint">Enter command or click buttons to infiltrate the 45 corporate mainframe nodes!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT MISSION NODE (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

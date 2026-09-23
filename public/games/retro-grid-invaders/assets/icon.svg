@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020008"/>
+      <stop offset="50%" stop-color="#0b031c"/>
+      <stop offset="100%" stop-color="#011417"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Starfield Grid -->
+  <g stroke="rgba(0, 240, 255, 0.15)" stroke-width="1">
+    <line x1="0" y1="320" x2="600" y2="320"/>
+    <line x1="0" y1="350" x2="600" y2="350"/>
+    <line x1="0" y1="380" x2="600" y2="380"/>
+    <line x1="100" y1="300" x2="40" y2="400"/>
+    <line x1="200" y1="300" x2="160" y2="400"/>
+    <line x1="300" y1="300" x2="300" y2="400"/>
+    <line x1="400" y1="300" x2="440" y2="400"/>
+    <line x1="500" y1="300" x2="560" y2="400"/>
+  </g>
+  <!-- Vector Aliens -->
+  <g filter="url(#neonGlow)">
+    <!-- Alien 1 -->
+    <path d="M150 110 L160 110 L160 120 L170 120 L170 130 L180 130 L180 150 L170 150 L170 160 L180 160 L180 170 L160 170 L150 160 L140 160 L130 170 L110 170 L110 160 L120 160 L120 150 L110 150 L110 130 L120 130 L120 120 L130 120 L130 110 Z" fill="#00ff88"/>
+    <!-- Alien 2 Center -->
+    <path d="M280 80 L320 80 L330 90 L330 110 L340 110 L340 130 L320 130 L330 145 L315 145 L305 130 L295 130 L285 145 L270 145 L280 130 L260 130 L260 110 L270 110 L270 90 Z" fill="#00f0ff"/>
+    <!-- Alien 3 -->
+    <path d="M440 110 L450 110 L450 120 L460 120 L460 130 L470 130 L470 150 L460 150 L460 160 L470 160 L470 170 L450 170 L440 160 L430 160 L420 170 L400 170 L400 160 L410 160 L410 150 L400 150 L400 130 L410 130 L410 120 L420 120 L420 110 Z" fill="#ff007f"/>
+    <!-- Defense Bunkers -->
+    <path d="M140 280 L180 280 L190 310 L130 310 Z" fill="#38ef7d" opacity="0.8"/>
+    <path d="M280 280 L320 280 L330 310 L270 310 Z" fill="#38ef7d" opacity="0.8"/>
+    <path d="M420 280 L460 280 L470 310 L410 310 Z" fill="#38ef7d" opacity="0.8"/>
+    <!-- Player Cannon -->
+    <polygon points="300,330 285,360 315,360" fill="#00f0ff"/>
+    <rect x="297" y="318" width="6" height="14" fill="#ffffff"/>
+    <line x1="300" y1="315" x2="300" y2="180" stroke="#00f0ff" stroke-width="4"/>
+  </g>
+  <!-- Title Badge -->
+  <rect x="120" y="24" width="360" height="34" rx="6" fill="rgba(6, 2, 18, 0.85)" stroke="#00ff88" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#00ff88" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">RETRO GRID INVADERS</text>
+</svg>

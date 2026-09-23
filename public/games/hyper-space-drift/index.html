@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>HyperSpace Drift: Zero-G - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-chip">
+        <div class="hud-title">Sector Score</div>
+        <div id="scoreVal" class="hud-val">0</div>
+      </div>
+      <div class="hud-chip">
+        <div class="hud-title">Shield Integrity</div>
+        <div id="livesVal" class="hud-val" style="color: #ff007f;">♥♥♥</div>
+      </div>
+      <div class="hud-chip">
+        <div class="hud-title">High Score</div>
+        <div id="highScoreVal" class="hud-val" style="color: #00ff88;">0</div>
+      </div>
+    </div>
+
+    <canvas id="spaceCanvas"></canvas>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">HYPERSPACE DRIFT</h1>
+        <p id="overlayDesc">Command an agile vector interceptor through deep orbital asteroid fields. Fire plasma cannons to shatter rogue spatial debris and utilize Newtonian inertia drift.</p>
+        <button id="startBtn" class="start-btn">LAUNCH INTERCEPTOR</button>
+        <div class="controls-hint">
+          <div><span class="key-badge">A / D / ← →</span> Steer</div>
+          <div><span class="key-badge">W / ↑</span> Thruster</div>
+          <div><span class="key-badge">SPACE</span> Fire</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Decoupled Modules -->
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

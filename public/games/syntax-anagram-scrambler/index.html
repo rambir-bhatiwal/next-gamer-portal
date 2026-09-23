@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Syntax Anagram Scrambler: Code Breaker - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Compiler Engine</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Target Score</div><div id="scoreVal" class="hud-val">0 / 200 PTS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Master Word Length</div><div id="masterVal" class="hud-val" style="color:#00ff88;">6 LETTERS</div></div>
+      <div class="hud-box"><div class="hud-lbl">Current Spelling</div><div id="currentVal" class="hud-val" style="color:#ffd600;">_ _ _ _ _ _</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">ENGINES (1-45)</button>
+      <button id="submitBtn" class="action-btn submit-btn">SUBMIT WORD [ENTER]</button>
+      <button id="clearBtn" class="action-btn">CLEAR [BACK]</button>
+      <button id="restartBtn" class="action-btn">SHUFFLE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT ENGINE &gt;</button>
+    </div>
+    <div class="controls-hint">Click scrambled letter tiles or type on keyboard to form the target anagram word | Press ENTER to verify</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">SYNTAX ANAGRAM SCRAMBLER</h1>
+        <p id="overlayDesc">Unscramble rotating letter wheels to discover code syntax words before the mainframe clock expires across 45 stages!</p>
+        <button id="startBtn" class="glow-btn">ENTER COMPILER</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT COMPILER ENGINE (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

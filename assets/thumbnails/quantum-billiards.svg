@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04020f"/>
+      <stop offset="60%" stop-color="#0d0824"/>
+      <stop offset="100%" stop-color="#020108"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="380" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- High-Tech Coordinate Grid -->
+  <g stroke="#00e5ff" stroke-opacity="0.12" stroke-width="1">
+    <line x1="50" y1="0" x2="50" y2="380"/>
+    <line x1="150" y1="0" x2="150" y2="380"/>
+    <line x1="250" y1="0" x2="250" y2="380"/>
+    <line x1="350" y1="0" x2="350" y2="380"/>
+    <line x1="450" y1="0" x2="450" y2="380"/>
+    <line x1="550" y1="0" x2="550" y2="380"/>
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="140" x2="600" y2="140"/>
+    <line x1="0" y1="220" x2="600" y2="220"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+  </g>
+
+  <!-- Outer Neon Trim -->
+  <rect x="8" y="8" width="584" height="364" rx="12" fill="none" stroke="#00e5ff" stroke-width="2" stroke-opacity="0.4"/>
+  <rect x="14" y="14" width="572" height="352" rx="8" fill="none" stroke="#ea80fc" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Category Watermark Banner -->
+  <text x="32" y="44" font-family="'Segoe UI', monospace" font-size="12" font-weight="900" fill="#00e5ff" letter-spacing="3" opacity="0.85">PHYSICS ENGINE 45-THEME LAB</text>
+
+  <!-- Graphic Icon Payload -->
+  <g>
+    
+      <!-- Octagonal Billiard Arena -->
+      <polygon points="190,80 410,80 480,150 480,250 410,320 190,320 120,250 120,150" fill="#04121a" stroke="#00e5ff" stroke-width="6"/>
+      <!-- Gravitational Pockets -->
+      <circle cx="190" cy="80" r="16" fill="#000" stroke="#ea80fc" stroke-width="3"/>
+      <circle cx="410" cy="80" r="16" fill="#000" stroke="#ea80fc" stroke-width="3"/>
+      <circle cx="410" cy="320" r="16" fill="#000" stroke="#ea80fc" stroke-width="3"/>
+      <circle cx="190" cy="320" r="16" fill="#000" stroke="#ea80fc" stroke-width="3"/>
+      <!-- Glowing Quantum Balls -->
+      <circle cx="260" cy="200" r="16" fill="#00e5ff" filter="url(#glow)"/>
+      <circle cx="340" cy="180" r="16" fill="#ff1744" filter="url(#glow)"/>
+      <circle cx="360" cy="230" r="16" fill="#ffd600" filter="url(#glow)"/>
+      <!-- Cue Aim Line -->
+      <line x1="160" y1="230" x2="245" y2="205" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    
+  </g>
+
+  <!-- Game Title Bottom Bar -->
+  <rect x="24" y="318" width="552" height="42" rx="8" fill="#060214" fill-opacity="0.9" stroke="#00e5ff" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="42" y="345" font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="800" fill="#ffffff" letter-spacing="1">ZERO-G BILLIARDS</text>
+  <text x="550" y="344" text-anchor="end" font-family="monospace" font-size="11" font-weight="700" fill="#00e5ff" letter-spacing="1">45 STAGES</text>
+</svg>

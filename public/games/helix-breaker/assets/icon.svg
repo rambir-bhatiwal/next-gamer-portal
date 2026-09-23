@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020512"/>
+      <stop offset="50%" stop-color="#08021c"/>
+      <stop offset="100%" stop-color="#14020a"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="url(#bgGrad)"/>
+  <!-- Brick Matrix -->
+  <g filter="url(#neonGlow)">
+    <!-- Row 1: Cyan -->
+    <rect x="70" y="80" width="80" height="24" rx="4" fill="#00f0ff"/>
+    <rect x="160" y="80" width="80" height="24" rx="4" fill="#00f0ff"/>
+    <rect x="250" y="80" width="80" height="24" rx="4" fill="#00f0ff"/>
+    <rect x="340" y="80" width="80" height="24" rx="4" fill="#00f0ff"/>
+    <rect x="430" y="80" width="80" height="24" rx="4" fill="#00f0ff"/>
+    <!-- Row 2: Magenta -->
+    <rect x="115" y="115" width="80" height="24" rx="4" fill="#ff007f"/>
+    <rect x="205" y="115" width="80" height="24" rx="4" fill="#ff007f"/>
+    <rect x="295" y="115" width="80" height="24" rx="4" fill="#ff007f"/>
+    <rect x="385" y="115" width="80" height="24" rx="4" fill="#ff007f"/>
+    <!-- Row 3: Amber / Violet -->
+    <rect x="70" y="150" width="80" height="24" rx="4" fill="#ffd700"/>
+    <rect x="160" y="150" width="80" height="24" rx="4" fill="#7928ca"/>
+    <rect x="250" y="150" width="80" height="24" rx="4" fill="#00ff88"/>
+    <rect x="340" y="150" width="80" height="24" rx="4" fill="#7928ca"/>
+    <rect x="430" y="150" width="80" height="24" rx="4" fill="#ffd700"/>
+
+    <!-- Laser Paddle -->
+    <rect x="230" y="340" width="140" height="18" rx="8" fill="#00f0ff" stroke="#ffffff" stroke-width="2"/>
+    <!-- Energy Ball & Trajectory -->
+    <circle cx="310" cy="240" r="10" fill="#ffffff"/>
+    <line x1="290" y1="280" x2="310" y2="240" stroke="#00f0ff" stroke-width="3" stroke-dasharray="6,4"/>
+  </g>
+  <!-- Title Badge -->
+  <rect x="130" y="24" width="340" height="34" rx="6" fill="rgba(6, 2, 18, 0.85)" stroke="#ff007f" stroke-width="1.5"/>
+  <text x="300" y="47" font-family="'Rajdhani', monospace, sans-serif" font-size="16" font-weight="900" fill="#ff007f" letter-spacing="3" text-anchor="middle" filter="url(#neonGlow)">HELIX BREAKER</text>
+</svg>

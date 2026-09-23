@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Structural Bridge Engineer: Cyber Span - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Chasm Gorge</div><div id="themeVal" class="hud-val">1: River Gorge Cyan</div></div>
+      <div class="hud-box"><div class="hud-lbl">Materials Budget</div><div id="budgetVal" class="hud-val">$15,000 / $15,000</div></div>
+      <div class="hud-box"><div class="hud-lbl">Convoy Status</div><div id="convoyVal" class="hud-val" style="color:#00ff88;">READY AT DOCK</div></div>
+      <div class="hud-box"><div class="hud-lbl">Max Stress Load</div><div id="stressVal" class="hud-val" style="color:#ffd600;">0% STRESS</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CHASMS (1-45)</button>
+      <button id="testBtn" class="action-btn test-btn">TEST CONVOY [SPACE]</button>
+      <button id="clearBtn" class="action-btn">RESET BEAMS</button>
+      <button id="restartBtn" class="action-btn">RETRY</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CHASM &gt;</button>
+    </div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">STRUCTURAL BRIDGE ENGINEER</h1>
+        <p id="overlayDesc">Construct truss bridges across treacherous planetary canyons using carbon-fiber beams and cables across 45 stages. Test your engineering under heavy cyber-truck convoy loads!</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">START BLUEPRINT</button>
+        <div class="controls-hint">Controls: Click on nodes and drag to connect beams across the chasm within your materials budget. Click 'TEST CONVOY' to run the stress load test!</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

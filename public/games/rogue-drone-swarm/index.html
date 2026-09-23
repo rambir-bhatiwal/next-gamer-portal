@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rogue Drone Swarm: Craft & Evolve - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">SECTOR</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">PROVING GROUND</span><span id="themeDisplay" class="value">Junkyard Alpha</span></div>
+      <div class="hud-item"><span class="label">HULL</span><span id="hullDisplay" class="value">100/100</span></div>
+      <div class="hud-item"><span class="label">MODULES</span><span id="modDisplay" class="value">1/4</span></div>
+      <div class="hud-item"><span class="label">SCRAP</span><span id="scrapDisplay" class="value">0</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">SECTORS</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="droneCanvas" width="600" height="420"></canvas>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">SECTOR HARVEST COMPLETE!</h2>
+        <p id="overlayMessage">All rogue drones dismantled.</p>
+        <button id="overlayBtn" class="btn-action">NEXT SECTOR</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="drone-controls">
+        <button class="ctrl-btn" id="btnUp">▲</button>
+        <div class="ctrl-row">
+          <button class="ctrl-btn" id="btnLeft">◀</button>
+          <button class="ctrl-btn fire" id="btnFire">FIRE</button>
+          <button class="ctrl-btn" id="btnRight">▶</button>
+        </div>
+        <button class="ctrl-btn" id="btnDown">▼</button>
+      </div>
+      <div class="controls-hint">Move drone with Arrow Keys/WASD. Space/Click to fire. Collect scrap to evolve module arms!</div>
+    </footer>
+  </div>
+
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT PROVING GROUND SECTOR (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

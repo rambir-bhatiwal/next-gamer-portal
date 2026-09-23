@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Lexicon Link: Word Association Chain - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Association Board</div><div id="themeVal" class="hud-val">1: Green Phosphor CRT</div></div>
+      <div class="hud-box"><div class="hud-lbl">Categories Solved</div><div id="categoriesVal" class="hud-val" style="color:#00ff88;">0 / 4 CATEGORIES</div></div>
+      <div class="hud-box"><div class="hud-lbl">Mistakes Buffer</div><div id="mistakesVal" class="hud-val" style="color:#ffd600;">● ● ● ● (4 LEFT)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Selected Tiles</div><div id="selectedCountVal" class="hud-val" style="color:#00f0ff;">0 / 4 TILES</div></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">BOARDS (1-45)</button>
+      <button id="submitBtn" class="action-btn submit-btn">SUBMIT (4 TILES)</button>
+      <button id="deselectBtn" class="action-btn">DESELECT ALL</button>
+      <button id="restartBtn" class="action-btn">RESET</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT BOARD &gt;</button>
+    </div>
+    <div class="controls-hint">Click consecutive adjacent letters to link words | Words must connect along valid grid paths | Reach target score</div>
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <h1 id="overlayTitle">LEXICON LINK</h1>
+        <p id="overlayDesc">Group 16 technology and cultural words into 4 secret categories of 4 items each across 45 staged puzzle levels!</p>
+        <button id="startBtn" class="glow-btn">ENTER LEXICON</button>
+      </div>
+    </div>
+
+    <div id="levelModal" class="overlay" style="display:none;">
+      <div class="card modal-card">
+        <h2>SELECT ASSOCIATION BOARD (1-45)</h2>
+        <div id="levelGrid" class="level-grid"></div>
+        <button id="closeModalBtn" class="glow-btn" style="margin-top:14px;">CLOSE</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Dungeon Crawler: Roguelike Matrix - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="hud-header">
+      <div class="hud-item"><span class="label">FLOOR</span><span id="levelDisplay" class="value">1/45</span></div>
+      <div class="hud-item"><span class="label">THEME</span><span id="themeDisplay" class="value">Corridor</span></div>
+      <div class="hud-item"><span class="label">HP</span><span id="hpDisplay" class="value">100/100</span></div>
+      <div class="hud-item"><span class="label">RAM</span><span id="ramDisplay" class="value">50/50</span></div>
+      <div class="hud-item"><span class="label">CHIPS</span><span id="chipsDisplay" class="value">0</span></div>
+      <button id="levelSelectBtn" class="btn-level-select">FLOORS</button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <canvas id="dungeonCanvas" width="600" height="480"></canvas>
+      <div id="gameOverlay" class="game-overlay hidden">
+        <h2 id="overlayTitle">FLOOR CLEARED!</h2>
+        <p id="overlayMessage">Descending to next server floor...</p>
+        <button id="overlayBtn" class="btn-action">CONTINUE</button>
+      </div>
+    </main>
+
+    <footer class="hud-footer">
+      <div class="dpad-controls">
+        <button class="dpad-btn" id="btnUp">▲</button>
+        <div class="dpad-row">
+          <button class="dpad-btn" id="btnLeft">◀</button>
+          <button class="dpad-btn" id="btnWait">WAIT</button>
+          <button class="dpad-btn" id="btnRight">▶</button>
+        </div>
+        <button class="dpad-btn" id="btnDown">▼</button>
+      </div>
+      <div class="dpad-actions">
+        <button class="action-btn" id="btnHeal">USE NANITE [H]</button>
+        <button class="action-btn" id="btnPulse">EMP PULSE [Space]</button>
+      </div>
+      <div class="controls-hint">Move with Arrow Keys/WASD. Bump into daemons to attack. Step on Stairs (▼) to descend!</div>
+    </footer>
+  </div>
+
+  <!-- Level Select Modal -->
+  <div id="levelModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>SELECT SERVER FLOOR (1–45)</h2>
+      <div id="levelSelectGrid" class="level-grid"></div>
+      <button id="closeModalBtn" class="btn-close">RESUME</button>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>

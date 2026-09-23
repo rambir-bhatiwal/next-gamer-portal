@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Nanite Slide Puzzle: Core Reassembly - Next Games/Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div class="hud">
+      <div class="hud-box"><div class="hud-lbl">Reactor Core</div><div id="themeVal" class="hud-val">1: Neon Cyber-Grid</div></div>
+      <div class="hud-box"><div class="hud-lbl">Core Status</div><div id="statusVal" class="hud-val">UNSTABLE (4x4)</div></div>
+      <div class="hud-box"><div class="hud-lbl">Slide Moves</div><div id="movesVal" class="hud-val">0 MOVES</div></div>
+    </div>
+
+    <div class="board-wrap">
+      <div id="slideGrid" class="slide-grid"></div>
+    </div>
+
+    <div class="controls-bar">
+      <button id="levelSelectBtn" class="action-btn">CORES (1-45)</button>
+      <button id="resetBtn" class="action-btn">SHUFFLE CORE</button>
+      <button id="nextBtn" class="action-btn next-btn" style="display:none;">NEXT CORE &gt;</button>
+    </div>
+
+    <div id="menuScreen" class="overlay">
+      <div class="card">
+        <h1 id="menuTitle">NANITE SLIDE PUZZLE</h1>
+        <p id="menuDesc">Reassemble scrambled quantum energy cores across 45 reactor stages. Slide numbered nanite tiles into numerical order using the empty slot.</p>
+        <div class="level-select" id="levelSelectGrid"></div>
+        <button id="startBtn" class="play-btn">INITIATE CORE REASSEMBLY</button>
+        <div class="controls-hint">Controls: Click or Tap any tile adjacent to the empty slot | Arrow Keys also supported</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./audio.js"></script>
+  <script src="./game.js"></script>
+</body>
+</html>
