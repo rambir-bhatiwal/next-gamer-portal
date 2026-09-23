@@ -129,12 +129,13 @@
     "accentColor": "#ff007f",
     "author": "Next Games/Game Engineering Team",
     "publisher": "Next Games/Game Interactive",
-    "contactEmail": "hq@next.gamer.free",
+    "contactEmail": "rambirworkofficial@gmail.com",
+    "contactPhone": "+91-9992180680",
     "establishedYear": 2026,
     "socialLinks": {
       "twitter": "https://twitter.com/NextGamesGame",
       "discord": "https://discord.gg/nextgames",
-      "github": "https://github.com/next-games-game"
+      "github": "https://github.com/rambir-bhatiwal/next-gamer-portal"
     },
     "seoKeywords": [
       "HTML5 games",

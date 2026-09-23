@@ -12,7 +12,8 @@ window.__SITE_CONFIG__ = {
     "accentColor": "#ff007f",
     "author": "Next Games/Game Engineering Team",
     "publisher": "Next Games/Game Interactive",
-    "contactEmail": "hq@next.gamer.free",
+    "contactEmail": "rambirworkofficial@gmail.com",
+    "contactPhone": "+91-9992180680",
     "establishedYear": 2026,
     "socialLinks": {
       "twitter": "https://twitter.com/NextGamesGame",
