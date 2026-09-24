@@ -1363,6 +1363,23 @@ img, svg {
   color: var(--text-muted);
 }
 
+.footer-bottom-container .footer-terms-link {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-container .footer-terms-link:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer-sep {
+  opacity: 0.5;
+  margin: 0 4px;
+}
+
 .system-status {
   display: inline-flex;
   align-items: center;
