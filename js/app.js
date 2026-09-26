@@ -129,8 +129,8 @@
     "accentColor": "#ff007f",
     "author": "Next Games/Game Engineering Team",
     "publisher": "Next Games/Game Interactive",
-    "contactEmail": "rambirworkofficial@gmail.com",
-    "contactPhone": "+91-9992180680",
+    "contactEmail": "r9896633156@gmail.com",
+    "contactPhone": "+91 9896633156",
     "establishedYear": 2026,
     "socialLinks": {
       "twitter": "https://twitter.com/NextGamesGame",

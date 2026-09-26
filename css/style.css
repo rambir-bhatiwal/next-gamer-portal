@@ -1881,6 +1881,18 @@ textarea.form-control {
     gap: 32px;
   }
 
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .copyright-text {
+    line-height: 1.6;
+    word-break: break-word;
+  }
+
   .modal-wrapper {
     width: 100vw;
     height: 100vh;
